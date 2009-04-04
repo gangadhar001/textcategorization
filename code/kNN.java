@@ -15,23 +15,32 @@ public class kNN {
     public kNN() {
     }
     
-    private static void getFiles(File folder, List<File> list) throws IOException {
+    private static void getFiles(File folder, ArrayList<File> list,Hashtable HT) throws IOException {
         folder.setReadOnly();
         File[] files = folder.listFiles();
         for(int j = 0; j < files.length; j++) {
             if(files[j].isDirectory())
-                getFiles(files[j], list);
+                getFiles(files[j], list, HT);
             else
             {
             	if(files[j].getAbsolutePath().indexOf("svn")==-1)
             	{
-            		copyFile(files[j],new File("./"+files[j].getName()));
-            		list.add(new File(files[j].getName()));
+            		String [] array = null;
+            		String path = files[j].getAbsolutePath();
+            
+    				array = path.split("\\\\");
+    				int arrayLength = array.length;
+    				String filename = array[arrayLength - 1];
+    				String filecategory = array[arrayLength - 2];
+    				
+            		copyFile(files[j],new File("./"+filename));
+            		list.add(new File(filename));
+            		HT.put(filename,filecategory);
             	}
             }
             	
         }
-    }//recursive traversing of files
+    }//recursive traversing of files; does copying of files and hashing of filename to file category
 
     public static void copyFile(File srcFile, File destFile) throws IOException
 	{
@@ -43,9 +52,8 @@ public class kNN {
         int nLength;
         BufferedInputStream oBuffInputStream = new BufferedInputStream( oInStream );
         while ((nLength = oBuffInputStream.read(oBytes)) > 0)
-        {
                 oOutStream.write(oBytes, 0, nLength);
-        }
+        
         oInStream.close();
         oOutStream.close();
 	}// to copy files from 1 destination to another
@@ -55,14 +63,18 @@ public class kNN {
         try
         {
         	File folder = new File("../training_corpus");
-        	List<File> list = new ArrayList<File>();
-        	getFiles(folder, list);
+        	Hashtable HT = new Hashtable();
+        	
+        	ArrayList<File> documentVector = new ArrayList<File>();
+        
+
+        	getFiles(folder,documentVector,HT);
         	String exec="";
         
-        	for(int i=0;i<list.size();i++)
-        		exec=exec+list.get(i)+" ";
+        	for(int i=0;i<documentVector.size();i++)
+        		exec=exec+documentVector.get(i)+" ";
         		
-        	Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        //	Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
         		
        		//for(int i=0;i<list.size();i++)
         	//	list.get(i).delete();
