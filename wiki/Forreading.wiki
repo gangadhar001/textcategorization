@@ -1,0 +1,7 @@
+#summary Links to read.... for understanding
+
+= Links =
+
+A document on kNN implementation
+http://www.matlog.net/tcej/tcej-doc.pdf
+
