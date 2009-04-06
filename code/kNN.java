@@ -15,7 +15,7 @@ public class kNN {
     public kNN() {
     }
     
-    private static void getFiles(File folder, ArrayList<File> list,Hashtable HT) throws IOException {
+    private static void getFiles(File folder, ArrayList<String> list,Hashtable HT) throws IOException {
         folder.setReadOnly();
         File[] files = folder.listFiles();
         for(int j = 0; j < files.length; j++) {
@@ -33,8 +33,9 @@ public class kNN {
     				String filename = array[arrayLength - 1];
     				String filecategory = array[arrayLength - 2];
     				
-            		copyFile(files[j],new File("./"+filename));
-            		list.add(new File(filename));
+    				copyFile(files[j],new File("./"+filename));
+            		list.add(filename);
+            		
             		HT.put(filename,filecategory);
             	}
             }
@@ -62,25 +63,181 @@ public class kNN {
     {
         try
         {
-        	File folder = new File("../training_corpus");
-        	Hashtable HT = new Hashtable();
+        	File trainfolder = new File("../training_corpus");
+        	File testfolder = new File("../testing_corpus");
+        	Hashtable HTrain = new Hashtable();
+        	Hashtable HTest = new Hashtable();
+        	int [][]EvaluationMatrix = new int[2][2];
         	
-        	ArrayList<File> documentVector = new ArrayList<File>();
+        	for(int i=0;i<2;i++)
+        		for(int j=0;j<2;j++)
+        			EvaluationMatrix[i][j]=0;
+        	
+        	ArrayList<String> trainingDocumentVector = new ArrayList<String>();
+        	ArrayList<String> testingDocumentVector = new ArrayList<String>();
+        	ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
+        	ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
         
-
-        	getFiles(folder,documentVector,HT);
+        	getFiles(trainfolder,trainingDocumentVector,HTrain);
         	String exec="";
         
-        	for(int i=0;i<documentVector.size();i++)
-        		exec=exec+documentVector.get(i)+" ";
+        	File traindir = new File("train");
+        	boolean success = traindir.mkdir();
+   			if (success) {
+      			System.out.println("Training directory created");
+    		}
+    		
+    		File testdir = new File("test");
+        	success = testdir.mkdir();
+   			if (success) {
+      			System.out.println("Testing directory created");
+    		}
+    		
+        	for(int i=0;i<trainingDocumentVector.size();i++)
+        	{
+        		exec=exec+trainingDocumentVector.get(i)+" "; 	
+        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
+        	}
+        	
+            Process p = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        	p.waitFor();
+    		
+    		for(int i=0;i<trainoutputDocumentVector.size();i++)
+        	{
+        		File file = new File(trainoutputDocumentVector.get(i));
+        		File fileTodel = new File(trainingDocumentVector.get(i));
+        		file.renameTo(new File(traindir, file.getName())); //moving files
+        		fileTodel.delete();
+        	}  
+    	
+        	getFiles(testfolder,testingDocumentVector,HTest);
+        	
+        	exec="";
+      
+        	for(int i=0;i<testingDocumentVector.size();i++)
+        	{
+        		exec=exec+testingDocumentVector.get(i)+" "; 	
+        		testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
+        	}
+        	
+            p = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        	p.waitFor();
+        	
+        	for(int i=0;i<testoutputDocumentVector.size();i++)
+        	{
+        		File file = new File(testoutputDocumentVector.get(i));
+        		File fileTodel = new File(testingDocumentVector.get(i));
+        		file.renameTo(new File(testdir, file.getName()));
+        		fileTodel.delete();
+        	}  
+        	
+        	Similarity s = new Similarity();
+        	
+        	Scanner scan = new Scanner(System.in);
+     		int k;
+
+     		System.out.print("Enter the value of k:");
+     		k = scan.nextInt();
+     			
+        	for(int i=0;i<testoutputDocumentVector.size();i++)
+        	{
+        		String testdoc = "./test/"+testoutputDocumentVector.get(i);
+        	
+        		String []knn = new String[k];
+     			double []freq = new double[k];
+     		
+     			for(int a=0; a<k; a++)
+     			{
+     				knn[a] = new String("");
+     				freq[a] = 0;
+     			}
+     				
+     			
+        		for(int j=0;j<trainoutputDocumentVector.size();j++)
+        		{
+        			String traindoc = "./train/"+trainoutputDocumentVector.get(j);
+        			
+        			double v = s.computeSimilarity(testdoc,traindoc);
+        			
+        			for(int a=0;a<k;a++)
+        			{
+        				if(freq[a]<v)
+        				{
+        					freq[a] = v;
+        					knn[a] = traindoc.substring(15);
+        					break;
+        				}
+        			}
+        		}
         		
-        //	Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        		int []count= new int[10];
+        		String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
+        			                   "rec.autos","rec.motorcycles","rec.sport.baseball",
+        			                   "sci.electronis","sci.med","talk.politics.misc",
+        			                   "talk.religion.misc"};
+        			                    
+        		for(int h=0;h<k;h++)
+        		{
+        			String category = (String)HTrain.get((String)knn[h]);
+        			
+        			for(int a=0;a<10;a++)
+        			{
+        				String c = categories[a];
+        				if(category!=null && category.equals(c))
+        					count[a]++;
+        			}
+        		}
         		
-       		//for(int i=0;i<list.size();i++)
-        	//	list.get(i).delete();
+        		for(int a=0;a<k;a++)
+        		{
+        			System.out.println(knn[a]+" "+freq[a]);
+        		}
         		
+        		for(int a=0;a<10;a++)
+        		{
+        			System.out.println(categories[a]+" "+count[a]);
+        		}
+        		
+        		int max = -1;
+        		int pos = -1;
+        			
+        		for(int a=0;a<10;a++)
+        			if(count[a]> max)
+        			{
+        					max = count[a];
+        					pos = a;
+        			}
+        			
+        		String retrievedcategory=""; 
+        		if(pos!=-1)
+        			retrievedcategory = categories[pos];
+        		String relevantcategory = (String)HTest.get((String)testingDocumentVector.get(i));
+        	
+        		System.out.println(retrievedcategory);
+  				System.out.println(relevantcategory);
+  				//System.out.println(testingDocumentVector.get(i));      		
+        		if(pos==-1)
+        			EvaluationMatrix[1][0]++;
+        		else
+        		{
+        			if(retrievedcategory.equals(relevantcategory))
+        				EvaluationMatrix[0][0]++;
+        			else if(!retrievedcategory.equals(relevantcategory))
+        				EvaluationMatrix[0][1]++;
+        		}
+        	}
+        	
+        	for(int i=0;i<2;i++)
+        	{
+        		for(int j=0;j<2;j++)
+        		{
+        			System.out.print(EvaluationMatrix[i][j]+" ");
+        		}
+        		System.out.println();
+        	}
+        	
        		System.out.println("Finished execution");
         }
-    	catch (IOException e) {System.out.println(e);}
+    	catch (Exception e) {System.out.println(e);}
     }
 }

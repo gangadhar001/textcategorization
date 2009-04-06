@@ -69,8 +69,8 @@ public class Similarity
 		{			
 			e.printStackTrace();
 		}
-		System.out.println(intersection.size());
-		System.out.println(union.size());
+		//System.out.println(intersection.size());
+		//System.out.println(union.size());
 		ret = (double)intersection.size()/union.size();
 		return ret;
 	}
@@ -78,7 +78,8 @@ public class Similarity
 	public static void main(String[] args)
 	{
 		Similarity s = new Similarity();
-		double v = s.computeSimilarity("output_1.txt","output_2.txt" );
+		
+		double v = s.computeSimilarity("C:/Users/User/Desktop/textcategorization/code/../testing_corpus/testing_corpus/alt.atheism/53661","C:/Users/User/Desktop/textcategorization/code/../testing_corpus/testing_corpus/alt.atheism/53661" );
 		System.out.println(v);		
 	}
 
