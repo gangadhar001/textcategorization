@@ -58,7 +58,7 @@ public class kNN {
         oInStream.close();
         oOutStream.close();
 	}// to copy files from 1 destination to another
-	
+     
     public static void main(String[] args)
     {
         try
@@ -82,12 +82,26 @@ public class kNN {
         	String exec="";
         
         	File traindir = new File("train");
+        	
+        	/*if(traindir.exists())
+        	{
+    			Process p = Runtime.getRuntime().exec("rmdir -rf train");
+        		p.waitFor();
+    		}*/
+        		
         	boolean success = traindir.mkdir();
    			if (success) {
       			System.out.println("Training directory created");
     		}
     		
     		File testdir = new File("test");
+    		
+    	/*	if(testdir.exists())
+    		{
+    			Process p = Runtime.getRuntime().exec("rmdir -rf test");
+        		p.waitFor();
+    		}*/
+        		
         	success = testdir.mkdir();
    			if (success) {
       			System.out.println("Testing directory created");
@@ -188,7 +202,7 @@ public class kNN {
         			}
         		}
         		
-        		for(int a=0;a<k;a++)
+        		/*for(int a=0;a<k;a++)
         		{
         			System.out.println(knn[a]+" "+freq[a]);
         		}
@@ -196,7 +210,7 @@ public class kNN {
         		for(int a=0;a<10;a++)
         		{
         			System.out.println(categories[a]+" "+count[a]);
-        		}
+        		}*/
         		
         		int max = -1;
         		int pos = -1;
@@ -213,9 +227,9 @@ public class kNN {
         			retrievedcategory = categories[pos];
         		String relevantcategory = (String)HTest.get((String)testingDocumentVector.get(i));
         	
-        		System.out.println(retrievedcategory);
-  				System.out.println(relevantcategory);
-  				//System.out.println(testingDocumentVector.get(i));      		
+        		System.out.println("Classified as "+retrievedcategory);
+  				System.out.println("Test category is "+relevantcategory);
+  				//System.out.println("Testing doc is "+testingDocumentVector.get(i));      		
         		if(pos==-1)
         			EvaluationMatrix[1][0]++;
         		else
