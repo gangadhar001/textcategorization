@@ -15,44 +15,67 @@ public class Similarity
 	{
 		double ret;
 		
-		HashSet<String> union = new HashSet<String>();
+		Hashtable union = new Hashtable();//originally, it is a HashSet
+		//HashSet<String> union = new HashSet<String>();
 		HashSet<String> intersection = new HashSet<String>();
 		
 		FileInputStream fstreamOne;
 		DataInputStream inOne;
 		BufferedReader brOne;
 		String wordOne;
+		String wordI;
 		FileInputStream fstreamTwo;
 		DataInputStream inTwo;
 		BufferedReader brTwo;
 		String wordTwo;
+		String wordJ;
+		
+		Integer numerator = 0;
+		Integer denominator = 0;
+		Integer i=0,j=0;
 		
 		try
 		{
 			fstreamOne = new FileInputStream(fileOne);
 			inOne = new DataInputStream(fstreamOne);
 			brOne = new BufferedReader(new InputStreamReader(inOne));
+			
 			while ((wordOne = brOne.readLine()) != null)
 			{
-				wordOne = wordOne.substring(0,wordOne.indexOf("\t"));	
-				union.add(wordOne);				
+				wordI = wordOne.substring(wordOne.indexOf("\t")+1);
+				wordOne = wordOne.substring(0,wordOne.indexOf("\t"));
+				union.put(wordOne,Integer.valueOf(wordI));
+				
+				i=i+Integer.valueOf(wordI);	//sum of all the term frequencies in fileOne			
 			}
 			
 			fstreamTwo = new FileInputStream(fileTwo);
 			inTwo = new DataInputStream(fstreamTwo);
 			brTwo = new BufferedReader(new InputStreamReader(inTwo));
 			while ((wordTwo = brTwo.readLine()) != null && wordTwo.indexOf("\t") != -1)
-			{				
-				wordTwo = wordTwo.substring(0,wordTwo.indexOf("\t"));	
-				if (union.contains(wordTwo))
+			{	
+				wordJ = wordTwo.substring(wordTwo.indexOf("\t")+1);			
+				wordTwo = wordTwo.substring(0,wordTwo.indexOf("\t"));
+				
+				j=j+Integer.valueOf(wordJ);	//sum of all the term frequencies in fileTwo
+						
+				if (union.containsKey(wordTwo))
 				{
 					intersection.add(wordTwo);
+					Integer WI = (Integer)union.get((String)wordTwo);  
+					Integer WJ = Integer.valueOf(wordJ);	
+					numerator=numerator+ (WI*WJ); 
+					//sum of dot products of term frequencies of 
+					//terms that exist in fileOne AND fileTwo
 				}
 				else
 				{
-					union.add(wordTwo);
+					union.put(wordTwo,Integer.valueOf(wordJ));
+					//union.add(wordTwo);
 				}
 			}			
+			
+			denominator = i*j;
 			
 			brOne.close();
 			inOne.close();
@@ -69,9 +92,9 @@ public class Similarity
 		{			
 			e.printStackTrace();
 		}
-		//System.out.println(intersection.size());
-		//System.out.println(union.size());
-		ret = (double)intersection.size()/union.size();
+		
+		ret = (double)intersection.size()/union.size(); //intersection/union similarity
+		//ret = (double)numerator/denominator; //cosine similarity measure
 		return ret;
 	}
 
