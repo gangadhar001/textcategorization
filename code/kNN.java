@@ -78,16 +78,9 @@ public class kNN {
         	ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
         	ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
         
-        	getFiles(trainfolder,trainingDocumentVector,HTrain);
-        	String exec="";
+// Step 1: Computing the training and testing set
         
         	File traindir = new File("train");
-        	
-        	/*if(traindir.exists())
-        	{
-    			Process p = Runtime.getRuntime().exec("rmdir -rf train");
-        		p.waitFor();
-    		}*/
         		
         	boolean success = traindir.mkdir();
    			if (success) {
@@ -95,18 +88,15 @@ public class kNN {
     		}
     		
     		File testdir = new File("test");
-    		
-    	/*	if(testdir.exists())
-    		{
-    			Process p = Runtime.getRuntime().exec("rmdir -rf test");
-        		p.waitFor();
-    		}*/
         		
         	success = testdir.mkdir();
    			if (success) {
       			System.out.println("Testing directory created");
     		}
     		
+    		getFiles(trainfolder,trainingDocumentVector,HTrain);
+        	String exec="";
+        	
         	for(int i=0;i<trainingDocumentVector.size();i++)
         	{
         		exec=exec+trainingDocumentVector.get(i)+" "; 	
@@ -122,8 +112,11 @@ public class kNN {
         		File fileTodel = new File(trainingDocumentVector.get(i));
         		file.renameTo(new File(traindir, file.getName())); //moving files
         		fileTodel.delete();
-        	}  
+        	}// moving the files[i.e output_xxx] to train folder;
+        	 // removing the training files from ./ folder after stemming them  
     	
+    	    //TODO feature selection to reduce the dimensionality of the training set
+    	    
         	getFiles(testfolder,testingDocumentVector,HTest);
         	
         	exec="";
@@ -143,7 +136,10 @@ public class kNN {
         		File fileTodel = new File(testingDocumentVector.get(i));
         		file.renameTo(new File(testdir, file.getName()));
         		fileTodel.delete();
-        	}  
+        	}// moving the files[i.e output_xxx] to test folder;
+        	 // removing the testing files from ./ folder after stemming them    
+        	
+// Step 2: Performing KNN classification        	
         	
         	Similarity s = new Similarity();
         	
@@ -184,7 +180,8 @@ public class kNN {
         			}
         		}
         		
-        		int []count= new int[10];
+        		int []count = new int[10];
+        		int []freqOfCategory = new int[10];
         		String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
         			                   "rec.autos","rec.motorcycles","rec.sport.baseball",
         			                   "sci.electronis","sci.med","talk.politics.misc",
@@ -198,7 +195,10 @@ public class kNN {
         			{
         				String c = categories[a];
         				if(category!=null && category.equals(c))
+        				{
         					count[a]++;
+        					freqOfCategory[a] += freq[h]; 
+        				}//computing the total frequency of each category
         			}
         		}
         		
@@ -218,7 +218,7 @@ public class kNN {
         		for(int a=0;a<10;a++)
         			if(count[a]> max)
         			{
-        					max = count[a];
+        					max = freqOfCategory[a];
         					pos = a;
         			}
         			
@@ -229,7 +229,7 @@ public class kNN {
         	
         		System.out.println("Classified as "+retrievedcategory);
   				System.out.println("Test category is "+relevantcategory);
-  				//System.out.println("Testing doc is "+testingDocumentVector.get(i));      		
+  			     		
         		if(pos==-1)
         			EvaluationMatrix[1][0]++;
         		else
