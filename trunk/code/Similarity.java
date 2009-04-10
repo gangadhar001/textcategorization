@@ -15,8 +15,8 @@ public class Similarity
 	{
 		double ret;
 		
-		Hashtable union = new Hashtable();//originally, it is a HashSet
-		//HashSet<String> union = new HashSet<String>();
+		//Hashtable union = new Hashtable();//originally, it is a HashSet
+		HashSet<String> union = new HashSet<String>();
 		HashSet<String> intersection = new HashSet<String>();
 		
 		FileInputStream fstreamOne;
@@ -42,11 +42,11 @@ public class Similarity
 			
 			while ((wordOne = brOne.readLine()) != null)
 			{
-				wordI = wordOne.substring(wordOne.indexOf("\t")+1);
+				//wordI = wordOne.substring(wordOne.indexOf("\t")+1);
 				wordOne = wordOne.substring(0,wordOne.indexOf("\t"));
-				union.put(wordOne,Integer.valueOf(wordI));
-				
-				i=i+Integer.valueOf(wordI);	//sum of all the term frequencies in fileOne			
+				//union.put(wordOne,Integer.valueOf(wordI));
+				union.add(wordOne);
+				//i=i+Integer.valueOf(wordI);	//sum of all the term frequencies in fileOne			
 			}
 			
 			fstreamTwo = new FileInputStream(fileTwo);
@@ -54,24 +54,24 @@ public class Similarity
 			brTwo = new BufferedReader(new InputStreamReader(inTwo));
 			while ((wordTwo = brTwo.readLine()) != null && wordTwo.indexOf("\t") != -1)
 			{	
-				wordJ = wordTwo.substring(wordTwo.indexOf("\t")+1);			
+				//wordJ = wordTwo.substring(wordTwo.indexOf("\t")+1);			
 				wordTwo = wordTwo.substring(0,wordTwo.indexOf("\t"));
 				
-				j=j+Integer.valueOf(wordJ);	//sum of all the term frequencies in fileTwo
+				//j=j+Integer.valueOf(wordJ);	//sum of all the term frequencies in fileTwo
 						
-				if (union.containsKey(wordTwo))
+				if (union.contains(wordTwo)/*union.containsKey(wordTwo)*/)
 				{
 					intersection.add(wordTwo);
-					Integer WI = (Integer)union.get((String)wordTwo);  
-					Integer WJ = Integer.valueOf(wordJ);	
-					numerator=numerator+ (WI*WJ); 
+					//Integer WI = (Integer)union.get((String)wordTwo);  
+					//Integer WJ = Integer.valueOf(wordJ);	
+					//numerator=numerator+ (WI*WJ); 
 					//sum of dot products of term frequencies of 
 					//terms that exist in fileOne AND fileTwo
 				}
 				else
 				{
-					union.put(wordTwo,Integer.valueOf(wordJ));
-					//union.add(wordTwo);
+					//union.put(wordTwo,Integer.valueOf(wordJ));
+					union.add(wordTwo);
 				}
 			}			
 			
