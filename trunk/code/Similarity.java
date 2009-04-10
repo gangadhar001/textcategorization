@@ -102,7 +102,7 @@ public class Similarity
 	{
 		Similarity s = new Similarity();
 		
-		double v = s.computeSimilarity("C:/Users/User/Desktop/textcategorization/code/../testing_corpus/testing_corpus/alt.atheism/53661","C:/Users/User/Desktop/textcategorization/code/../testing_corpus/testing_corpus/alt.atheism/53661" );
+		double v = s.computeSimilarity("output_53660","./train/output_53660" );
 		System.out.println(v);		
 	}
 
