@@ -1,0 +1,5 @@
+README on how to use StopList Stemmer
+
+java StopListStemmer folder [variant number of filepaths be it relative or absolute]
+
+To output to current folder where StopListStemmer.class resides, assign "" to folder parameter
