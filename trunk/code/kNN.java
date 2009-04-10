@@ -15,6 +15,20 @@ public class kNN {
     public kNN() {
     }
     
+    public static void bubbleSort(double[] x,String[] y) {
+    	int n = x.length;
+    	for (int pass=1; pass < n; pass++) {  // count how many times
+        	// This next loop becomes shorter and shorter
+        	for (int i=0; i < n-pass; i++) {
+            	if (x[i] < x[i+1]) {
+                	// exchange elements
+                	double temp = x[i];  x[i] = x[i+1];  x[i+1] = temp;
+                	String stemp = y[i];  y[i] = y[i+1];  y[i+1] = stemp;
+            	}
+        	}
+    	}
+	}
+
     private static void getFiles(File folder, ArrayList<String> list,Hashtable HT) throws IOException {
         folder.setReadOnly();
         File[] files = folder.listFiles();
@@ -153,32 +167,23 @@ public class kNN {
         	{
         		String testdoc = "./test/"+testoutputDocumentVector.get(i);
         	
-        		String []knn = new String[k];
-     			double []freq = new double[k];
-     		
-     			for(int a=0; a<k; a++)
-     			{
-     				knn[a] = new String("");
-     				freq[a] = 0;
-     			}
+        		String []knn = new String[trainoutputDocumentVector.size()];
+     			double []freq = new double[trainoutputDocumentVector.size()];
      				
-     			
         		for(int j=0;j<trainoutputDocumentVector.size();j++)
         		{
         			String traindoc = "./train/"+trainoutputDocumentVector.get(j);
         			
-        			double v = s.computeSimilarity(testdoc,traindoc);
+        			knn[j] = new String("");
         			
-        			for(int a=0;a<k;a++)
-        			{
-        				if(freq[a]<v)
-        				{
-        					freq[a] = v;
-        					knn[a] = traindoc.substring(15);
-        					break;
-        				}
-        			}
+        			double v = s.computeSimilarity(testdoc,traindoc);
+       
+       				freq[j] = v;
+      			    knn[j] = traindoc.substring(15);
+        			
         		}
+        		
+        		bubbleSort(freq,knn);
         		
         		int []count = new int[10];
         		int []freqOfCategory = new int[10];
@@ -194,7 +199,7 @@ public class kNN {
         			for(int a=0;a<10;a++)
         			{
         				String c = categories[a];
-        				if(category!=null && category.equals(c))
+        				if(category.equals(c))
         				{
         					count[a]++;
         					freqOfCategory[a] += freq[h]; 
@@ -225,7 +230,7 @@ public class kNN {
         		String retrievedcategory=""; 
         		if(pos!=-1)
         			retrievedcategory = categories[pos];
-        		String relevantcategory = (String)HTest.get((String)testingDocumentVector.get(i));
+        		String relevantcategory = (String)HTest.get((String)testdoc.substring(14));
         	
         		System.out.println("Classified as "+retrievedcategory);
   				System.out.println("Test category is "+relevantcategory);
