@@ -77,6 +77,7 @@ public class kNN {
     {
         try
         {
+        	FeatureExtraction fe = new FeatureExtraction();
         	File trainfolder = new File("../training_corpus");
         	File testfolder = new File("../testing_corpus");
         	Hashtable HTrain = new Hashtable();
@@ -109,6 +110,7 @@ public class kNN {
     		}
     		
     		getFiles(trainfolder,trainingDocumentVector,HTrain);
+        	
         	String exec="";
         	
         	for(int i=0;i<trainingDocumentVector.size();i++)
@@ -117,19 +119,18 @@ public class kNN {
         		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
         	}
         	
-            Process p = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
-        	p.waitFor();
-    		
+        	Process p1 = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        	p1.waitFor();
+        		
     		for(int i=0;i<trainoutputDocumentVector.size();i++)
         	{
         		File file = new File(trainoutputDocumentVector.get(i));
         		File fileTodel = new File(trainingDocumentVector.get(i));
-        		file.renameTo(new File(traindir, file.getName())); //moving files
+        		if(!file.renameTo(new File(traindir,file.getName())))
+        			System.out.println(file.getName());
+        		
         		fileTodel.delete();
-        	}// moving the files[i.e output_xxx] to train folder;
-        	 // removing the training files from ./ folder after stemming them  
-    	
-    	    //TODO feature selection to reduce the dimensionality of the training set
+        	} 
     	    
         	getFiles(testfolder,testingDocumentVector,HTest);
         	
@@ -141,8 +142,8 @@ public class kNN {
         		testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
         	}
         	
-            p = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
-        	p.waitFor();
+            Process p2 = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
+        	p2.waitFor();
         	
         	for(int i=0;i<testoutputDocumentVector.size();i++)
         	{
@@ -153,6 +154,14 @@ public class kNN {
         	}// moving the files[i.e output_xxx] to test folder;
         	 // removing the testing files from ./ folder after stemming them    
         	
+        	
+        /*	
+        	for(int i=0;i<trainoutputDocumentVector.size();i++)
+        		fe.extract("./train/"+trainoutputDocumentVector.get(i));
+      
+      		for(int i=0;i<testoutputDocumentVector.size();i++)
+        		fe.extract("./test/"+testoutputDocumentVector.get(i));
+     */
 // Step 2: Performing KNN classification        	
         	
         	Similarity s = new Similarity();
