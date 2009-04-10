@@ -174,13 +174,13 @@ public class kNN {
         		{
         			String traindoc = "./train/"+trainoutputDocumentVector.get(j);
         			
+        			freq[j] = 0;
         			knn[j] = new String("");
         			
         			double v = s.computeSimilarity(testdoc,traindoc);
        
        				freq[j] = v;
       			    knn[j] = traindoc.substring(15);
-        			
         		}
         		
         		bubbleSort(freq,knn);
@@ -189,7 +189,7 @@ public class kNN {
         		int []freqOfCategory = new int[10];
         		String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
         			                   "rec.autos","rec.motorcycles","rec.sport.baseball",
-        			                   "sci.electronis","sci.med","talk.politics.misc",
+        			                   "sci.electronics","sci.med","talk.politics.misc",
         			                   "talk.religion.misc"};
         			                    
         		for(int h=0;h<k;h++)
@@ -207,11 +207,13 @@ public class kNN {
         			}
         		}
         		
-        		/*for(int a=0;a<k;a++)
+        		System.out.println();
+        		for(int a=0;a<k;a++)
         		{
         			System.out.println(knn[a]+" "+freq[a]);
         		}
-        		
+        		System.out.println();
+        		/*
         		for(int a=0;a<10;a++)
         		{
         			System.out.println(categories[a]+" "+count[a]);
