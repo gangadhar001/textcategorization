@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TermSelection
 {
-	public float DFThresh = 2;
+	public float DFThresh = 100;
 	public float IDFThresh = 100;
 
 	public TermSelection()

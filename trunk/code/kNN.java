@@ -88,7 +88,7 @@ public class kNN {
         	for(int i=0;i<trainingDocumentVector.size();i++)
 	        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
 	        		
-        	//ts.filterTerms(trainingDocumentVector, HTrain);
+        	ts.filterTerms(trainingDocumentVector, HTrain);
         	
 	        if(!traindir.exists())
 	        {
@@ -187,9 +187,7 @@ public class kNN {
         	System.out.println();
         	
         	for(int a=0;a<k;a++)
-        	{
         		System.out.println(knn[a]+" "+freq[a]);
-        	}
         	
         	System.out.println();
         		
@@ -233,6 +231,95 @@ public class kNN {
        	System.out.println("Finished classifying");
 
     }
+    
+    public String classify(String filetobeClassified)
+    {
+    	// Step 2: Performing KNN classification        	
+        	
+        Similarity s = new Similarity();
+        
+     	int k=3;
+		
+		String [] array = null;	
+        array = filetobeClassified.split("\\\\");
+    	String filename = array[array.length - 1];
+    	
+    	try
+    	{
+    		Process p1 = Runtime.getRuntime().exec("java StopListStemmer \"\" " + filetobeClassified);
+			p1.waitFor();
+    	}
+    	catch(Exception e){}
+    	
+        String testdoc = "output_" + filename;
+        	
+        String []knn = new String[trainoutputDocumentVector.size()];
+     	double []freq = new double[trainoutputDocumentVector.size()];
+     			
+        for(int j=0;j<trainoutputDocumentVector.size();j++)
+        {
+        	String traindoc = "./train/"+trainoutputDocumentVector.get(j);
+        			
+        	freq[j] = 0;
+        	knn[j] = new String("");			
+        	double v = s.computeSimilarity(testdoc,traindoc);
+       		freq[j] = v;
+      		knn[j] = traindoc.substring(15);
+        }	
+        		
+        bubbleSort(freq,knn);
+        	
+        int []count = new int[10];
+        int []freqOfCategory = new int[10];
+        String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
+        			           "rec.autos","rec.motorcycles","rec.sport.baseball",
+        			           "sci.electronics","sci.med","talk.politics.misc",
+        			           "talk.religion.misc"};
+        			                    
+        for(int h=0;h<k;h++)
+        {
+        	String category = (String)HTrain.get((String)knn[h]);
+        			
+        	for(int a=0;a<10;a++)
+        	{
+        		String c = categories[a];
+        		if(category.equals(c))
+        		{
+        			count[a]++;
+        			freqOfCategory[a] += freq[h]; 
+        		}//computing the total frequency of each category
+        	}
+        }
+        		
+        System.out.println();
+        	
+        for(int a=0;a<k;a++)
+        	System.out.println(knn[a]+" "+freq[a]);
+        
+        System.out.println();
+        		
+        int max = -1;
+        int pos = -1;
+        			
+        for(int a=0;a<10;a++)
+        	if(count[a]> max)
+        	{
+        		max = freqOfCategory[a];
+        		pos = a;
+        	}
+        			
+        String retrievedcategory=""; 
+        if(pos!=-1)
+        	retrievedcategory = categories[pos];
+  
+        String relevantcategory = (String)HTest.get((String)filename);
+        System.out.println(filename);
+        System.out.println(filename+" classified as "+retrievedcategory);
+  		System.out.println("Test category is "+relevantcategory);
+  			     	
+        return retrievedcategory;
+    }
+    
     public static void main(String[] args)
     {
         kNN knn = new kNN();
