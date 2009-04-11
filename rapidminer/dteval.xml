@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="MacRoman"?>
+<process version="4.4">
+
+  <operator name="Root" class="Process" expanded="yes">
+      <description text="#ylt#h3#ygt#Learning and storing a text classifier#ylt#/h3#ygt##ylt#p#ygt#This experiments shows how to lear and store a model o a set of texts.#ylt#/p#ygt##ylt#p#ygt#Most important to notice here is, that the list of words used for learning must be stored, if the model should be applied to new texts.  This will ensurethat new texts will be represented exactly in the same way then then the texts used during training. #ylt#/p#ygt#"/>
+      <parameter key="logverbosity"	value="init"/>
+      <parameter key="random_seed"	value="2001"/>
+      <parameter key="encoding"	value="SYSTEM"/>
+      <operator name="TextInput" class="TextInput" expanded="yes">
+          <list key="texts">
+            <parameter key="alt.atheism"	value="data/training_set/alt.atheism"/>
+            <parameter key="comp.windows.x"	value="data/training_set/comp.windows.x"/>
+            <parameter key="misc.forsale"	value="data/training_set/misc.forsale"/>
+            <parameter key="rec.autos"	value="data/training_set/rec.autos"/>
+            <parameter key="rec.motorcycles"	value="data/training_set/rec.motorcycles"/>
+            <parameter key="rec.sport.baseball"	value="data/training_set/rec.sport.baseball"/>
+            <parameter key="sci.electronics"	value="data/training_set/sci.electronics"/>
+            <parameter key="sci.med"	value="data/training_set/sci.med"/>
+            <parameter key="talk.politics.misc"	value="data/training_set/talk.politics.misc"/>
+            <parameter key="talk.religion.misc"	value="data/training_set/talk.religion.misc"/>
+          </list>
+          <parameter key="default_content_type"	value=""/>
+          <parameter key="default_content_encoding"	value=""/>
+          <parameter key="default_content_language"	value="english"/>
+          <parameter key="prune_below"	value="3"/>
+          <parameter key="prune_above"	value="-1"/>
+          <parameter key="vector_creation"	value="TFIDF"/>
+          <parameter key="use_content_attributes"	value="false"/>
+          <parameter key="use_given_word_list"	value="false"/>
+          <parameter key="return_word_list"	value="false"/>
+          <parameter key="output_word_list"	value="data/training_set_words.list"/>
+          <parameter key="id_attribute_type"	value="number"/>
+          <list key="namespaces">
+          </list>
+          <parameter key="text_query"	value="\n\n([\s\S]+) $1"/>
+          <parameter key="create_text_visualizer"	value="false"/>
+          <parameter key="on_the_fly_pruning"	value="-1"/>
+          <parameter key="extend_exampleset"	value="false"/>
+          <operator name="StringTokenizer" class="StringTokenizer">
+          </operator>
+          <operator name="EnglishStopwordFilter" class="EnglishStopwordFilter">
+          </operator>
+          <operator name="TokenLengthFilter" class="TokenLengthFilter">
+              <parameter key="min_chars"	value="3"/>
+              <parameter key="max_chars"	value="2147483647"/>
+          </operator>
+          <operator name="PorterStemmer" class="PorterStemmer">
+          </operator>
+      </operator>
+      <operator name="OperatorChain" class="OperatorChain" expanded="yes">
+          <operator name="DecisionTree" class="DecisionTree" breakpoints="before">
+              <parameter key="keep_example_set"	value="false"/>
+              <parameter key="criterion"	value="gain_ratio"/>
+              <parameter key="minimal_size_for_split"	value="4"/>
+              <parameter key="minimal_leaf_size"	value="2"/>
+              <parameter key="minimal_gain"	value="0.1"/>
+              <parameter key="maximal_depth"	value="20"/>
+              <parameter key="confidence"	value="0.25"/>
+              <parameter key="number_of_prepruning_alternatives"	value="3"/>
+              <parameter key="no_pre_pruning"	value="false"/>
+              <parameter key="no_pruning"	value="false"/>
+          </operator>
+          <operator name="Testing Set" class="TextInput" breakpoints="before" expanded="yes">
+              <list key="texts">
+                <parameter key="alt.atheism"	value="data/testing_set/alt.atheism"/>
+                <parameter key="comp.windows.x"	value="data/testing_set/comp.windows.x"/>
+                <parameter key="misc.forsale"	value="data/testing_set/misc.forsale"/>
+                <parameter key="rec.autos"	value="data/testing_set/rec.autos"/>
+                <parameter key="rec.motorcycles"	value="data/testing_set/rec.motorcycles"/>
+                <parameter key="rec.sport.baseball"	value="data/testing_set/rec.sport.baseball"/>
+                <parameter key="sci.electronics"	value="data/testing_set/sci.electronics"/>
+                <parameter key="sci.med"	value="data/testing_set/sci.med"/>
+                <parameter key="talk.politics.misc"	value="data/testing_set/talk.politics.misc"/>
+                <parameter key="talk.religion.misc"	value="data/testing_set/talk.religion.misc"/>
+              </list>
+              <parameter key="default_content_type"	value=""/>
+              <parameter key="default_content_encoding"	value=""/>
+              <parameter key="default_content_language"	value="english"/>
+              <parameter key="prune_below"	value="-1"/>
+              <parameter key="prune_above"	value="-1"/>
+              <parameter key="vector_creation"	value="TFIDF"/>
+              <parameter key="use_content_attributes"	value="false"/>
+              <parameter key="use_given_word_list"	value="false"/>
+              <parameter key="input_word_list"	value="data/training_set_words.list"/>
+              <parameter key="return_word_list"	value="false"/>
+              <parameter key="id_attribute_type"	value="number"/>
+              <list key="namespaces">
+              </list>
+              <parameter key="create_text_visualizer"	value="false"/>
+              <parameter key="on_the_fly_pruning"	value="-1"/>
+              <parameter key="extend_exampleset"	value="false"/>
+              <operator name="StringTokenizer (2)" class="StringTokenizer">
+              </operator>
+              <operator name="EnglishStopwordFilter (2)" class="EnglishStopwordFilter">
+              </operator>
+              <operator name="TokenLengthFilter (2)" class="TokenLengthFilter">
+                  <parameter key="min_chars"	value="3"/>
+                  <parameter key="max_chars"	value="2147483647"/>
+              </operator>
+              <operator name="PorterStemmer (2)" class="PorterStemmer">
+              </operator>
+          </operator>
+          <operator name="ModelApplier" class="ModelApplier" breakpoints="before">
+              <parameter key="keep_model"	value="false"/>
+              <list key="application_parameters">
+              </list>
+              <parameter key="create_view"	value="false"/>
+          </operator>
+          <operator name="ClassificationPerformance" class="ClassificationPerformance">
+              <parameter key="keep_example_set"	value="false"/>
+              <parameter key="main_criterion"	value="first"/>
+              <parameter key="accuracy"	value="true"/>
+              <parameter key="classification_error"	value="true"/>
+              <parameter key="kappa"	value="false"/>
+              <parameter key="weighted_mean_recall"	value="false"/>
+              <parameter key="weighted_mean_precision"	value="false"/>
+              <parameter key="spearman_rho"	value="false"/>
+              <parameter key="kendall_tau"	value="false"/>
+              <parameter key="absolute_error"	value="false"/>
+              <parameter key="relative_error"	value="false"/>
+              <parameter key="relative_error_lenient"	value="false"/>
+              <parameter key="relative_error_strict"	value="false"/>
+              <parameter key="normalized_absolute_error"	value="false"/>
+              <parameter key="root_mean_squared_error"	value="false"/>
+              <parameter key="root_relative_squared_error"	value="false"/>
+              <parameter key="squared_error"	value="false"/>
+              <parameter key="correlation"	value="false"/>
+              <parameter key="squared_correlation"	value="false"/>
+              <parameter key="cross-entropy"	value="false"/>
+              <parameter key="margin"	value="false"/>
+              <parameter key="soft_margin_loss"	value="false"/>
+              <parameter key="logistic_loss"	value="false"/>
+              <parameter key="skip_undefined_labels"	value="true"/>
+              <parameter key="use_example_weights"	value="true"/>
+              <list key="class_weights">
+              </list>
+          </operator>
+      </operator>
+  </operator>
+
+</process>
