@@ -429,7 +429,7 @@ class Stemmer
             break;
 
         case 115: // 's'
-            if(!ends("ism"))
+            if(!ends("ism") && !ends("se"))
                 return;
             break;
 
