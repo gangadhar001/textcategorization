@@ -34,7 +34,7 @@ public class kNN {
         File[] files = folder.listFiles();
         for(int j = 0; j < files.length; j++) {
             if(files[j].isDirectory())
-                getFiles(files[j], list, HT);
+                getFiles(files[j], list,address, HT);
             else
             {
             	if(files[j].getAbsolutePath().indexOf("svn")==-1)
@@ -47,8 +47,8 @@ public class kNN {
     				String filename = array[arrayLength - 1];
     				String filecategory = array[arrayLength - 2];
     				
-    				//copyFile(files[j],new File("./"+filename));
             		list.add(filename);
+            		address.add(path);
             		
             		HT.put(filename,filecategory);
             	}
@@ -56,27 +56,13 @@ public class kNN {
             	
         }
     }//recursive traversing of files; does copying of files and hashing of filename to file category
-
-    public static void copyFile(File srcFile, File destFile) throws IOException
-	{
-        InputStream oInStream = new FileInputStream(srcFile);
-        OutputStream oOutStream = new FileOutputStream(destFile);
-
-        // Transfer bytes from in to out
-        byte[] oBytes = new byte[1024];
-        int nLength;
-        BufferedInputStream oBuffInputStream = new BufferedInputStream( oInStream );
-        while ((nLength = oBuffInputStream.read(oBytes)) > 0)
-                oOutStream.write(oBytes, 0, nLength);
-        
-        oInStream.close();
-        oOutStream.close();
-	}// to copy files from 1 destination to another
      
     public static void main(String[] args)
     {
         try
         {
+        	String train = "./train ";
+        	String test = "./test ";
         	FeatureExtraction fe = new FeatureExtraction();
         	File trainfolder = new File("../training_corpus");
         	File testfolder = new File("../testing_corpus");
@@ -90,78 +76,53 @@ public class kNN {
         	
         	ArrayList<String> trainingDocumentVector = new ArrayList<String>();
         	ArrayList<String> testingDocumentVector = new ArrayList<String>();
+        	ArrayList<String> trainingDocumentVector_address = new ArrayList<String>();
+        	ArrayList<String> testingDocumentVector_address = new ArrayList<String>();
         	ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
         	ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
         
 // Step 1: Computing the training and testing set
         
-        	File traindir = new File("train");
+        	File traindir = new File(train);
         		
         	boolean success = traindir.mkdir();
    			if (success) {
       			System.out.println("Training directory created");
     		}
     		
-    		File testdir = new File("test");
+    		File testdir = new File(test);
         		
         	success = testdir.mkdir();
    			if (success) {
       			System.out.println("Testing directory created");
     		}
     		
-    		getFiles(trainfolder,trainingDocumentVector,HTrain);
-        	
-        	String exec="";
-        	
+    		getFiles(trainfolder,trainingDocumentVector,trainingDocumentVector_address,HTrain);
+        
         	for(int i=0;i<trainingDocumentVector.size();i++)
         	{
-        		exec=exec+trainingDocumentVector.get(i)+" "; 	
+        		//exec=exec+trainingDocumentVector_address+" "; 	
         		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
+        		Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
+        	    p1.waitFor();
         	}
         	
-        	Process p1 = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
-        	p1.waitFor();
-        		
-    		for(int i=0;i<trainoutputDocumentVector.size();i++)
-        	{
-        		File file = new File(trainoutputDocumentVector.get(i));
-        		File fileTodel = new File(trainingDocumentVector.get(i));
-        		if(!file.renameTo(new File(traindir,file.getName())))
-        			System.out.println(file.getName());
-        		
-        		fileTodel.delete();
-        	} 
-    	    
-        	getFiles(testfolder,testingDocumentVector,HTest);
-        	
-        	exec="";
-      
+        	getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);
+        
         	for(int i=0;i<testingDocumentVector.size();i++)
         	{
-        		exec=exec+testingDocumentVector.get(i)+" "; 	
         		testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
+        		Process p2 = Runtime.getRuntime().exec("java StopListStemmer "+test+testingDocumentVector_address.get(i));
+        		p2.waitFor();
         	}
-        	
-            Process p2 = Runtime.getRuntime().exec("java -jar stemmer.jar "+exec);
-        	p2.waitFor();
-        	
-        	for(int i=0;i<testoutputDocumentVector.size();i++)
-        	{
-        		File file = new File(testoutputDocumentVector.get(i));
-        		File fileTodel = new File(testingDocumentVector.get(i));
-        		file.renameTo(new File(testdir, file.getName()));
-        		fileTodel.delete();
-        	}// moving the files[i.e output_xxx] to test folder;
-        	 // removing the testing files from ./ folder after stemming them    
-        	
-        	
+       
         /*	
         	for(int i=0;i<trainoutputDocumentVector.size();i++)
         		fe.extract("./train/"+trainoutputDocumentVector.get(i));
       
       		for(int i=0;i<testoutputDocumentVector.size();i++)
         		fe.extract("./test/"+testoutputDocumentVector.get(i));
-     */
+        */
 // Step 2: Performing KNN classification        	
         	
         	Similarity s = new Similarity();
@@ -245,7 +206,8 @@ public class kNN {
         	
         		System.out.println("Classified as "+retrievedcategory);
   				System.out.println("Test category is "+relevantcategory);
-  			     		
+  			     if(relevantcategory.equals("concats"))
+  			     	Thread.sleep(5000);		
         		if(pos==-1)
         			EvaluationMatrix[1][0]++;
         		else
