@@ -1,0 +1,1219 @@
+Xref: cantaloupe.srv.cs.cmu.edu misc.consumers:67779 sci.med:58992 rec.food.cooking:65335 sci.environment:29535
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!rutgers!uwm.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!agate!dog.ee.lbl.gov!network.ucsd.edu!sdcc12!jeeves!wsun
+From: wsun@jeeves.ucsd.edu (Fiberman)
+Newsgroups: misc.consumers,sci.med,rec.food.cooking,sci.environment
+Subject: Re: Is MSG sensitivity superstition?
+Keywords: MSG, Glu
+Message-ID: <48183@sdcc12.ucsd.edu>
+Date: 19 Apr 93 22:50:48 GMT
+References: <1993Apr17.184435.19725@cunews.carleton.ca> <1993Apr17.202011.21443@spdcc.com> <1993Apr19.185206.25218@cunews.carleton.ca>
+Sender: news@sdcc12.ucsd.edu
+Followup-To: misc.consumers
+Organization: University of California, San Diego
+Lines: 5
+Nntp-Posting-Host: jeeves.ucsd.edu
+
+I have heard that epileptic patients go into seizures if they
+eat anything with MSG added.  This may have something to do with
+the excitotoxicity of neurons.
+
+-fm
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!zaphod.mps.ohio-state.edu!ub!csn!boulder!boulder!menon
+From: menon@boulder.Colorado.EDU (Ravi or Deantha Menon)
+Newsgroups: sci.med
+Subject: Re: eye dominance
+Message-ID: <menon.735260022@beagle>
+Date: 19 Apr 93 22:53:42 GMT
+References: <1993Apr12.231605.5991@cnsvax.uwec.edu>
+Sender: news@colorado.edu (The Daily Planet)
+Organization: University of Colorado, Boulder
+Lines: 38
+Nntp-Posting-Host: beagle.colorado.edu
+
+nyeda@cnsvax.uwec.edu (David Nye) writes:
+
+>[reply to rsilver@world.std.com (Richard Silver)]
+> 
+>>Is there a right-eye dominance (eyedness?) as there is an overall
+>>right-handedness in the population? I mean do most people require less
+>>lens corrections for the one eye than the other? If so, what kinds of
+>>percentages can be attached to this?  Thanks.
+> 
+>There is an "eyedness" analogous to handedness but it has nothing to do
+>with refractive error.  To see whether you are right or left eyed, roll
+>up a sheet of paper into a tube and hold it up to either eye like a
+>telescope.  The eye that you feel more comfortable putting it up to is
+>your dominant eye.  Refractive error is often different in the two eyes
+>but has no correlation with handedness.
+> 
+>David Nye (nyeda@cnsvax.uwec.edu).  Midelfort Clinic, Eau Claire WI
+>This is patently absurd; but whoever wishes to become a philosopher
+>must learn not to be frightened by absurdities. -- Bertrand Russell
+
+
+What do you mean "more comfortable putting it up to."  That seems a bit
+hard to evaluate.  At least for me it is.  
+
+Stare straight Point with both hands together and clasp so that only the
+pointer fingers are pointing straight forward to a a spot on the wall about
+eight feet away.  First stare at the spot with both eyes open.  Now
+close your left eye.  Now open your left eye.  Now close your right eye.
+now open your right eye.
+
+If the image jumped more when you closed your right eye, you are right
+eye dominant.
+
+If the image jumped more when you closed your left eye, you are left eye
+dominant.
+
+
+Deantha
+Xref: cantaloupe.srv.cs.cmu.edu sci.med:58994 misc.consumers:67780
+Newsgroups: sci.med,misc.consumers
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!pacific.mps.ohio-state.edu!zaphod.mps.ohio-state.edu!cs.utexas.edu!asuvax!ennews!mcdphx!schbbs!mothost!white!sapphire.rtsg.mot.com!lundby
+From: lundby@rtsg.mot.com (Walter F. Lundby)
+Subject: Re: Is MSG sensitivity superstition?
+Message-ID: <1993Apr19.204855.10818@rtsg.mot.com>
+Sender: news@rtsg.mot.com
+Nntp-Posting-Host: accord2
+Organization: Motorola Inc., Cellular Infrastructure Group
+References: <13APR199308003715@delphi.gsfc.nasa.gov> <34507@oasys.dt.navy.mil>
+Distribution: na
+Date: Mon, 19 Apr 1993 20:48:55 GMT
+Lines: 29
+
+As nobody in the food industry has even bothered to address my previous
+question "WHY DO YOU NEED TO PUT MSG IN ALMOST EVERY FOOD?" I must assume
+that my wife's answer is closer to the truth than I hoped it was.
+
+She believes that MSG is added to food to cause people to eat more of it
+and not quit when they shoud be sated.  To put it a different way, she 
+believes that for some people MSG causes them to act toward food like an addict.  
+(Eat all the chips, chow down on several packages of noodle soup .... you get the
+idea! }  IF she is right, then the moral and ethical standards of the 
+food, chemical and regulatory groups need to be addressed!!!  Can MSG
+be considered a conditioning substance (not addictive but sort of habit
+forming) ?
+
+This brings up a side question of mine.   I have noticed that cats (my
+children's and my parent's) seem to fixate on a particular brand of pet
+food. The cat will eat any product within one brand and not any other
+brand.  I have wondered if this is not a case of preference, but, some
+sort of chemical training or addiction. My questions, for the net, are:
+Does the FDA regulate the contents of pet food?  Is it allowed for pet
+food to contain addictive or conditioning substances?  Is MSG put in 
+pet food?
+
+-----------------------------------
+I speak for myself and not Motorola
+-----------------------------------
+ 
+-- 
+Walter Lundby
+
+Xref: cantaloupe.srv.cs.cmu.edu sci.energy:15598 sci.image.processing:2662 sci.anthropology:2548 alt.sci.physics.new-theories:3326 sci.skeptic:43201 sci.med:58995 alt.alien.visitors:15485
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!transfer.stratus.com!sw.stratus.com!tarl
+From: tarl@sw.stratus.com (Tarl Neustaedter)
+Newsgroups: sci.energy,sci.image.processing,sci.anthropology,alt.sci.physics.new-theories,sci.skeptic,sci.med,alt.alien.visitors
+Subject: Re: Krillean Photography
+Date: 20 Apr 1993 00:06:38 GMT
+Organization: Stratus Computer, Inc.
+Lines: 14
+Distribution: world
+Message-ID: <1qveqe$1sf@transfer.stratus.com>
+References: <1993Apr19.205615.1013@unlv.edu>
+NNTP-Posting-Host: coyoacan.sw.stratus.com
+
+In article <1993Apr19.205615.1013@unlv.edu>, todamhyp@charles.unlv.edu (Brian M. Huey) writes:
+> I think that's the correct spelling..
+
+The proper spelling is Kirlian. It was an effect discoverd by
+S. Kirlian, a soviet film developer in 1939.
+
+As I recall, the coronas visible are ascribed to static discharges
+and chemical reactions between the organic material and the silver
+halides in the films.
+
+-- 
+         Tarl Neustaedter       Stratus Computer
+       	 tarl@sw.stratus.com    Marlboro, Mass.
+Disclaimer: My employer is not responsible for my opinions.
+Newsgroups: sci.med
+Path: cantaloupe.srv.cs.cmu.edu!rochester!rocksanne!leisner
+From: leisner@wrc.xerox.com (Marty Leisner 71348 )
+Subject: Intravenous antibiotics
+Message-ID: <1993Apr19.144358.28376@spectrum.xerox.com>
+Sender: news@spectrum.xerox.com
+Reply-To: leisner@eso.mc.xerox.com
+Organization: Xerox
+X-Newsreader: TIN [version 1.1 PL9]
+Date: Mon, 19 Apr 1993 14:43:58 GMT
+
+I recently had a case of shingles and my doctors wanted to give me
+intravenous Acyclovir.
+
+It was a pain finding IV sites in my arms...can I have some facts about
+how advantageous it is to give intravenous antibiotics rather than oral?
+
+marty
+Xref: cantaloupe.srv.cs.cmu.edu rec.food.cooking:65336 sci.med:58997
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!agate!zabriskie.berkeley.edu!spp
+From: spp@zabriskie.berkeley.edu (Steve Pope)
+Newsgroups: rec.food.cooking,sci.med
+Subject: Re: Is MSG sensitivity superstition?
+Date: 20 Apr 1993 00:36:45 GMT
+Organization: U.C. Berkeley -- ERL
+Lines: 17
+Message-ID: <1qvgit$sbi@agate.berkeley.edu>
+References: <memo.137121@cix.compulink.co.uk> <34513@oasys.dt.navy.mil> <C5qzJM.3wK@news.cso.uiuc.edu>
+NNTP-Posting-Host: zion.berkeley.edu
+
+Betty Harvey writes,
+
+> I am not a researcher or a medical person but it amazes me that 
+> when they can't find a scientific or a known fact they automatically 
+> assume that the reaction is psychological.  It is mind boggling.
+
+This, simply stated, is a result of the bankrupt ethics in
+the healthcare and scientific medicine industries.
+
+America is fed up with the massive waste and fraud that is costing
+us 15% of our GNP to support these industries, while delivering 
+marginal health care to the community.
+
+Unfortunately, the "Clinton Plan", in whatever form it
+takes, will probably cost us an even greater sum.  Bleah.
+
+Steve
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!gatech!howland.reston.ans.net!noc.near.net!das-news.harvard.edu!husc-news.harvard.edu!husc.harvard.edu!ng4
+Newsgroups: sci.med
+Subject: What are knots?
+Message-ID: <ng4.735268435@husc.harvard.edu>
+From: ng4@husc11.harvard.edu (Ho Leung Ng)
+Date: 20 Apr 93 01:13:55 GMT
+Nntp-Posting-Host: husc11.harvard.edu
+Lines: 8
+
+    What exactly are knots, those sore, tight spots in your muscles?
+In certain kinds of massage, people try and break up these knots; it this
+really helpful?
+
+
+Ho Leung Ng
+ng4@husc.harvard.edu
+
+Xref: cantaloupe.srv.cs.cmu.edu rec.food.cooking:65349 sci.med:59007
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!cs.utexas.edu!not-for-mail
+From: kiran@village.com (Kiran Wagle)
+Newsgroups: rec.food.cooking,sci.med
+Subject: Re: Barbecued foods and health risk
+Date: 20 Apr 1993 00:09:08 -0500
+Organization: the Syllabub Sea
+Lines: 55
+Sender: daemon@cs.utexas.edu
+Message-ID: <9304200509.AA29429@deepthought.cs.utexas.edu>
+NNTP-Posting-Host: cs.utexas.edu
+
+Mark McWiggins <markmc@halcyon.com> reminds us:
+
+MM> Also, don't forget that it's better for your health 
+MM> to enjoy your steak than to resent your sprouts ...
+
+YES!
+
+I call this notion "psychological health food" and, in fact, have
+determined that the Four Food Groups are Ice Cream, Pizza, Barbecue, and
+Chocolate.  Ideally, every meal should contain something from at least two
+of these four groups.  Food DOES serve functions other than nutrition, and
+one of them is keeping the organism happy and thus aiding its immune
+system. 
+
+And I didn't spend a million bucks commissioning a study that told me to
+redraw my silly little pyramid in different colors and with a friendlier
+typeface, either.  (Ref: Consumer Reports' back page--one of the best
+things ever to turn up there.)
+
+Rich Young <young@serum.kodak.com> writes of one of six impossible things:
+RY> to consume unrealistically large quantities of barbecued meat at a time."
+
+Donald Mackie <Donald_Mackie@med.umich.edu> confesses:
+DM> I have to confess that this is one of my few unfulfilled ambitions.
+DM> No matter how much I eat, it still seems realistic.
+
+Yeah, I want to try one of those 42oz steaks (cooked over applewood) at
+Wally's Wolf Lodge Inn in Coeur d'Alene.  That seems quite
+unrealistic--unrealistically SMALL.  And a few slabs of ribs from the East
+Texas Smoker (RIP, again) in Louisville is not at all unrealistic either.  
+
+What say we have a rec.food.cooking dinner at the Moonlite Bar-B-Que Inn in
+Owensboro? (It's all you can eat including lamb ribs & mutton for about
+$10.)  We could invite Julie Kangas as guest of honor and see if the
+Moonlite's Very Hot Sauce is too hot for her.  (It IS too hot for me, and I
+don't say that very often.)  And she could bring ice cream with crushed
+dried chiltepins for dessert.  
+
+And we could see if there IS such a thing as an "unrealistically large
+quantity" of barbecue--the owner of the Moonlite estimates that the
+Owensboro restaurants serve a hundred thousand pounds of meat a week in the
+summer, and forty thousand in the winter--in a town of 50 000 or so.  Two
+pounds per person per week?   Again, sure sounds unrealistic to me--thats
+just too meager to be healthy.
+
+~ Kiran (Now a two-pound slab of ribs a day, THAT's realistic.)
+
+-- 
+FUZZY PINK NIVEN'S LAW:  Never Waste Calories.  Potato chips, candy,
+whipped cream, or hot fudge sundae consumption may involve you, your
+dietician, your wardrobe, and other factors.  But Fuzzy Pink's Law implies:
+Don't eat soggy potato chips, or cheap candy, or fake whipped cream, or an
+inferior hot fudge sundae.
+                Larry Niven, NIVEN'S LAWS, N-SPACE
+
+Newsgroups: sci.med
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!emory!athena!aisun3.ai.uga.edu!mcovingt
+From: mcovingt@aisun3.ai.uga.edu (Michael Covington)
+Subject: Re: Frequent nosebleeds
+Message-ID: <C5rnK0.1GL@athena.cs.uga.edu>
+Sender: usenet@athena.cs.uga.edu
+Nntp-Posting-Host: aisun3.ai.uga.edu
+Organization: AI Programs, University of Georgia, Athens
+References: <1993Apr17.195202.28921@freenet.carleton.ca> <9304191126.AA21125@seastar.seashell>
+Date: Tue, 20 Apr 1993 05:07:12 GMT
+Lines: 17
+
+In article <9304191126.AA21125@seastar.seashell> bebmza@sru001.chvpkh.chevron.com (Beverly M. Zalan) writes:
+>
+>My 6 year son is so plagued.  Lots of vaseline up his nose each night seems 
+>to keep it under control.  But let him get bopped there, and he'll recur for 
+>days!  Also allergies, colds, dry air all seem to contribute.  But again, the 
+>vaseline, or A&D ointment, or neosporin all seem to keep them from recurring.
+>
+If you can get it, you might want to try a Canadian over-the-counter product
+called Secaris, which is a water-soluble gel.  Compared to Vaseline or other
+greasy ointments, Secaris seems more compatible with the moisture that's
+already there.
+
+-- 
+:-  Michael A. Covington, Associate Research Scientist        :    *****
+:-  Artificial Intelligence Programs      mcovingt@ai.uga.edu :  *********
+:-  The University of Georgia              phone 706 542-0358 :   *  *  *
+:-  Athens, Georgia 30602-7415 U.S.A.     amateur radio N4TMI :  ** *** **  <><
+Xref: cantaloupe.srv.cs.cmu.edu rec.food.cooking:65353 sci.med:59009
+Newsgroups: rec.food.cooking,sci.med
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!zaphod.mps.ohio-state.edu!darwin.sura.net!opusc!usceast!myers
+From: myers@cs.scarolina.edu (Daniel Myers)
+Subject: Re: Is MSG sensitivity superstition?
+Message-ID: <myers.735287742@peach.cs.scarolina.edu>
+Sender: usenet@usceast.cs.scarolina.edu (USENET News System)
+Organization: USC  Department of Computer Science
+References: <memo.137121@cix.compulink.co.uk> <34513@oasys.dt.navy.mil> <C5qzJM.3wK@news.cso.uiuc.edu> <1qvgit$sbi@agate.berkeley.edu>
+Date: 20 Apr 93 06:35:42 GMT
+Lines: 39
+
+Frequently of late, I have been reacting to something added to
+restaurant foods.  What happens is that the inside of my throat starts
+to feel "puffy", like I have a cold, and also at times the inside of my
+mouth (especially the tongue) and lips also feel puffy.
+
+The situations around these symptoms almost always involve restaurants
+(usually chinese), the most notable cases:  a cheap chinese fast food
+chain, a japanese steak house (I had the steak), and another chinese
+fast food chain where I SAW the cook put about a tablespoon or two of
+what looked like sugar or salt into my fried rice.
+
+I am under the impression that MSG "enhances" flavor by causing the
+taste buds to swell.  If this is correct, I do not find it unreasonable
+to assume that high doses of MSG can cause other mouth tissues to swell.
+
+Also, as the many of the occurances (including two of the above)
+involved beef, and as beef is frequently tenderized with MSG, this is
+what I suspect as being the cause.
+
+I wouldn't be at all surprised if toxicity studies of MSG in animals
+showed it as being harmless, as it would be very startling to hear a lab
+rat or rhesus monkey complain about their throats feeling funny.
+
+Anyone who wishes to explain how the majority of food additives are
+totally harmless is welcome to e-mail me with the results of any studied
+they know of.  I will probably respond to them however with a reminder
+of how long it took to prove that smoking causes cancer (which the
+tobacco companies still deny).
+
+- DM
+
+(If I sound grumpy, it's because I had beef with broccoli for lunch
+today, and now it hurts to swallow)
+
+--
+------------------------------------------------------------------------------
+Dan Myers (Madman)		| If the creator had intended us to walk 
+myers@usceast.cs.scarolina.edu	| upright, he wouldn't have given us knuckles
+------------------------------------------------------------------------------
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!zaphod.mps.ohio-state.edu!darwin.sura.net!news-feed-1.peachnet.edu!umn.edu!csus.edu!nic.csu.net!eis.CalState.EDU!chinsz
+Newsgroups: sci.med
+Subject: Origin of Morphine
+Message-ID: <C5r69D.G01@eis.calstate.edu>
+From: chinsz@eis.calstate.edu (Christopher Hinsz)
+Date: Mon, 19 Apr 1993 22:53:32 GMT
+Organization: Calif State Univ/Electronic Information Services
+Lines: 20
+
+	I am sorry to once again bother those of you on this newsgroup. 
+If you have any suggestions as to where I might find out about the subject
+of this letter (the origin of Morphine, ie. who first isolsted it, and why
+he/she attempted such an experiment).  Once agian any suggestion would be
+appreciated.
+	CSH
+p.s. My instructer insists that I get 4 rescources from this newsgroup, so
+please send me and info you think may be helpful.  Facts that you know,
+but don't know what book they're from are ok.
+ATTENTION: If you do NOT like seeing letters such as this one on your
+newsgroup direct all complaints to my instructor at <bshayler@eis.CalStat.Edu>
+
+
+--
+ "Kilimanjaro is a pretty tricky climb. Most of it's up, until you reach
+the very, very top, and then it tends to slope away rather sharply."
+					Sir George Head, OBE (JC)
+------------------------------------------------------------------------------
+LOGIC: "The point is frozen, the beast is dead, what is the difference?"
+					Gavin Millarrrrrrrrrr (JC)
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!zaphod.mps.ohio-state.edu!saimiri.primate.wisc.edu!zazen!uwec.edu!nyeda
+From: nyeda@cnsvax.uwec.edu (David Nye)
+Newsgroups: sci.med
+Subject: Re: OB-GYN residency
+Message-ID: <1993Apr20.004158.6122@cnsvax.uwec.edu>
+Date: 20 Apr 93 00:41:58 -0600
+Organization: University of Wisconsin Eau Claire
+Lines: 13
+
+[reply to geb@cs.pitt.edu (Gordon Banks)]
+ 
+>>I believe it is illegal for a residency to discriminate against FMGs.
+ 
+>Is that true?  I know some that won't even interview FMGs.
+ 
+I think a case could be made that this is discriminatory, particularly
+if an applicant had good board scores and recommendations but wasn't
+offered an interview, but I don't know if it has ever gone to court.
+ 
+David Nye (nyeda@cnsvax.uwec.edu).  Midelfort Clinic, Eau Claire WI
+This is patently absurd; but whoever wishes to become a philosopher
+must learn not to be frightened by absurdities. -- Bertrand Russell
+Xref: cantaloupe.srv.cs.cmu.edu sci.energy:15612 sci.image.processing:2675 sci.anthropology:2553 alt.sci.physics.new-theories:3330 sci.skeptic:43228 sci.med:59019 alt.alien.visitors:15497
+Newsgroups: sci.energy,sci.image.processing,sci.anthropology,alt.sci.physics.new-theories,sci.skeptic,sci.med,alt.alien.visitors
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!darwin.sura.net!haven.umd.edu!uunet!mcsun!julienas!ircam!francis
+From: francis@ircam.fr (Joseph Francis)
+Subject: Re: Krillean Photography
+Message-ID: <1993Apr20.125920.15005@ircam.fr>
+Organization: Inst. de Recherche et Coordination Acoustique/Musique, Paris
+References: <1993Apr19.205615.1013@unlv.edu>
+Date: Tue, 20 Apr 93 12:59:20 GMT
+Lines: 50
+
+In article <1993Apr19.205615.1013@unlv.edu> todamhyp@charles.unlv.edu (Brian M. Huey) writes:
+>I think that's the correct spelling..
+
+Crullerian.
+
+>	I am looking for any information/supplies that will allow
+>do-it-yourselfers to take Krillean Pictures. I'm thinking
+>that education suppliers for schools might have a appartus for
+>sale, but I don't know any of the companies. Any info is greatly
+>appreciated.
+
+Crullerian photography isn't educational, except in a purely satiric
+sense.
+
+>	In case you don't know, Krillean Photography, to the best of my
+>knowledge, involves taking pictures of an (most of the time) organic
+>object between charged plates. The picture will show energy patterns
+>or spikes around the object photographed, and depending on what type
+>of object it is, the spikes or energy patterns will vary. One might
+>extrapolate here and say that this proves that every object within
+>the universe (as we know it) has its own energy signature.
+
+Crullerian photography involves putting donuts between grease-covered
+hot metal plates while illuminating them with a Krypton Stroboscope.
+Through a unique iteration involving the 4th-dimensional projection of
+a torus through the semi-stochastic interactions of hot monomolecular
+lipid layers covering the metal plates (the best metal is iron since
+it repels Vampires and Succubi) the donuts start developing flutes,
+and within moments actually become poly-crenellated hot greasy
+breadtubes. Some people believe that food is the way to a man's heart,
+but most psychics agree that there is nothing like hot Crullers for
+breakfast; the chemical composition of crullers is a mystery, some
+thought evidence of Charles Fort's channeling in Stevie Wonder's
+production of "The Secret Life of Plants" when played backwards in the
+theatre of unnaturally fertile Findhorn Farms has deduced that they
+are complex carbohydrates ordinarily only found by spectoscopy in the
+Magellenic Clouds. I called Devi on my Orgone Box and asked her if
+this was really the case, and she TM levitated me a letter across the
+Atlantic to tell me it was indeed not just another case of
+misunderstanding Tesla, though the Miskatonic University hasn't
+confirmed anything at all. At least the Crullers taste good; I got the
+recipe from Kaspar Hauser.
+
+
+
+
+
+-- 
+| Le Jojo: Fresh 'n' Clean, speaking out to the way you want to live
+| today; American - All American; doing, a bit so, and even more so.
+Xref: cantaloupe.srv.cs.cmu.edu news.announce.newgroups:3232 news.groups:69989 sci.med:59020
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!bogus.sura.net!howland.reston.ans.net!noc.near.net!uunet!bounce-back
+From: swkirch@sun6850.nrl.navy.mil (Steve Kirchoefer)
+Newsgroups: news.announce.newgroups,news.groups,sci.med
+Subject: 3rd CFV and VOTE ACK: misc.health.diabetes
+Followup-To: poster
+Date: 20 Apr 1993 09:54:39 -0400
+Organization: Naval Research Laboratory  (Electronics Science and Technology Division)
+Lines: 198
+Sender: tale@rodan.UU.NET
+Approved: tale@uunet.uu.net
+Message-ID: <1r0vavINNflt@rodan.UU.NET>
+NNTP-Posting-Host: rodan.uu.net
+
+This is the third and final call for votes for the creation of the
+newsgroup misc.health.diabetes.  A mass acknowledgement of valid votes
+received as of April 19th 14:00 GMT appears at the end of this
+posting.  Please check the list to be sure that your vote has been
+registered.  Read the instructions for voting carefully and follow
+them precisely to be certain that you place a proper vote.
+ 
+Instructions for voting:
+ 
+To place a vote FOR the creation of misc.health.diabetes, send an
+email message to yes@sun6850.nrl.navy.mil
+ 
+To place a vote AGAINST creation of misc.health.diabetes, send an
+email message to no@sun6850.nrl.navy.mil
+ 
+The contents of the message should contain the line "I vote
+for/against misc.health.diabetes as proposed".  Email messages sent to
+the above addresses must constitute unambiguous and unconditional
+votes for/against newsgroup creation as proposed.  Conditional votes
+will not be accepted.  Only votes emailed to the above addresses will
+be counted; mailed replies to this posting will be returned.  In the
+event that more than one vote is placed by an individual, only the
+most recent vote will be counted.
+ 
+Voting will continue until 23:59 GMT, 29 Apr 93.
+Votes will not be accepted after this date.
+ 
+Any administrative inquiries pertaining to this CFV may be made by
+email to swkirch@sun6850.nrl.navy.mil
+ 
+The proposed charter appears below.
+ 
+--------------------------
+ 
+Charter:  
+ 
+misc.health.diabetes                            unmoderated
+ 
+1.   The purpose of misc.health.diabetes is to provide a forum for the
+discussion of issues pertaining to diabetes management, i.e.: diet,
+activities, medicine schedules, blood glucose control, exercise,
+medical breakthroughs, etc.  This group addresses the issues of
+management of both Type I (insulin dependent) and Type II (non-insulin
+dependent) diabetes.  Both technical discussions and general support
+discussions relevant to diabetes are welcome.
+ 
+2.   Postings to misc.heath.diabetes are intended to be for discussion
+purposes only, and are in no way to be construed as medical advice.
+Diabetes is a serious medical condition requiring direct supervision
+by a primary health care physician.  
+ 
+-----(end of charter)-----
+ 
+The following individuals have sent in valid votes:
+ 
+9781BMU@VMS.CSD.MU.EDU                  Bill Satterlee
+a2wj@loki.cc.pdx.edu                    Jim Williams
+ac534@freenet.carleton.ca               Colin Henein
+ad@cat.de                               Axel Dunkel
+al198723@academ07.mty.itesm.mx          Jesus Eugenio S nchez Pe~a
+anugula@badlands.NoDak.edu              RamaKrishna Reddy Anugula
+apps@sneaks.Kodak.com                   Robert W. Apps
+arperd00@mik.uky.edu                    alicia r perdue
+baind@gov.on.ca                         Dave Bain
+balamut@morris.hac.com                  Morris Balamut
+bch@Juliet.Caltech.Edu
+BGAINES@ollamh.ucd.ie                   Brian Gaines
+Bjorn.B.Larsen@delab.sintef.no
+bobw@hpsadwc.sad.hp.com                 Bob Waltenspiel
+bruce@uxb.liverpool.ac.uk               bruce
+bspencer@binkley.cs.mcgill.ca           Brian SPENCER
+cline@usceast.cs.scarolina.edu          Ernest A. Cline
+coleman@twin.twinsun.com                Mike Coleman
+compass-da.com!tomd@compass-da.com      Thomas Donnelly
+csc@coast.ucsd.edu                      Charles Coughran
+curtech!sbs@unh.edu                     Stephanie Bradley-Swift
+debrum#m#_brenda@msgate.corp.apple.com  DeBrum, Brenda
+dlb@fanny.wash.inmet.com                David Barton
+dlg1@midway.uchicago.edu                deborah lynn gillaspie
+dougb@comm.mot.com                      Douglas Bank
+ed@titipu.resun.com                     Edward Reid
+edmoore@hpvclc.vcd.hp.com               Ed Moore
+ejo@kaja.gi.alaska.edu                  Eric J. Olson
+emcguire@intellection.com               Ed McGuire
+ewc@hplb.hpl.hp.com                     Enrico Coiera
+feathr::bluejay@ampakz.enet.dec.com
+franklig@GAS.uug.Arizona.EDU            Gregory C Franklin 
+FSSPR@acad3.alaska.edu                  Hardcore Alaskan
+gabe@angus.mi.org                       Gabe Helou
+gasp@medg.lcs.mit.edu                   Isaac Kohane
+gasp@medg.lcs.mit.edu                   Isaac Kohane
+Geir.Millstein@TF.tele.no
+ggurman@cory.Berkeley.EDU               Gail Gurman
+ggw@wolves.Durham.NC.US                 Gregory G. Woodbury
+greenlaw@oasys.dt.navy.mil              Leila Thomas
+grm+@andrew.cmu.edu                     Gretchen Miller
+halderc@cs.rpi.edu
+HANDELAP%DUVM.BITNET@pucc.Princeton.EDU Phil Handel
+hansenr@ohsu.EDU
+hc@Nyongwa.cam.org                      hc
+heddings@chrisco.nrl.navy.mil           Hubert Heddings
+herbison@lassie.ucx.lkg.dec.com         B.J.
+hmpetro@mosaic.uncc.edu                 Herbert M Petro
+HOSCH2263@iscsvax.uni.edu
+hrubin@pop.stat.purdue.edu              Herman Rubin
+HUDSOIB@AUDUCADM.DUC.AUBURN.EDU         Ingrid B. Hudson
+huff@MCCLB0.MED.NYU.EDU                 Edward J. Huff
+huffman@ingres.com                      Gary Huffman
+HUYNH_1@ESTD.NRL.NAVY.MIL               Minh Huynh
+ishbeld@cix.compulink.co.uk             Ishbel Donkin
+James.Langdell@Eng.Sun.COM              James Langdell
+jamyers@netcom.com                      John A. Myers
+jc@crosfield.co.uk                      jerry cullingford
+jesup@cbmvax.cbm.commodore.com          Randell Jesup
+jjmorris@gandalf.rutgers.edu            Joyce Morris
+joep@dap.csiro.au                       Joe Petranovic
+John.Burton@acenet.auburn.edu           John E. Burton Jr.
+johncha@comm.mot.com
+JORGENSONKE@CC.UVCC.EDU
+jpsum00@mik.uky.edu                     joey p sum
+JTM@ucsfvm.ucsf.edu                     John Maynard
+julien@skcla.monsanto.com
+kaminski@netcom.com                     Peter Kaminski
+kerry@citr.uq.oz.au                     Kerry Raymond
+kieran@world.std.com                    Aaron L Dickey
+knauer@cs.uiuc.edu                      Rob Knauerhase
+kolar@spot.Colorado.EDU                 Jennifer Lynn Kolar
+kriguer@tcs.com                         Marc Kriguer
+lau@ai.sri.com                          Stephen Lau
+lee@hal.com                             Lee Boylan
+lmt6@po.cwru.edu
+lunie@Lehigh.EDU
+lusgr@chili.CC.Lehigh.EDU               Stephen G. Roseman
+M.Beamish@ins.gu.edu.au                 Marilyn Beamish
+M.Rich@ens.gu.edu.au                    Maurice H. Rich.
+maas@cdfsga.fnal.gov                    Peter Maas
+macridis_g@kosmos.wcc.govt.nz           Gerry Macridis
+markv@hpvcivm.vcd.hp.com                Mark Vanderford
+MASCHLER@vms.huji.ac.il
+mcb@net.bio.net                         Michael C. Berch
+mcday@ux1.cso.uiuc.edu
+mcookson@flute.calpoly.edu
+mfc@isr.harvard.edu                     Mauricio F Contreras
+mg@wpi.edu                              Martha Gunnarson
+mhollowa@libserv1.ic.sunysb.edu         Michael Holloway
+misha@abacus.concordia.ca               MISHA GLOUBERMAN 
+mjb@cs.brown.edu                        Manish Butte
+MOFLNGAN@vax1.tcd.ie
+muir@idiom.berkeley.ca.us               David Muir Sharnoff
+Nancy.Block@Eng.Sun.COM                 Nancy Block
+ndallen@r-node.hub.org                  Nigel Allen
+nlr@B31.nei.nih.gov                     Rohrer, Nathan
+owens@cookiemonster.cc.buffalo.edu      Bill Owens
+pams@hpfcmp.fc.hp.com                   Pam Sullivan
+papresco@undergrad.math.uwaterloo.ca    Paul Prescod
+paslowp@cs.rpi.edu
+pillinc@gov.on.ca                       Christopher Pilling
+pkane@cisco.com                         Peter Kane
+popelka@odysseus.uchicago.edu           Glenn Popelka
+pulkka@cs.washington.edu                Aaron Pulkka
+pwatkins@med.unc.edu                    Pat Watkins
+rbnsn@mosaic.shearson.com               Ken Robinson
+rick@crick.ssctr.bcm.tmc.edu            Richard H. Miller
+robyn@media.mit.edu                     Robyn Kozierok
+rolf@green.mathematik.uni-stuttgart.de  Rolf Schreiber
+sageman@cup.portal.com
+sasjcs@unx.sas.com                      Joan Stout
+SCOTTJOR@delphi.com
+scrl@hplb.hpl.hp.com
+scs@vectis.demon.co.uk                  Stuart C. Squibb
+shan@techops.cray.com                   Sharan Kalwani
+sharen@iscnvx.lmsc.lockheed.com         Sharen A. Rund
+shazam@unh.edu                          Matthew T Thompson
+shipman@csab.larc.nasa.gov              Floyd S. Shipman
+shoppa@ERIN.CALTECH.EDU                 Tim Shoppa
+slillie@cs1.bradley.edu                 Susan Lillie
+steveo@world.std.com                    Steven W Orr
+surendar@ivy.WPI.EDU                    Surendar Chandra
+swkirch@sun6850.nrl.navy.mil            Steven Kirchoefer
+S_FAGAN@twu.edu
+TARYN@ARIZVM1.ccit.arizona.edu          Taryn L. Westergaard
+Thomas.E.Taylor@gagme.chi.il.us         Thomas E Taylor
+tima@CFSMO.Honeywell.COM                Timothy D Aanerud
+tsamuel%gollum@relay.nswc.navy.mil      Tony Samuel
+U45301@UICVM.UIC.EDU                    M. Jacobs  
+vstern@gte.com                          Vanessa Stern
+wahlgren@haida.van.wti.com              James Wahlgren
+waterfal@pyrsea.sea.pyramid.com         Douglas Waterfall
+weineja1@teomail.jhuapl.edu
+wgrant@informix.com                     William Grant
+YEAGER@mscf.med.upenn.edu
+yozzo@watson.ibm.com                    Ralph E. Yozzo
+Z919016@beach.utmb.edu                  Molly Hamilton
+-- 
+Steve Kirchoefer                                             (202) 767-2862
+Code 6851                                      kirchoefer@estd.nrl.navy.mil
+Naval Research Laboratory                       Microwave Technology Branch
+Washington, DC  20375-5000              Electronics Sci. and Tech. Division
+Xref: cantaloupe.srv.cs.cmu.edu news.announce.newgroups:3234 news.groups:69991 sci.med:59021 sci.med.nutrition:3051 sci.bio:11992 bionet.molbio.ageing:396 sci.cryonics:1009 sci.nanotech:2347 alt.psychoactives:2329 alt.cyberpunk:16546
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!bogus.sura.net!howland.reston.ans.net!noc.near.net!uunet!bounce-back
+From: bmdelane@midway.uchicago.edu (brian manning delaney)
+Newsgroups: news.announce.newgroups,news.groups,sci.med,sci.med.nutrition,sci.bio,bionet.molbio.ageing,sci.cryonics,sci.nanotech,alt.psychoactives,alt.cyberpunk
+Subject: RESULT: sci.life-extension passes 237:28
+Followup-To: news.groups
+Date: 20 Apr 1993 09:55:12 -0400
+Organization: University of Chicago
+Lines: 284
+Sender: tale@rodan.UU.NET
+Approved: tale@uunet.uu.net
+Message-ID: <1r0vc0INNfmt@rodan.UU.NET>
+NNTP-Posting-Host: rodan.uu.net
+
+The vote to create the proposed group, Sci.life-extension, was
+affirmative.
+
+Yes votes:    237.
+No votes:      28.
+
+What follows is a list of the people who voted, by vote ("no" or "yes").
+
+Here are the people who voted NO:
+
+bailey@utpapa.ph.utexas.edu               (Ed Bailey)
+barkdoll@lepomis.psych.upenn.edu          (Edwin Barkdoll)
+msb@sq.com                                (Mark Brader)
+carr@acsu.buffalo.edu                     (Dave Carr)
+desj@ccr-p.ida.org                        (David desJardins)
+jbh@Anat.UMSMed.Edu                       (James B. Hutchins)
+rsk@gynko.circ.upenn.edu                  (Rich Kulawiec)
+stu@valinor.mythical.com                  (Stu Labovitz)
+lau@ai.sri.com                            (Stephen Lau)
+plebrun@minf8.vub.ac.be                   (Philippe Lebrun)
+jmaynard@nyx.cs.du.edu                    (Jay Maynard)
+emcguire@intellection.com                 (Ed McGuire)
+rick@crick.ssctr.bcm.tmc.edu              (Richard H. Miller)
+smarry@zooid.guild.org                    (Marc Moorcroft)
+dmosher@nyx.cs.du.edu                     (David Mosher)
+ejo@kaja.gi.alaska.edu                    (Eric J. Olson)
+hmpetro@mosaic.uncc.edu                   (Herbert M Petro)
+smith-una@YALE.EDU                        (Una Smith)
+mmt@RedBrick.COM                          (Maxime Taksar KC6ZPS)
+urlichs@smurf.sub.org                     (Matthias Urlichs)
+ac999266@umbc.edu                         (a Francis Uy)
+werner@SOE.Berkeley.Edu                   (John Werner)
+wick@netcom.com                           (Potter Wickware)
+ggw@wolves.Durham.NC.US                   (Gregory G. Woodbury)
+D.W.Wright@bnr.co.uk                      (D. Wright)
+yarvin-norman@CS.YALE.EDU                 (Norman Yarvin)
+ask@cblph.att.com
+spm2d@opal.cs.virginia.edu
+
+Here are the people who voted YES:
+
+FSSPR@ACAD3.ALASKA.EDU                    (Hardcore Alaskan)
+kalex@eecs.umich.edu                      (Ken Alexander)
+ph600fht@sdcc14.UCSD.EDU                  (Alex Aumann)
+franklin.balluff@Syntex.Com               (Franklin Balluff)
+barash@umbc.edu                           (Mr. Steven Barash)
+build@alan.b30.ingr.com               (Alan Barksdale (build))
+lion@TheRat.Kludge.COM                    (John H. Barlow)
+pbarto@UCENG.UC.EDU                       (Paul Barto)
+ryan.bayne@canrem.com                     (Ryan Bayne)
+mignon@shannon.Jpl.Nasa.Gov               (Mignon Belongie)
+beaudot@tirf.grenet.fr                    (william Beaudot)
+lavb@lise.unit.no                         (Olav Benum)
+ross@bryson.demon.co.uk                   (Ross Beresford)
+ben.best@canrem.com                       (Ben Best)
+levi@happy-man.com                        (Levi Bitansky)
+jsb30@dagda.Eng.Sun.COM                   (James Blomgren)
+gbloom@nyx.cs.du.edu                      (Gregory Bloom)
+mbrader@netcom.com                        (Mark Brader)
+ebrandt@jarthur.Claremont.EDU             (Eli Brandt)
+doom@leland.stanford.edu                  (Joseph Brenner)
+rc@pos.apana.org.au                       (Robert Cardwell)
+jeffjc@binkley.cs.mcgill.ca               (Jeffrey CHANCE)
+sasha@cs.umb.edu                          (Alexander Chislenko)
+mclark@world.std.com                      (Maynard S Clark)
+100042.2703@CompuServe.COM                ("A.J. Clifford")
+coleman@twinsun.com                       (Mike Coleman)
+steve@constellation.ecn.uoknor.edu        (Steve Coltrin)
+collier@ivory.rtsg.mot.com                (John T. Collier)
+compton@plains.NoDak.edu                  (Curtis M. Compton) 
+bobc@master.cna.tek.com                   (Bob Cook)
+cordell@shaman.nexagen.com                (Bruce Cordell)
+cormierj@ERE.UMontreal.CA                 (Cormier Jean-Marc)
+djcoyle@macc.wisc.edu                     (Douglas J. Coyle)
+dass0001@student.tc.umn.edu               ("John R Dassow-1")
+bdd@onion.eng.hou.compaq.com              (Bruce Davis)
+demonn@emunix.emich.edu                   (Kenneth Jubal DeMonn)
+desilets@sj.ate.slb.com                   (Mark Desilets)
+markd@sco.COM                             (Mark Diekhans)
+kari@teracons.teracons.com                (Kari Dubbelman)
+lhdsy1!cyberia.hou281.chevron.com!hwdub@uunet.UU.NET (Dub Dublin)
+willdye@helios.unl.edu                    (Will Dye)
+155yegan%jove.dnet.measurex.com@juno.measurex.com (TERRY EGAN)
+eder@hsvaic.boeing.com                    (Dani Eder)
+glenne@magenta.HQ.Ileaf.COM               (Glenn Ellingson)
+farrar@adaclabs.com                       (Richard Farrar)
+ghsvax!hal@uunet.UU.NET                   (Hal Finney)
+lxfogel@srv.PacBell.COM                   (Lee Fogel)
+afoxx@foxxjac.b17a.ingr.com               (Foxx)
+i000702@disc.dla.mil               (sam frajerman,sppb,x3026,)
+mpf@medg.lcs.mit.edu                      (Michael P. Frank)
+Martin.Franklin@Corp.Sun.COM              (Martin Franklin)
+tiff@CS.UCLA.EDU                          (Tiffany Frazier)
+Ailing_Zhu_Freeman@U.ERGO.CS.CMU.EDU      (Ailing Freeman)
+Timothy_Freeman@U.ERGO.CS.CMU.EDU         (Tim Freeman)
+gt0657c@prism.gatech.edu                  (geoff george)
+mtvdjg@rivm.nl                            (Daniel Gijsbers)
+exusag@exu.ericsson.se                    (Serena Gilbert)
+rlglende@netcom.com                (Robert Lewis Glendenning)
+goetz@cs.Buffalo.EDU                      (Phil Goetz)
+goolsby@dg-rtp.dg.com                     (Chris Goolsby)
+dgordon@crow.omni.co.jp                   (David Gordon)
+bgrahame@eris.demon.co.uk                 (Robert D Grahame)
+sascsg@unx.sas.com                        (Cynthia Grant)
+green@srilanka.island.COM                 (Robert Greenstein)
+johng@oce.orst.edu                        (John A. Gregor)
+roger@netcom.com                          (roger gregory)
+evans-ron@CS.YALE.EDU                     (Ron Hale-Evans)
+brent@vpnet.chi.il.us                     (Brent Hansen)
+Ron.G.Hay@med.umich.edu                   (Ron G. Hay)
+akh@empress.gvg.tek.com                   (Anna K. Haynes)
+claris!qm!Bob_Hearn@ames.arc.nasa.gov     (Robert Hearn)
+fheyligh@vnet3.vub.ac.be                  (Francis Heylighen)
+hin9@midway.uchicago.edu                  (P. Hindman)
+fishe@casbah.acns.nwu.edu                 (Carwil James)
+janzen@mprgate.mpr.ca                     (Martin Janzen)
+karp@skcla.monsanto.com                   (Jeffery M Karp)
+rk2@elsegundoca.ncr.com                   (Richard Kelly)
+merklin@gnu.ai.mit.edu                    (Ed Kemo)
+kessner@rintintin.Colorado.EDU            (KESSNER ERIC M)
+mapam@csv.warwick.ac.uk                   (Mr R A Khwaja)
+koski@sunset.cs.utah.edu                  (Keith Koski)
+kathi@bridge.com                          (Kathi Kramer)
+benkrug@jupiter.fnbc.com                  (Ben Krug)
+farif@eskimo.com                          (David Kunz)
+edsr!edsdrd!sel@uunet.UU.NET              (Steve Langs)
+pa_hcl@MECENG.COE.NORTHEASTERN.EDU        (Henry Leong)
+S.Linton@pmms.cam.ac.uk                   (Steve Linton)
+alopez@cs.ep.utexas.EDU                   (Alejandro Lopez 6330)
+kfl@access.digex.com                      ("Keith F. Lynch")
+KAMCHAR@msu.edu                           (Charles MacDonald)
+rob@vis.toronto.edu                       (Robert C. Majka)
+phil@starconn.com                         (Phil Marks)
+cam@jackatak.raider.net                   (Cameron Marshall)
+mmay@mcd.intel.com                        (Mike May ~)
+drac@uumeme.chi.il.us                     (Bruce Maynard)
+i001269@discg2.disc.dla.mil               (john mccarrick)
+xyzzy@imagen.com                          (David McIntyre)
+cuhes@csv.warwick.ac.uk                   (Malcolm McMahon)
+mcpherso@macvax.UCSD.EDU                  (John Mcpherson)
+merkle@parc.xerox.com                     (Ralph Merkle)
+eric@Synopsys.COM                         (Eric Messick)
+pmetzger@shearson.com                     (Perry E. Metzger)
+gmichael@vmd.cso.uiuc.edu                 (Gary R. Michael)
+dat91mas@ludat.lth.se                     (Asker Mikael)
+MILLERL@WILMA.WHARTON.UPENN.EDU           ("Loren J. Miller")
+minsky@media.mit.edu                      (Marvin Minsky)
+pmorris@lamar.ColoState.EDU               (Paul Morris)
+Mark_Muhlestein@Novell.COM                (Mark Muhlestein)
+david@staff.udc.upenn.edu                 (R. David Murray)
+gananney@mosaic.uncc.edu                  (Glenn A Nanney)
+anthony@meaddata.com                      (Anthony Napier)
+dniman@panther.win.net                    (Donald E. Niman)
+nistuk@unixg.ubc.ca                       (Richard Nistuk)
+Jonathan@RMIT.EDU.AU                      (Jonathan O'Donnell)
+martino@gomez.Jpl.Nasa.Gov                (Martin R. Olah)
+cpatil@leland.stanford.edu          (Christopher Kashina Patil)
+crp5754@erfsys01.boeing.com               (Chris Payne)
+sharon@acri.fr                            (Sharon Peleg)
+php@rhi.hi.is                             (Petur Henry Petersen)
+chrisp@efi.com                            (Chris Phoenix)
+pierce@CS.UCLA.EDU                        (Brad Pierce)
+julius@math.utah.edu                      ("Julius Pierce")
+dplatt@cellar.org                         (Doug Platt)
+Mitchell.Porter@lambada.oit.unc.edu       (Mitchell Porter)
+cpresson@jido.b30.ingr.com                (Craig Presson)
+price@price.demon.co.uk                   (Michael Clive Price)
+U39554@UICVM.BITNET                       (Edward S. Proctor)
+stevep@deckard.Works.ti.com               (Steve Pruitt)
+MJQUINN@PUCC.BITNET                       (Michael Quinn)
+rauss@nvl.army.mil                        (Patrick Rauss)
+remke@cs.tu-berlin.de                     ("Jan K. Remke")
+ag167@yfn.ysu.edu                         (Barry H. Rodin)
+ksackett@cs.uah.edu                       (Karl R. Sackett)
+rcs@cs.arizona.edu                        (Richard Schroeppel)
+fschulz@pyramid.com                       (Frank Schulz)
+kws@Thunder-Island.kalamazoo.MI.US        (Karel W. Sebek)
+bseewald@gozer.idbsu.edu                  (Brad Seewald)
+shapard@manta.nosc.mil                    (Thomas D. Shapard)
+habs@Panix.Com                            (Harry Shapiro)
+muir@idiom.berkeley.ca.us                 (David Muir Sharnoff)
+dasher@well.sf.ca.us                      (D Anton Sherwood)
+zero@netcom.com                           (Richard Shiflett)
+AP201160@BROWNVM.BITNET                   (Elaine Shiner)
+robsho@robsho.Auto-trol.COM               (Robert Shock)
+rshvern@gmuvax2.gmu.edu                   (Rob Shvern)
+wesiegel@cie-2.uoregon.edu                (William Siegel)
+ggyygg@mixcom.mixcom.com                  (Kenton Sinner)
+bsmart@bsmart.tti.com                     (Bob Smart)
+tonys@ariel.ucs.unimelb.EDU.AU            (Anthony David Smith)
+sgccsns@citecuc.citec.oz.au               (Shayne Noel Smith)
+dsnider@beta.tricity.wsu.edu              (Daniel L Snider)
+snyderg@spot.Colorado.EDU                 (SNYDER GARY EDWIN JR)
+blupe@ruth.fullfeed.com                   (Brian Arthur Stewart)
+lhdsy1!usmi02.midland.chevron.com!tsfsi@uunet.UU.NET (Sigrid
+Stewart)
+nat@netcom.com                            (Nathaniel Stitt)
+tps@biosym.com                            (Tom Stockfisch)
+stodolsk@andromeda.rutgers.edu            (David Stodolsky)
+gadget@dcs.warwick.ac.uk                  (Steve Strong)
+carey@CS.UCLA.EDU                         (Carey Sublette)
+jsuttor@netcom.com                        (Jeff Suttor)
+swain@cernapo.cern.ch                     (John Swain)
+szabo@techbook.com                        (Nick Szabo)
+ptheriau@netcom.com                       (P. Chris Theriault)
+ak051@yfn.ysu.edu                         (Chris Thompson)
+gunnar.thoresen@bio.uio.no                (Gunnar Thoresen)
+dreamer@uxa.cso.uiuc.edu                  (Andrew Trapp)
+jerry@cse.lbl.gov                         (Jerry Tunis)
+music@parcom.ernet.in                     (Rajeev Upadhye)
+treon@u.washington.edu                    (Treon Verdery)
+evore@magnus.acs.ohio-state.edu           (Eric J Vore)
+U13054@UICVM.BITNET                       (Howard Wachtel)
+susan@wpi.WPI.EDU                         (Susan C Wade)
+70023.3041@CompuServe.COM                 (Paul Wakfer)
+ewalker@it.berklee.edu                    ("Elaine Walker")
+jew@rt.sunquest.com                       (James Ward)
+jeremy@ai.mit.edu                         (Jeremy M. Wertheimer)
+bw@ws029.torreypinesca.NCR.COM            (Bruce White 3807)
+weeds@strobe.ATC.Olivetti.Com             (Mark Wiedman)
+wiesel-elisha@CS.YALE.EDU                 (Elisha Wiesel)
+WILLINGP@gar.union.edu                    (WILLING, PAUL)
+smw@alcor.concordia.ca                    (Steven Winikoff)
+wright@hicomb.hi.com                      (David Wright)
+ebusew@anah.ericsson.com                  (Stephen Wright 66667)
+liquidx@cnexus.cts.com                    (Liquid-X)
+xakellis@uivlsisl.csl.uiuc.edu            (Michael G. Xakellis)
+cs012113@cs.brown.edu                     (Ion Yannopoulos)
+yazz@lccsd.sd.locus.com                   (Bob Yazz)
+lnz@lucid.com                             (Leonard N. Zubkoff)
+62RSE@npd1.ufpe.br
+adwyer@mason1.gmu.edu
+ART@EMBL-Hamburg.DE
+atfurman@cup.portal.com
+billw@attmail.att.com
+carl@red-dragon.umbc.edu
+carlf@ai.mit.edu
+cccbbs!chris.thompson@UCENG.UC.EDU
+CCGARCIA@MIZZOU1.BITNET
+clayb@cellar.org
+dack@permanet.org
+daedalus@netcom.com
+danielg@autodesk.com
+Dave-M@cup.portal.com
+F_GRIFFITH@CCSVAX.SFASU.EDU
+garcia@husc.harvard.edu
+gav@houxa.att.com
+hammar@cs.unm.edu
+herbison@lassie.ucx.lkg.dec.com
+hhuang@Athena.MIT.EDU
+hkhenson@cup.portal.com
+irving@happy-man.com
+jeckel@amugw.aichi-med-u.ac.jp
+jgs@merit.edu
+jmeritt@mental.mitre.org
+Jonas_Marten_Fjallstam@cup.portal.com
+kqb@whscad1.att.com
+LPOMEROY@velara.sim.es.com
+lubkin@apollo.hp.com
+kunert@wustlb.wustl.edu
+LINYARD_M@XENOS.a1.logica.co.uk
+M.Michelle.Wrightwatson@att.com
+moselecw@elec.canterbury.ac.nz
+naoursla@eos.ncsu.edu
+ng4@husc.harvard.edu
+pase70!dchapman@uwm.edu
+pocock@math.utah.edu
+RUDI@HSD.UVic.CA
+SCOTTJOR@delphi.com
+stanton@ide.com
+steveha@microsoft.com
+stu1016@DISCOVER.WRIGHT.EDU
+SYang.ES_AE@xerox.com
+tim.hruby@his.com
+Todd.Kaufmann@FUSSEN.MT.CS.CMU.EDU
+tom@genie.slhs.udel.edu
+UC482529@MIZZOU1.BITNET
+WMILLER@clust1.clemson.edu
+yost@mv.us.adobe.com
+
+(The group still passes if you don't count the people for
+whom I just have email address.)
+
+-Brian <bmdelane@midway.uchicago.edu>
+Xref: cantaloupe.srv.cs.cmu.edu sci.energy:15613 sci.image.processing:2677 sci.anthropology:2554 alt.sci.physics.new-theories:3333 sci.skeptic:43232 sci.med:59022 alt.alien.visitors:15507
+Newsgroups: sci.energy,sci.image.processing,sci.anthropology,alt.sci.physics.new-theories,sci.skeptic,sci.med,alt.alien.visitors
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!darwin.sura.net!haven.umd.edu!uunet!mcsun!dxcern!vxcrna.cern.ch!filipe
+From: filipe@vxcrna.cern.ch (VINCI)
+Subject: Re: Krillean Photography
+Message-ID: <20APR199315574161@vxcrna.cern.ch>
+News-Software: VAX/VMS VNEWS 1.41    
+Sender: news@dxcern.cern.ch (USENET News System)
+Organization: European Organization for Nuclear Research, CERN
+References: <1993Apr19.205615.1013@unlv.edu> <1993Apr20.125920.15005@ircam.fr>
+Date: Tue, 20 Apr 1993 14:57:00 GMT
+Lines: 14
+
+In article <1993Apr20.125920.15005@ircam.fr>, francis@ircam.fr (Joseph Francis) writes...
+>In article <1993Apr19.205615.1013@unlv.edu> todamhyp@charles.unlv.edu (Brian M. Huey) writes:
+>>I think that's the correct spelling..
+> 
+>Crullerian.
+> 
+ How about Kirlian imaging ? I believe the FAQ for sci.skeptics (sp?)
+ has a nice write-up on this. They would certainly be most supportive
+ on helping you to build such a device and connect to a 120Kvolt
+ supply so that you can take a serious look at your "aura"... :-)
+
+ Filipe Santos
+ CERN - European Laboratory for Particle Physics
+ Switzerland
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!noc.near.net!news.bbn.com!hsdndev!enterprise.bih.harvard.edu!rind
+From: rind@enterprise.bih.harvard.edu (David Rind)
+Newsgroups: sci.med
+Subject: Re: Candida Albicans: what is it?
+Date: 20 Apr 1993 13:59:11 GMT
+Organization: Beth Israel Hospital, Harvard Medical School, Boston Mass., USA
+Lines: 19
+Message-ID: <1r0vjf$op7@hsdndev.harvard.edu>
+References: <1993Apr19.084258.1040@ida.liu.se>
+NNTP-Posting-Host: enterprise.bih.harvard.edu
+
+In article <1993Apr19.084258.1040@ida.liu.se> davpa@ida.liu.se
+ (David Partain) writes:
+>Someone I know has recently been diagnosed as having Candida Albicans, 
+>a disease about which I can find no information.  Apparently it has something
+>to do with the body's production of yeast while at the same time being highly
+>allergic to yeast.  Can anyone out there tell me any more about it?
+
+Candida albicans can cause severe life-threatening infections, usually
+in people who are otherwise quite ill.  This is not, however, the sort
+of illness that you are probably discussing.
+
+"Systemic yeast syndrome" where the body is allergic to
+yeast is considered a quack diagnosis by mainstream medicine.  There
+is a book "The Yeast Connection" which talks about this "illness".
+
+There is no convincing evidence that such a disease exists.
+-- 
+David Rind
+rind@enterprise.bih.harvard.edu
+Xref: cantaloupe.srv.cs.cmu.edu misc.consumers:67815 sci.med:59024 rec.food.cooking:65398 sci.environment:29547
+Newsgroups: misc.consumers,sci.med,rec.food.cooking,sci.environment
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!usc!cs.utexas.edu!csc.ti.com!tilde.csc.ti.com!m2.dseg.ti.com!ernest!egsner!adaptex!sdf!marco
+From: marco@sdf.lonestar.org (Steve Giammarco)
+Subject: Re: Is MSG sensitivity superstition?
+Message-ID: <C5nFDG.8En@sdf.lonestar.org>
+Organization: sdf public access Unix, Dallas TX 214/436-3281
+References: <1qi2h1INNr3o@roundup.crhc.uiuc.edu> <1993Apr15.153729.13738@walter.bellcore.com> <1qk1taINNmr4@calamari.hi.com>
+Date: Sat, 17 Apr 1993 22:20:04 GMT
+Lines: 27
+
+In article <1qk1taINNmr4@calamari.hi.com> rogers@calamari.hi.com (Andrew Rogers) writes:
+>In article <1993Apr15.153729.13738@walter.bellcore.com> jchen@ctt.bellcore.com writes:
+>>Chinese, and many other Asians (Japanese, Koreans, etc) have used
+>>MSG as flavor enhancer for two thousand years. Do you believe that
+>>they knew how to make MSG from chemical processes? Not. They just
+>>extracted it from natural food such sea food and meat broth.
+>
+>And to add further fuel to the flame war, I read about 20 years ago that
+>the "natural" MSG - extracted from the sources you mention above - does not
+>cause the reported aftereffects; it's only that nasty "artificial" MSG -
+>extracted from coal tar or whatever - that causes Chinese Restaurant
+>Syndrome.  I find this pretty hard to believe; has anyone else heard it?
+
+I was under the (possibly incorrect) assumption that most of the MSG on
+our foods was made from processing sugar beets. Is this not true? Are 
+there other sources of MSG?
+
+I am one of those folx who react, sometimes strongly, to MSG. However,
+I also react strongly to sodium chloride (table salt) in excess. Each
+causes different symptoms except for the common one of rapid heartbeat
+and an uncomfortable feeling of pressure in my chest, upper left quadrant.
+
+
+-- 
+Steve Giammarco/5330 Peterson Lane/Dallas TX 75240
+marco@sdf.lonestar.org
+loveyameanit.
+Newsgroups: sci.med
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!magnus.acs.ohio-state.edu!jhoskins
+From: jhoskins@magnus.acs.ohio-state.edu (James M Hoskins)
+Subject: Cost of Roxonal
+Message-ID: <1993Apr20.181220.7842@magnus.acs.ohio-state.edu>
+Sender: news@magnus.acs.ohio-state.edu
+Nntp-Posting-Host: photon.magnus.acs.ohio-state.edu
+Organization: The Ohio State University
+Distribution: na
+Date: Tue, 20 Apr 1993 18:12:20 GMT
+Lines: 5
+
+
+Does anyone know the approximate prescription cost
+of a 250 ml bottle of Roxonal (morphine)?
+
+Thanks.
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!uwm.edu!biosci!parc!decwrl!pa.dec.com!e2big.mko.dec.com!dbased.nuo.dec.com!lftfld!dufault
+From: dufault@lftfld.enet.dec.com (MD)
+Newsgroups: sci.med
+Subject: seizures ( infantile spasms )
+Keywords: seizures epilepsy
+Message-ID: <1993Apr20.184034.13779@dbased.nuo.dec.com>
+Date: 20 Apr 93 18:40:34 GMT
+Sender: dufault@lftfld (MD)
+Reply-To: dufault@lftfld.enet.dec.com (MD)
+Organization: Digital Equipment Corporation
+Lines: 32
+
+
+	The reason I'm posting this article to this newsgroup is to:
+1. gather any information about this disorder from anyone who might
+   have recently been *e*ffected by it ( from being associated with
+   it or actually having this disorder ) and
+2. help me find out where I can access any medical literature associated
+   with seizures over the internet.
+
+Recently, I had a baby boy born with seizures which occured 12-15 hours
+after birth. He was immediately transferred to a major hospital in Boston
+and has since been undergoing extensive drug treatment for his condition.
+This has been a major learning experience for me and my wife not only in
+learning the medical problems that faced our son but also in dealing with
+hospitals, procedures...etc.
+
+I don't want to go into a lot of detail, but his condition was termed 
+quite severe at first then slowly he began to grow and put on weight
+as a normal baby would. He was put on the standard anti-convulsion drugs
+and that did not seem to help out. His MRI, EKG, cat-scans are all normal,
+but the EEG's show alot of seizure activity. After many metabolic tests,
+body structure tests, and infection/virus tests the doctors still do not
+know quite what type of siezures he is having (although they do have alot
+of evidence that it is now pointing to infantile spasms ). This is where
+we stand right now....
+
+If anyone knows of any database or newsgroup or as I mentioned up above,
+any information relating to this disorder I would sure appreciate hearing
+from you. I am not trying to play doctor here, but only trying to gather
+information about it. As I know now, these particular types of disorders
+are still not really well understood by the medical community, and so I'm
+going to see now....if somehow the internet can at least give me alittle
+insight. Thanks. 
+Newsgroups: sci.med
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!bogus.sura.net!news-feed-1.peachnet.edu!umn.edu!csus.edu!netcom.com!noring
+From: noring@netcom.com (Jon Noring)
+Subject: Good Grief!  (was Re: Candida Albicans: what is it?)
+Message-ID: <noringC5snsx.KMo@netcom.com>
+Organization: Netcom Online Communications Services (408-241-9760 login: guest)
+Date: Tue, 20 Apr 1993 18:10:08 GMT
+Lines: 81
+
+In article rind@enterprise.bih.harvard.edu (David Rind) writes:
+>In article davpa@ida.liu.se  (David Partain) writes:
+
+>>Someone I know has recently been diagnosed as having Candida Albicans, 
+>>a disease about which I can find no information.  Apparently it has something
+>>to do with the body's production of yeast while at the same time being highly
+>>allergic to yeast.  Can anyone out there tell me any more about it?
+
+>Candida albicans can cause severe life-threatening infections, usually
+>in people who are otherwise quite ill.  This is not, however, the sort
+>of illness that you are probably discussing.
+>
+>"Systemic yeast syndrome" where the body is allergic to
+>yeast is considered a quack diagnosis by mainstream medicine.  There
+>is a book "The Yeast Connection" which talks about this "illness".
+>
+>There is no convincing evidence that such a disease exists.
+
+There's a lot of evidence, it just hasn't been adequately gathered and
+published in a way that will convince the die-hard melancholic skeptics
+who quiver everytime the word 'anecdote' or 'empirical' is used.
+
+For example, Dr. Ivker, who wrote the book "Sinus Survival", always gives,
+before any other treatment, a systemic anti-fungal (such as Nizoral) to his
+new patients IF they've been on braod-spectrum anti-biotics 4 or more times
+in the last two years.  He's kept a record of the results, and for over 
+2000 patients found that over 90% of his patients get significant relief
+of allergic/sinus symptoms.  Of course, this is only the beginning for his
+program.
+
+In my case, as I reported a few weeks ago, I was developing the classic
+symptoms outlined in 'The Yeast Connection' (I agree it is a poorly 
+written book):  e.g., extreme sensitivity to plastics, vapors, etc. which
+I never had before (started in November).  Within one week of full dosage
+of Sporanox, the sensitivity to chemicals has fully disappeared - I can
+now sit on my couch at home without dying after two minutes.  I'm also
+*greatly* improved in other areas as well.
+
+Of course, I have allergy symptoms, etc.  I am especially allergic to
+molds, yeasts, etc.  It doesn't take a rocket scientist to figure out that
+if one has excessive colonization of yeast in the body, and you have a
+natural allergy to yeasts, that a threshold would be reached where you
+would have perceptible symptoms.  Also, yeast do produce toxins of various
+sorts, and again, you don't have to be a rocket scientist to realize that
+such toxins can cause problems in some people.  In my case it was sinus
+since that's the center of my allergic response.  Of course, the $60,000
+question is whether a person who is immune compromised (as tests showed I was
+from over 5 years of antibiotics, nutritionally-deficiencies because of the
+stress of infections and allergies, etc.), can develop excessive yeast
+colonization somewhere in the body.  It is a tough question to answer since
+testing for excessive yeast colonization is not easy.  One almost has to
+take an empirical approach to diagnosis.  Fortunately, Sporanox is relatively
+safe unlike past anti-fungals (still have to be careful, however) so there's
+no reason any longer to withhold Sporanox treatment for empirical reasons.
+
+BTW, some would say to try Nystatin.  Unfortunately, most yeast grows hyphae
+too deep into tissue for Nystatin to have any permanent affect.  You'll find
+a lot of people who are on Nystatin all the time.
+
+In summary, I appreciate all of the attempts by those who desire to keep
+medicine on the right road.  But methinks that some who hold too firmly
+to the party line are academics who haven't been in the trenches long enough
+actually treating patients.  If anybody, doctors included, said to me to my
+face that there is no evidence of the 'yeast connection', I cannot guarantee
+their safety.  For their incompetence, ripping off their lips is justified as
+far as I am concerned.
+
+Jon Noring
+
+-- 
+
+Charter Member --->>>  INFJ Club.
+
+If you're dying to know what INFJ means, be brave, e-mail me, I'll send info.
+=============================================================================
+| Jon Noring          | noring@netcom.com        |                          |
+| JKN International   | IP    : 192.100.81.100   | FRED'S GOURMET CHOCOLATE |
+| 1312 Carlton Place  | Phone : (510) 294-8153   | CHIPS - World's Best!    |
+| Livermore, CA 94550 | V-Mail: (510) 417-4101   |                          |
+=============================================================================
+Who are you?  Read alt.psychology.personality!  That's where the action is.

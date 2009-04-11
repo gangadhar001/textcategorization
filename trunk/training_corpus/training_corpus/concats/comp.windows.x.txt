@@ -1,0 +1,848 @@
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!spool.mu.edu!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: mahan@TGV.COM (Patrick L. Mahan)
+Newsgroups: comp.windows.x
+Subject: RE: Drawing Lines (inverse/xor)
+Date: 19 Apr 1993 23:55:16 -0400
+Organization: The Internet
+Lines: 51
+Sender: news@athena.mit.edu
+Message-ID: <930419175016.1000228@TGV.COM>
+NNTP-Posting-Host: enterpoop.mit.edu
+To: xpert@expo.lcs.mit.edu, dyoung@media.mit.edu
+
+#
+#I'm trying to write some code that lets me draw lines and do rubber-band
+#boxes in Motif/X.  I'm running on an 8-bit display for which I've created a
+#colormap and am using almost all of the colors.  I want to draw the lines
+#in a drawing area widget -- a widget in which I'm displaying a bitmap using
+#XPutImage().  If doesn't matter if the lines I draw interactively stay
+#around when the window is refreshed.
+#
+#Currently, to draw interactively, I begin with:
+#
+#   /* drawIndex is an colortable index I reserve for the Foreground */
+#   /* my_default_bg_color is the color index for the background of my image */
+#   palette_colors[drawIndex].red =   palette_colors[my_default_bg_color].red;
+#   palette_colors[drawIndex].green = palette_colors[my_default_bg_color].green;
+#   palette_colors[drawIndex].blue =  palette_colors[my_default_bg_color].blue;
+#   XStoreColors( myDisplay, my_cmap, &palette_colors[DrawIndex], 1);
+#   XFlush( myDisplay);
+#
+#   XSetFunction( myDisplay, gc, GXxor);
+#   XSetForeground( myDisplay, gc, drawIndex);
+#
+#Then to draw I do:
+#
+#   XDrawLine( myDisplay, XtWindow( drawingArea1), gc, x1, y1, x2, y2);
+#   XFlush( myDisplay);
+#
+#And when I'm all done, to return things to normal I do:
+#
+#   XSetFunction( myDisplay, gc, GXcopy);
+#
+#
+#What I'd like to happen is for the lines I draw to be the inverse of
+#whatever I'm drawing over.  Instead what happens is I get white lines.  If
+#the lines are over a white background - nothing shows up.  If the lines are
+#over a black area - nothing shows up!  It's very strange.  But the GXxor
+#function seems right - since if I do a rubber-banding box, it erases and
+#redraws itself correctly (ie. not disturbing the underlying image).
+#
+#Any suggestions what I'm doing wrong?
+#
+
+I believe for this to work on a color display you must set the foreground of
+the GC to be (foreground^background).
+
+Patrick L. Mahan
+
+--- TGV Window Washer ------------------------------- Mahan@TGV.COM ---------
+
+Waking a person unnecessarily should not be considered  - Lazarus Long
+a capital crime.  For a first offense, that is            From the Notebooks of
+							  Lazarus Long
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!usenet.ins.cwru.edu!magnus.acs.ohio-state.edu!csn!boulder!ucsu!ucsu.Colorado.EDU!baileyc
+From: baileyc@ucsu.Colorado.EDU (Christopher R. Bailey)
+Subject: How do I cause a timeout?
+Message-ID: <1993Apr20.062041.18586@ucsu.Colorado.EDU>
+Summary: how can I force a strip chart to update
+Sender: news@ucsu.Colorado.EDU (USENET News System)
+Nntp-Posting-Host: ucsu.colorado.edu
+Organization: University of Colorado, Boulder
+Date: Tue, 20 Apr 1993 06:20:41 GMT
+Lines: 20
+
+
+I have a problem where an Athena strip chart widget is not calling it's
+get value function.  I am pretty sure this is happening because I am
+not using XtAppMainLoop, but am dealing with events via sockets.  (ya ya).
+
+Anyway, I want to cause a timeout so that the strip chart widget(s) will
+call their get value callback.  Or if someone knows another FAST way around
+this (or any way for that matter) let me know.  I cannot (or I don't think)
+call the XtNgetValue callback myself because I don't have the value for
+the third parameter of the get value proc (XtPointer call_data).  
+
+In other words, I want to force a strip chart widget to update itself.
+
+Any ideas anyone?  
+
+-- 
+Christopher R. Bailey            |Internet: baileyc@dendrite.cs.colorado.edu
+University of Colorado at Boulder|CompuServe: 70403,1522
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+Ride Fast, Take Chances!
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: cerna@ntep.tmg.nec.co.JP (Alexander Cerna (SV))
+Newsgroups: comp.windows.x
+Subject: transparent widgets--how?
+Date: 20 Apr 1993 02:56:10 -0400
+Organization: The Internet
+Lines: 8
+Sender: news@athena.mit.edu
+Message-ID: <9304200233.AA16720@ntep2.ntep.tmg.nec.co.jp>
+NNTP-Posting-Host: enterpoop.mit.edu
+To: xpert@expo.lcs.mit.edu
+Cc: cerna@ntep.tmg.nec.co.jp
+
+I need to write an application which does annotation notes
+on existing documents.  The annotation could be done several
+times by different people.  The idea is something like having
+several acetate transparencies stacked on top of each other
+so that the user can see through all of them.  I've seen
+something like this being done by the oclock client.
+Could someone please tell me how to do it in Xt?
+Thank you very much.
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!usenet.ins.cwru.edu!agate!doc.ic.ac.uk!pipex!uknet!mcsun!hp4at!sun3.eeam.elin.co.at!sun3.eeam.elin.co.at!bobby@elin.co.at
+From: rainer@sun3.eeam.elin.co.at (Rainer Hochreiter)
+Newsgroups: comp.windows.x
+Subject: Re: Multi-screen apps and window managers
+Date: 20 Apr 1993 09:14:37 +0200
+Organization: ELIN Energeanwendung Ges.m.b.H
+Lines: 20
+Message-ID: <1r07st$50v@sun3.eeam.elin.co.at>
+References: <1993Apr17.010006.9857@serval.net.wsu.edu>
+NNTP-Posting-Host: sun3.eeam.elin.co.at
+X-Newsreader: TIN [version 1.1 PL9]
+
+: ========================================================================
+: Jo Pelkey                                   Phone: (509)375-6947
+: Battelle Pacific Northwest Labs             Fax:   (509)375-3641
+: Mail Stop K7-22                             Email: je_pelkey@pnl.gov
+: P.O. Box 999
+: Richland, WA  99352
+: ========================================================================
+
+Hi Jo,
+
+I'm also interested in your questions, so if you get any
+answers via email and not via repost please let me know.
+
+Thanks, rainer.
+
+-- 
+Rainer Hochreiter                | Telephone: +43 (1) 89100 / 3961
+ELIN-Energieanwendung GesmbH     | Telefax  : +43 (1) 89100 / 3387
+Penzingerstr. 76                 |
+A-1141 Wien, Austria/Europe      | E-mail   : rainer@elin.co.at
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: mahan@TGV.COM (Patrick L. Mahan)
+Newsgroups: comp.windows.x
+Subject: Re: How do I find by AppContext
+Date: 20 Apr 1993 03:37:01 -0400
+Organization: The Internet
+Lines: 24
+Sender: news@athena.mit.edu
+Message-ID: <930419221847.100025d@TGV.COM>
+NNTP-Posting-Host: enterpoop.mit.edu
+To: xpert@expo.lcs.mit.edu, masc0442@gondor.sdsu.edu
+
+# 
+# 
+# Is there an Xt call to give me my application context?
+# I am fixing up an X/Motif program, and am trying to use XtAppAddTimeOut,
+# whose first argument is the app_context.  What call can I use
+# to give me this value?
+# 
+
+Use XtDisplayToApplicationContext() to retreive the application context.
+
+Patrick L. Mahan
+
+--- TGV Window Washer ------------------------------- Mahan@TGV.COM ---------
+
+Waking a person unnecessarily should not be considered  - Lazarus Long
+a capital crime.  For a first offense, that is            From the Notebooks of
+							  Lazarus Long
+Patrick L. Mahan
+
+--- TGV Window Washer ------------------------------- Mahan@TGV.COM ---------
+
+Waking a person unnecessarily should not be considered  - Lazarus Long
+a capital crime.  For a first offense, that is            From the Notebooks of
+							  Lazarus Long
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!newsserver.jvnc.net!newsserver.technet.sg!suresh
+From: suresh@iss.nus.sg (Suresh Thennarangam - Research Scholar)
+Subject: X Device Driver for Bird
+Message-ID: <C5rxG9.EHx@newsserver.technet.sg>
+Sender: news@newsserver.technet.sg
+Nntp-Posting-Host: raccoon.iss.nus.sg
+Organization: Institute Of Systems Science, NUS
+X-Newsreader: Tin 1.1 PL4
+Date: Tue, 20 Apr 1993 08:40:56 GMT
+Lines: 16
+
+Has anyone written a device driver to use the Ascension bird with XWindows ? 
+
+
+      __                  
+     (_   / /  o_   o  o |_
+     __)/(_( __) (_(_ /_)| )_
+
+
+***************************************************************************
+* Suresh Thennarangam               *  EMail: suresh@iss.nus.sg(Internet) *
+* Research Scholar                  *         ISSST@NUSVM.BITNET          *
+* Institute Of Systems Science      *  Tel:  (065) 772 2588.              *
+* National University Of Singapore  *  Facs.: (065) 778 2571              *
+* Heng Mui Keng Terrace             *  Telex: ISSNUS RS 39988             *
+* Singapore 0511.                   *                                     *
+***************************************************************************
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: leon@dimatrix.DK (Leon Thrane)
+Newsgroups: comp.windows.x
+Subject: X Intrinsic mailing list
+Date: 20 Apr 1993 08:41:59 -0400
+Organization: The Internet
+Lines: 14
+Sender: news@athena.mit.edu
+Message-ID: <9304200757.AA12243@dimatrix.dk>
+NNTP-Posting-Host: enterpoop.mit.edu
+To: xpert@expo.lcs.mit.edu
+
+As we don't get a newsfeed I was wondering whether there was such a
+thing as a Xt mailing list (other than xpert@expo.lcs.mit.edu).  I
+would appreciate any info on this, (or X related mailing lists.)
+
+        Thanks in advance,
+
+        Leon
+
++-------------------------------+---------------------------------+
+| Leon Thrane                   | Telephone:    +45 - 45 93 51 00 |
+| DimatriX ApS                  | FAX:          +45 - 45 93 51 11 |
+| Lyngby Hovedgade 15D          | E-mail:       leon@dimatrix.dk  |
+| DK-2800 Lyngby, Denmark       | or   ...!uunet!dimatrix.dk!leon |
++-------------------------------+---------------------------------+
+Newsgroups: comp.windows.x
+From: bryan@alex.com (Bryan Boreham)
+Return-Path: <news>
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!uunet!pipex!demon!alex.com!bryan
+Subject: Re: Xt intrinsics: slow popups
+Nntp-Posting-Host: tweety
+Reply-To: bryan@alex.com
+Organization: Alex Technologies Ltd, London, England
+References:  <735259869.13021@minster.york.ac.uk>
+Date: Tue, 20 Apr 1993 11:48:24 +0000
+Message-ID: <1993Apr20.114824.9110@alex.com>
+Sender: usenet@demon.co.uk
+Lines: 15
+
+In article <735259869.13021@minster.york.ac.uk>, cjhs@minster.york.ac.uk writes:
+> The application creates window with a button "Quit" and "Press me".
+> The button "Press me" pops up a dialog box. The strange feature of
+> this program is that it always pops up the dialog box much faster the
+> first time. If I try to pop it up a 2nd time (3rd, 4th .... time), 
+> it is *much* slower.
+
+The shell is waiting for the window-manager to respond to its
+positioning request.  The window-manager is not responding because
+it thinks the window is already in the right place.
+
+Exactly *why* the two components get into this sulk is unclear to
+me; all information greatly received.
+
+Bryan.
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!bogus.sura.net!news-feed-1.peachnet.edu!umn.edu!lynx.unm.edu!btaylor
+From: btaylor@mcl.bdm.com (Brent Taylor)
+Newsgroups: comp.windows.x
+Subject: XDM & DECnet ?
+Date: 20 Apr 1993 13:14:41 GMT
+Organization: BDM International, Inc.
+Lines: 10
+Message-ID: <1r0t01INNs7g@lynx.unm.edu>
+NNTP-Posting-Host: jupiter.mcl.bdm.com
+
+Does XDM work with DECnet? I have an Ultrix machine running both TCP/IP
+and DECnet. I have a number of X-terminals hanging off the Ultrix host also
+running TCP/IP and DECnet. Presently I am using XDM for the login procedure
+on the X-terminals using TCP/IP. Since XDM is basically just an X-windows
+client, shouldn't I be able to run XDM on the DECnet protocol tower as well?
+
+My first inclination is that XDM is not your typical X client. It is making
+TCP/IP specific socket calls. In this case the answer would be no; you can
+not run XDM over DECnet. Is this right or not? Any feedback is appreciated.
+Thanks.
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!darwin.sura.net!sgiblab!news.kpc.com!kpc!nntphost!whaley
+From: whaley@sigma.kpc.com (Ken Whaley)
+Subject: Re: XCopyPlane Question
+In-Reply-To: nancie@neko.CSS.GOV's message of 19 Apr 1993 19:48:30 -0400
+Message-ID: <WHALEY.93Apr20115240@sigma.kpc.com>
+Sender: usenet@kpc.com
+Organization: Kubota Pacific Computer Inc.
+References: <9304191835.AA08519@neko.CSS.GOV>
+Date: Tue, 20 Apr 1993 19:52:40 GMT
+Lines: 52
+
+| 
+| In article <BUZZ.93Apr19101538@lion.bear.com> buzz@bear.com (Buzz Moschetti) write
+| >In article <WHALEY.93Apr15103931@sigma.kpc.com> whaley@sigma.kpc.com (Ken Whaley) writes:
+| >>   Actually, I must also ask the FAQ's #1 most popular reason why graphics
+| >>   don't show up: do you wait for an expose event before drawing your
+| >>   rectangle?
+| >
+| >Suppose you have an idle app with a realized and mapped Window that contains
+| >Xlib graphics.  A button widget, when pressed, will cause a new item
+| >to be drawn in the Window.  This action clearly should not call XCopyArea() 
+| >(or equiv) directly; instead, it should register the existence of the new
+| >item in a memory structure and let the expose event handler take care
+| >of rendering the image because at that time it is guaranteed that the
+| >Window is mapped.
+| >
+| >The problem, of course, is that no expose event is generated if the window
+| >is visible and mapped.  Do you know the best way to "tickle" a window so
+| >that the expose event handler will be invoked to draw this new item?
+| >
+| 
+| What does this have to do with my original question???  I previously
+| stated that I did an XCopyArea of the depth-8 pixmap to the screen
+| just to make sure that my image had data, and it did.  This is NOT
+| a problem with expose events, it has to do with XCopyPlane not
+| working!!!
+| 
+| Does anyone have a code fragment they could send demonstrating that
+| XCopyPlane works???  This would be very helpful!
+| 
+| Thanks!
+
+What it has to do with your original question is this: many times 
+beginning X users (heck, experienced X users too!) write small test
+programs.  Many times they forget to draw only in response to expose
+events, and thus see unpreditable results whereby sometimes the application's
+graphics show up, and sometimes they don't.  We're just trying to
+eliminate all the "easy" explanations  for why you're not seeing your
+graphics. 
+
+That being said, why don't you try copying different planes to your
+window other than 16 (== 1 << 4).  Try 1, 1<<1, 1<<2, ..., 1<<7
+to see it you get any output.  Since you're dipslaying only a single 
+plane of your data, it's possible that all the pixel values in your
+pixmap have the same value for that color plane.
+
+	Ken
+
+--
+Kenneth Whaley			 (408) 748-6347
+Kubota Pacific Computer, Inc.	 Email: whaley@kpc.com
+2630 Walsh Avenue
+Santa Clara, CA.  95051
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: victor@hpfrcu03.FRance.hp.COM (Victor GATTEGNO FRENCH CRC)
+Newsgroups: comp.windows.x
+Subject: Re: Running dxterm's onto Apollo from DEC 5000/240
+Date: 20 Apr 1993 16:18:12 -0400
+Organization: The Internet
+Lines: 61
+Sender: news@athena.mit.edu
+Message-ID: <9304201333.AA16144@hpfrcu03.france.hp.com>
+To: alf@st.nepean.uws.edu.au
+Cc: xpert@expo.lcs.mit.edu
+
+
+> Apollo DN2500 (Domain/OS 10.3, X11R4, Motif ?.?).
+
+I think you are running Xapollo , it's a X11R3 server ...
+
+If you want a X11R4 server you should install PSKQ3 (10.3.5) or 10.4
+  so you can run Xdomain . 
+
+> 
+> I get these errors appearing on the DECstation:
+> 
+> > dxterm
+> X Toolkit Warning: Cannot convert string "<Key>apCharDel        " to type VirtualBinding
+> ...
+> Segmentation fault
+> 
+> Any ideas? Is it a Motif problem...are the DEC and Apollo versions of Motif
+> incompatible? Or something to do with XKeysymDB?
+
+In XKeysymDB you could add : 
+!		Apollo specific keysyms
+!
+apLineDel            : 1000FF00
+apCharDel            : 1000FF01
+apCopy               : 1000FF02
+apCut                : 1000FF03
+apPaste              : 1000FF04
+apMove               : 1000FF05
+apGrow               : 1000FF06
+apCmd                : 1000FF07
+apShell              : 1000FF08
+apLeftBar            : 1000FF09
+apRightBar           : 1000FF0A
+apLeftBox            : 1000FF0B
+apRightBox           : 1000FF0C
+apUpBox              : 1000FF0D
+apDownBox            : 1000FF0E
+apPop                : 1000FF0F
+apRead               : 1000FF10
+apEdit               : 1000FF11
+apSave               : 1000FF12
+apExit               : 1000FF13
+apRepeat             : 1000FF14
+apKP_parenleft       : 1000FFA8
+apKP_parenright      : 1000FFA9
+
+
+--
+Victor .
+
+                                            \     /
+                                              ^ ^  
+______victor@hpfrcu03.france.hp.com_______oOOo_o_oOOo_________________
+
+Victor GATTEGNO 
+
+                   "Be Yourself and not what people expect you to be ."
+______________________________________________________________________
+                                              (( 
+                                               )) 
+
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: arana@labein.ES (Jose Luis Arana)
+Newsgroups: comp.windows.x
+Subject: X Graphics Accelerators
+Date: 20 Apr 1993 16:19:49 -0400
+Organization: The Internet
+Lines: 7
+Sender: news@athena.mit.edu
+Message-ID: <19*/S=arana/O=labein/PRMD=iris/ADMD=mensatex/C=es/@MHS>
+To: xpert@expo.lcs.mit.edu
+
+How can I obtain public information (documentation and sources)
+about Xservers implemented with graphics processors?
+
+I am specially interested in Xservers developed for the TMS34020
+Texas Instruments graphic processor.
+
+                     Please send answer to arana@labein.es
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!spool.mu.edu!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: D.Haywood@sheffield-hallam.ac.UK (Dave Haywood)
+Newsgroups: comp.windows.x
+Subject: tvtwm & xsetroot, X11R5 and Sparc 10 keyboard
+Date: 20 Apr 1993 16:55:33 -0400
+Organization: Sheffield Hallam University
+Lines: 66
+Sender: news@athena.mit.edu
+Message-ID: <MAILQUEUE-101.930420145015.384@oak.shu.ac.uk>
+Reply-To: D.Haywood@sheffield-hallam.ac.uk
+To: xpert@expo.lcs.mit.edu
+
+Hi,
+
+  Please reply to me direct as I am not a member of this list.
+
+  I am new to X, so please excuse my lax (read: "probably incorrect")
+terminology!
+
+  Environment: Sun Sparc 10, SunOs 4.1.3.  X11R5 path level 23.  My X process
+is started by xdm.
+
+  i) I want to setup the backgroud (root window?) of the tvtwm display to
+     display the escherknot etc (grey is a very boring colour to work on)!
+
+     The setup is as follows:
+
+        lib/X11/xdm/Xsetup_0    -   xsetroot -bitmap ... etc
+        ~user/.xsession         -   xsetroot .... etc
+                                    tvtwm
+
+     There are also .tvtwmrc and .Xdefaults files in the (~user) home
+     directory.
+
+     The xsetroot in Xsetup_0 displays the appropriate bitmap in the xdm
+     login window as expected - very nice!
+
+     Unfortunately, when the users session is started, the background of the
+     tvtwm window reverts to grey.  If I manually type xsetroot... in an
+     xterm window when the session has started, the background is changed as
+     expected.
+
+     The question is: How do I retain the background from the login window
+     and/or specify a new background on a per-user basis as part of the
+     the users session startup?
+
+ ii) When I open an Xterm on the Sparc 10, not all of the keys are recognised
+     and some keys on the keyboard are not sending the correct characters.
+
+     ie: real key       key shown on screen
+         ------------   -------------------
+         hash           back slash
+         tilde          pipe
+         double quote   at symbol
+         pound          hash
+         cursor key     not recognised
+
+     This is very annoying!  Is X at fault here or the machine setup?  I have
+     installed the xterm drivers that came with X11R5 in both terminfo and
+     termcap as they seemed more uptodate.
+
+     Typing set in an xterm window shows a terminal type of xterm - as
+     expected!
+
+  Any help on how to correct either of these problems much appreciated!
+
+  Thanks,
+
+Dave.
+--------------------------------------------------------------------------
+JANET   : D.Haywood@uk.ac.sheffield-hallam      | Dave Haywood.
+  or      D.Haywood@uk.ac.shu                   | Computer Services,
+INTERNET: D.Haywood@shu.ac.uk                   | Sheffield Hallam University
+Telex   : 54680 SHPOLY G                        | Pond Street,
+Tel     : +44 742-533-828                       | Sheffield. S1 1WB. ENGLAND.
+FAX     : +44 742-533-840                       |
+X.400:/I=D/S=Haywood/O=Sheffield-Hallam/PRMD=UK.AC/ADMD= /C=GB
+X.500:@c=GB@o=Sheffield Hallam University@ou=Computer Services@cn=Dave Haywood
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!news.cac.psu.edu!barr
+From: barr@pop.psu.edu (David Barr)
+Newsgroups: comp.windows.x
+Subject: Re: tvtwm & xsetroot, X11R5 and Sparc 10 keyboard
+Date: 20 Apr 1993 21:32:32 GMT
+Organization: Penn State Population Research Institute
+Lines: 32
+Message-ID: <1r1q5g$cv4@genesis.ait.psu.edu>
+References: <MAILQUEUE-101.930420145015.384@oak.shu.ac.uk>
+NNTP-Posting-Host: darwin.pop.psu.edu
+
+In article <MAILQUEUE-101.930420145015.384@oak.shu.ac.uk> D.Haywood@sheffield-hallam.ac.uk writes:
+>Hi,
+>  Environment: Sun Sparc 10, SunOs 4.1.3.  X11R5 path level 23.  My X process
+>is started by xdm.
+
+Okay, that's good.  I'm typing this from exactly the same setup.
+(US-UNIX layout keyboard)  I did install the sunkbd patch, though.
+
+>  i) I want to setup the backgroud (root window?) of the tvtwm display to
+>     display the escherknot etc (grey is a very boring colour to work on)!
+
+Make sure you're using "ssetroot", which comes with tvtwm.  When tvtwm
+starts up, it nukes the existing root window.  Use an "ssetroot" after
+tvtwm starts up.   (You could spawn off a "(sleep 10; ssetroot ...)&")
+You can also use "VirtualDesktopBackgroundPixmap filename" or just
+VirtualDesktopBackground if you just want another color besides grey.
+
+> ii) When I open an Xterm on the Sparc 10, not all of the keys are recognised
+>     and some keys on the keyboard are not sending the correct characters.
+
+Did you install the sunkbd patch?  It's in the contrib directory on export.
+All the keys on my keyboard send events properly, except the following:
+The End, PageUp, PageDown on the 6-key cluster aren't recognized.
+Even the compose key works.  (Though I can't seem to get the composed
+characters in an xterm to get passed.)
+
+Anyone have a fix for the last two?
+
+--Dave
+-- 
+System Administrator, Penn State Population Research Institute
+* Dog Dianetics ("Woof woof woof?  Page 725.") - Kibo
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!bogus.sura.net!darwin.sura.net!emory!sol.ctr.columbia.edu!ira.uka.de!gmd.de!Germany.EU.net!mcsun!uknet!pipex!slxsys!bae-st!tees!paul
+From: paul@def.bae.co.uk (Paul Byrne)
+Subject: imake - help needed
+Message-ID: <1993Apr20.101306.21536@def.bae.co.uk>
+Sender: usenet@def.bae.co.uk
+Reply-To: paul@def.bae.co.uk
+Organization: British Aerospace (Defence) Ltd.
+Date: Tue, 20 Apr 93 10:13:06 GMT
+Lines: 19
+
+Hi
+
+Can someone please give me some pointers to setting up imake in a SUN OPENWINDOWS
+enviornment ? I've checked through all the documentation but can not find any clues.
+
+Please respons via e-mail.....
+
+Thanks
+
+Paul
+
+
+---------------------------------------------------------------------
+Paul Byrne				British Aerospace Defence Ltd
+					Dynamics Division
+email Paul.Byrne@def.bae.co.uk		FPC 450
+					P.O.Box 5, Filton
+Phone 0272 316086			Bristol, BS12 7QW
+
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!bogus.sura.net!udel!news.intercon.com!psinntp!newsserver.pixel.kodak.com!kodak!eastman!b56vxg.kodak.com!ekdug
+From: jhcox@kodak.com (James Cox)
+Newsgroups: comp.windows.x
+Subject: Xterm Problem With Input Focus / "Shuffle Up"
+Keywords: Xterm, Tektronics, Input Focus, Shuffle up
+Message-ID: <20APR199319424527@b56vxg.kodak.com>
+Date: 21 Apr 93 00:42:00 GMT
+Sender: usenet@eastman.UUCP
+Organization: Eastman Kodak Company, Rochester NY
+Lines: 41
+Nntp-Posting-Host: b56vxg
+News-Software: VAX/VMS VNEWS 1.41
+
+
+The situation: running a Fortran executable that creats an Xterm.  An option
+in the menu contained in the Xterm runs a Fortran subroutine that creats
+a Tektronics-mode Xterm for displaying some graphics.  Typing a <RET> while
+the Tektronics-mode Xterm (future reference to this will be "Tek-term") is
+active makes the Xterm read future keystrokes but does not shift input focus
+to the Xterm (I'm basing that statement on the fact that the border of the 
+Tek-term stays the highlighted color and that the Tek-term stays on top of
+Xterm.  If what I'm describing isn't input focus, let me know.)  
+
+The xterm can be brought to the top by clicking the mouse button on it.
+
+Subsequent selections from the Xterm of the menu item that displays graphics 
+highlihts the border and displays the updated graphics, but does not move 
+the Tek-term to the top.  If the Tek-term has been iconized to conserve 
+screen space, it stays an icon.
+
+
+The desired behavior: one of two options - 
+
+    1. Whichever of the windows that is active is always on top of the 
+       inactive one.
+
+    2. Whenever the Tek-term is inactivated, it should revert to a icon
+       but when it is activated it should become a window on a higher 
+       level than the Xterm.
+
+What I think I need: a means of specifying that a Xterm or Tek-term will
+be at the highest level and a way to iconify/expand a Xterm and Tek-term.
+These commands, would, I'd guess, need to be in the Fortran or in the 
+command that starts up the Xterm and Tek-term.
+
+Other information: All this is taking place on a VT-1300 (a DEC dumb 
+X-windows terminal) connected to a VAX running VMS and Motif.
+
+Thanks for your time.  If you've got any words of wisdom (other than 
+"give up" ;-), please send email to 
+
+jhcox@Kodak.com
+
+
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!pacific.mps.ohio-state.edu!zaphod.mps.ohio-state.edu!cs.utexas.edu!uunet!tarpit!fang!gator!larry
+From: larry@gator.rn.com (Larry Snyder)
+Subject: Dell 2.2 EISA Video Cards
+Message-ID: <C5ssHu.CBI@gator.rn.com>
+Organization: GatorNet, Lake Mary, Florida
+Date: Tue, 20 Apr 1993 19:51:29 GMT
+Lines: 4
+
+Does XFree86 support any EISA video cards under Dell 2.2?
+-- 
+Larry Snyder                               
+larry@gator.rn.com
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!newsserver.jvnc.net!newsserver.technet.sg!suresh
+From: suresh@iss.nus.sg (Suresh Thennarangam - Research Scholar)
+Subject: X Device Driver for Bird
+Message-ID: <C5t9Ay.3Dr@newsserver.technet.sg>
+Sender: news@newsserver.technet.sg
+Nntp-Posting-Host: titan.iss.nus.sg
+Organization: Institute Of Systems Science, NUS
+X-Newsreader: Tin 1.1 PL4
+Date: Wed, 21 Apr 1993 01:54:33 GMT
+Lines: 19
+
+
+Has anyone written a device driver to use the Ascension bird with XWindows ? 
+
+
+      __                  
+     (_   / /  o_   o  o |_
+     __)/(_( __) (_(_ /_)| )_
+
+
+***************************************************************************
+* Suresh Thennarangam               *  EMail: suresh@iss.nus.sg(Internet) *
+* Research Scholar                  *         ISSST@NUSVM.BITNET          *
+* Institute Of Systems Science      *  Tel:  (065) 772 2588.              *
+* National University Of Singapore  *  Facs.: (065) 778 2571              *
+* Heng Mui Keng Terrace             *  Telex: ISSNUS RS 39988             *
+* Singapore 0511.                   *                                     *
+***************************************************************************
+
+
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!newsserver.jvnc.net!newsserver.technet.sg!suresh
+From: suresh@iss.nus.sg (Suresh Thennarangam - Research Scholar)
+Subject: Re: Mix GL with X (Xlib,Xt,mwm)
+Message-ID: <C5tA96.3L4@newsserver.technet.sg>
+Sender: news@newsserver.technet.sg
+Nntp-Posting-Host: titan.iss.nus.sg
+Organization: Institute Of Systems Science, NUS
+X-Newsreader: Tin 1.1 PL4
+References: <1993Apr20.173401.14378@texhrc.uucp>
+Date: Wed, 21 Apr 1993 02:15:05 GMT
+Lines: 47
+
+pyeatt@Texaco.com (Larry D. Pyeatt) writes:
+: In article <9304191540.AA09727@sparc1.jade.com>, graham@sparc1.ottawa.jade.COM (Jay Graham) writes:
+: |> 
+: |> XmDrawingArea for drawing with Xlib.  But I would like to take advantage of
+: |> the Graphics Library (GL) available on our IBM RS/6000 (SGI's GL i believe).
+: |> Is it possible to mix X and GL in one application program?
+: |> Can I use GL subroutines in an XmDrawingArea or in an X window opened by me
+: |> with XOpenWindow?
+
+You can't make GL calls in an XmDrawingArea widget for sure.  
+: 
+: There is a widget already defined for GL.  It is the GlxMDraw (motif) or
+: GlxDraw (athena) widget.  It is similar to a XmDrawingArea, except that it
+: allows you to use GL calls to render into the window.  Look at glxlink,
+: glxunlink, glxgetconfig, and glxwinset in the man pages.
+: 
+: 
+: The GlxMDraw widget works pretty well.  OpenGL will be an improvement.
+
+I can vouch for that. The GL Widget works pretty well. I have been using it
+for sometime now. I'm not sure though whether you can use Xlib calls to draw
+into the GL widget. I haven't tried it yet nor have I read the accompanying
+documentation completely. Try posting to comp.sys.sgi for more information.
+Better still,you will find most of the answers in the  SGI manuals .. there
+is a little transition guide which explains the "mixed-model programming"
+paradigm(Mixing X and GL).
+
+: |> Does PEX (graPHIGS?) have the same functionality of GL?
+: 
+: I think GL is a little easier to use and a little more powerful, but
+: that's just an opinion.  Mileage may vary.
+
+Well, PEX is designed as an extension to  X and will be more seamless  but 
+then, it is buggy to start with .. opinions again.
+
+      __                  
+     (_   / /  o_   o  o |_
+     __)/(_( __) (_(_ /_)| )_
+
+***************************************************************************
+* Suresh Thennarangam               *  EMail: suresh@iss.nus.sg(Internet) *
+* Research Scholar                  *         ISSST@NUSVM.BITNET          *
+* Institute Of Systems Science      *  Tel:  (065) 772 2588.              *
+* National University Of Singapore  *  Facs.: (065) 778 2571              *
+* Heng Mui Keng Terrace             *  Telex: ISSNUS RS 39988             *
+* Singapore 0511.                   *                                     *
+***************************************************************************
+Newsgroups: comp.windows.x
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!gatech!howland.reston.ans.net!bogus.sura.net!darwin.sura.net!uvaarpa!cv3.cv.nrao.edu!rgooch
+From: rgooch@rp.CSIRO.AU (Richard Gooch)
+Subject: Re: Animation with XPutImage()?
+Message-ID: <1993Apr21.175447.21636@nrao.edu>
+Sender: news@nrao.edu
+Organization: CSIRO Division of Radiophysics/Australia Telescope National Facility
+References:  <1993Apr21.154620.16330@infodev.cam.ac.uk> <1993Apr21.165310.14544@dsd.es.com>
+Date: Wed, 21 Apr 1993 17:54:47 GMT
+Lines: 41
+
+In article <1993Apr21.165310.14544@dsd.es.com>, pmartz@dsd.es.com (Paul Martz) writes:
+> In article <1993Apr21.154620.16330@infodev.cam.ac.uk>, dcr@mail.ast.cam.ac.uk (Derek C. Richardson) writes:
+> > Hi, I'm new to this group so please bear with me!
+> > 
+> > Two years ago I wrote a Sunview application for fast animation
+> > of raster files. With Sunview becoming rapidly obselete, I've
+> > finally decided to rewrite everything from scratch in XView.
+> > I put together a quick test, and I've found that XPutImage()
+> > is considerably slower (factor of 2 on average?) than the
+> > Sunview command pw_rop() which moves image data from memory
+> > pixrects to a canvas. This was on a Sparc IPX. It seems that:
+> > (1) the X protocol communication is slowing things down; or
+> > (2) XPutImage is inefficient...or both!
+> 
+> Using XPutImage, your source is maintained by the client and the
+> destination is maintained by the server, thus you incur the overhead
+> of transporting through whatever client-server communications
+> mechanism you are using.
+> 
+> Is it possible for you to maintain your source images in pixmaps?
+> These are maintained by the server, so copying them into a window is
+> much cheaper.
+> 
+> Also make sure you are not sending any unnecessary XSyncs, or running
+> in XSynchonize mode.
+
+  If you need speed, and your client can run on the same host as the X server,
+  you should use the shared memory extension to the sample X server (MIT-SHM).
+  xdpyinfo  will tell you if your server has this extension. This is certainly
+  available with the sample MIT X server running under SunOS.
+  A word of warning: make sure your kernel is configured to support shared
+  memory. And another word of warning: OpenWindows is slower than the MIT
+  server.
+  I have written an imaging tool (using XView for the GUI, by the way) which
+  yields over 10 frames per second for 512*512*8 bit images, running on a Sparc
+  IPC (half the cpu grunt of an IPX). This has proved quite sufficient for
+  animations.
+
+				Regards,
+
+					Richard Gooch....
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!gatech!enterpoop.mit.edu!INTERNET!news-mail-gateway
+From: victor@hpfrcu03.FRance.hp.COM (Victor GATTEGNO FRENCH CRC)
+Newsgroups: comp.windows.x
+Subject: Re: High order bit of a character in xterm .
+Date: 21 Apr 1993 14:26:14 -0400
+Organization: The Internet
+Lines: 33
+Sender: news@athena.mit.edu
+Message-ID: <9304211336.AA02196@hpfrcu03.france.hp.com>
+To: kavitsky@hsi.com
+Cc: xpert@expo.lcs.mit.edu
+
+> 
+> Does anyone know why the high order bit is being filtered and what
+> I can do to make sure that the entire 8bits make it through to
+> the final application? Any help is greatly appreciated.
+> 
+
+1. You need these resources :
+	XTerm*EightBitInput:    true
+	XTerm*EightBitOutput:    true
+
+2. In the shell you need to do : 
+        stty cs8 -istrip 
+
+
+Good luck .
+Victor .
+
+                                                              |
+                                                              *
+                                                              X
+                                                              X
+                                                              X
+                                                              X
+______________________________________________________________X________
+                                                              X
+  Victor Gattegno     Email: victor@hpfrcu03.france.hp.com   XXX
+  Hewlett-Packard France   Hpdesk: HP8101/RC                X X X  
+  1, Avenue du Canada      Phone : 33-1-69-82-60-60        X  X  X 
+  91947 - Les Ulis Cedex   Telnet: 770-1141               X   X   X  
+
+ 
+
+
