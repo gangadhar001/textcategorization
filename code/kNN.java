@@ -29,7 +29,7 @@ public class kNN {
     	}
 	}
 
-    private static void getFiles(File folder, ArrayList<String> list,Hashtable HT) throws IOException {
+    private static void getFiles(File folder, ArrayList<String> list,ArrayList<String> address,Hashtable HT) throws IOException {
         folder.setReadOnly();
         File[] files = folder.listFiles();
         for(int j = 0; j < files.length; j++) {
@@ -47,7 +47,7 @@ public class kNN {
     				String filename = array[arrayLength - 1];
     				String filecategory = array[arrayLength - 2];
     				
-    				copyFile(files[j],new File("./"+filename));
+    				//copyFile(files[j],new File("./"+filename));
             		list.add(filename);
             		
             		HT.put(filename,filecategory);
