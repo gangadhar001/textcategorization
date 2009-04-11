@@ -4,46 +4,49 @@ import java.util.*;
 
 public class TermSelection
 {
-	public float DFThresh;
-	public float IDFThresh;
-	public ArrayList consolidatedDocuments = new ArrayList();
+	public float DFThresh = 0;
+	public float IDFThresh = 9999;
+	public File MasterFile;
+	public String MASTERFILENAME = "database";
 
 	public TermSelection()
 	{
 	}
 
 
-	public void filterTerms(ArrayList trainoutputDocumentVector, Hashtable HT)
+	public void filterTerms(ArrayList trainingDocumentVector, Hashtable HT)
 	{
 		ArrayList filtered;
+		ArrayList trainoutputDocumentVector = new ArrayList();
+		File consolidatedDoc = new File(MASTERFILENAME);
 		String filename;
 		String category;
-
-		for (int i = 0; i < trainoutputDocumentVector.size(); i++)
+		File[] categorizedDoc = new File[10];
+		for (int i = 0; i < trainingDocumentVector.size(); i++)
 		{
-			filename = (String)trainoutputDocumentVector.get(i);
+			filename = (String)trainingDocumentVector.get(i);
 			File file = new File(filename);
 			category = (String)HT.get(filename);
 
-			//insert document into certain category
-			insertDoc(file, category);
+			//append document into certain category
+			categorizedDoc = appendDocCat(file, category, categorizedDoc);
 			
 		}
+		
 
 		for (int j = 0; j < 10; j++)
 		{
-			filename = (String)consolidatedDocuments.get(j);
-			File file = new File(filename);
+			
+			//TODO: run stemmer on the 10 files
+			// run stemmer on categorizedDoc[j]
 
-			//filter key terms based on df frequency
+			//filter key terms based on df frequency on each stemmered file
 			//returns a list of filtered keyterms(unwanted)
-			filtered = filterDF(file);
+			File stemmered_file = new File(categorizedDoc[j].getName() + "_output");
+			filtered = filterDF(stemmered_file);
 
-			//filter keyterms from original files
-			filterOriginal(filtered);
-
-			//insert document(consolidated category) into single consolidated file
-			insertDoc(file);
+			//append document(consolidated category) into single consolidated file
+			consolidatedDoc = appendDoc(categorizedDoc[j], consolidatedDoc);
 
 		}
 
@@ -52,11 +55,12 @@ public class TermSelection
 		filtered = filterIDF();
 
 		//filter keyterms from original files
-		filterOriginal(filtered);
+		filterOriginal(filtered, trainoutputDocumentVector);
 	}
 
 	public ArrayList filterDF(File file)
 	{
+
 		return (new ArrayList());
 	}
 
@@ -65,16 +69,18 @@ public class TermSelection
 		return (new ArrayList());
 	}
 
-	public void filterOriginal(ArrayList filtered)
+	public void filterOriginal(ArrayList filtered, ArrayList trainoutputDocumentVector)
 	{
 	}
 
-	public void insertDoc(File file)
+	public File appendDoc(File file, File consolidatedFile)
 	{
+		return (new File("stub"));
 	}
 
-	public void insertDoc(File file, String category)
+	public File[] appendDocCat(File file, String category, File[] categorizedFile)
 	{
+		return (new File[10]);
 		/*int catIndex;
 		
 		switch (category)
