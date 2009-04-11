@@ -47,7 +47,6 @@ public class TermSelection
 
 			//append document(consolidated category) into single consolidated file
 			consolidatedDoc = appendDoc(categorizedDoc[j], consolidatedDoc);
-
 		}
 
 		//filter key terms of the single consolidated file
@@ -60,7 +59,6 @@ public class TermSelection
 
 	public ArrayList filterDF(File file)
 	{
-
 		return (new ArrayList());
 	}
 
