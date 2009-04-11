@@ -148,7 +148,7 @@ public class StopListStemmer
             sl.handleStopList();
             
             String filename ="";
-            StringTokenizer st = new StringTokenizer((args[i]).toString(),"/");
+            StringTokenizer st = new StringTokenizer((args[i]).toString(),"/\\");
 		     while (st.hasMoreTokens()) {
          		filename = st.nextToken();
      		}
