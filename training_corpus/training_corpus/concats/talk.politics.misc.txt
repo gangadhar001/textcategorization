@@ -1,0 +1,761 @@
+Xref: cantaloupe.srv.cs.cmu.edu talk.politics.misc:178756 misc.legal:60831 alt.politics.libertarian:6600
+Path: cantaloupe.srv.cs.cmu.edu!rochester!rochester!udel!bogus.sura.net!howland.reston.ans.net!gatech!nanovx!gloster!cutter
+From: cutter@gloster.via.mind.org (cutter)
+Newsgroups: talk.politics.misc,misc.legal,alt.politics.libertarian
+Subject: Re: Limiting Govt (was Re: Employment (was Re: Why not concentrate..
+Message-ID: <7qHD3B4w165w@gloster.via.mind.org>
+Date: Wed, 21 Apr 93 16:07:29 EDT
+References: <1993Apr19.183653.9855@tijc02.uucp>
+Distribution: world
+Organization: Gordian Knot, Gloster,GA
+Lines: 27
+
+pjs269@tijc02.uucp (Paul Schmidt) writes:
+
+> I want to know that I have a competent doctor when I am ill.  Government
+> regulations have driven up costs and decreased quality by providing a
+> monopoly for licensed M.D.s.  Many procedures could be performed by
+> qualified nurses but doctors are forced to do them.  The common cold
+> must be diagnosed by a licensed doctor who is the only one who is
+> allowed to write a perscription.  Doctor's are spending much of their
+> time on such mundane cases that they cannot have the time to spend on
+> the really tough cases.  This results in higher cost, lower quality
+> medical care.
+
+Here in Georgia, the state legislature in 1992 "accidentally passed a law 
+lobbied for by Opthamologists prohibiting anyone but a licensed MD from
+giving shots. They were trying to limit Optometrists from competing with
+them.
+They inadvertantly forbade nurses, EMTs, dentists, and tattoo artists 
+from "piercing the skin." (probably diabetics too). The Secretary of State's 
+office announced on June 30th that they wouldn't enforce it pending
+reconsideration in the 1003 Legislature. In the hassle over the state flag
+I heard nothing about repealing it.
+
+---------------------------------------------------------------------
+cutter@gloster.via.mind.org (chris)     All jobs are easy 
+                                     to the person who
+                                     doesn't have to do them.
+                                               Holt's law
+Xref: cantaloupe.srv.cs.cmu.edu alt.conspiracy:21837 talk.politics.misc:178757
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!news.bbn.com!news.bbn.com!ingria
+From: ingria@bbn.com (Bob Ingria)
+Newsgroups: alt.conspiracy,talk.politics.misc
+Subject: Re: A Message for you Mr. President: How do you know what happened?
+Date: 20 Apr 93 19:30:03
+Organization: BBN, Cambridge MA
+Lines: 38
+Message-ID: <INGRIA.93Apr20193003@snoopy.bbn.com>
+References: <C5sCqI.4By@apollo.hp.com>
+Reply-To: ingria@BBN.COM
+NNTP-Posting-Host: snoopy.bbn.com
+In-reply-to: goykhman@apollo.hp.com's message of 20 Apr 93 14:11:06 GMT
+
+In article <C5sCqI.4By@apollo.hp.com> goykhman@apollo.hp.com (Red Herring) writes:
+   In article <bskendigC5rCBG.Azp@netcom.com> bskendig@netcom.com (Brian Kendig) writes:
+
+   >They used a tank to knock a hole in the wall, and they released
+   >non-toxic, non-flammable tear gas into the building.
+
+       Non-toxic tear gas?!?  Do you know what tear gas is?
+
+       I do: once upon a time I happened to be in a room when someone threw 
+       a tear-gas grenade in (that was supposed to be a joke:).  The sensation 
+       was incredible: I felt my eyes and nostrils were being torn apart.
+       I remember us - a bunch of young men in our early 20's - running out
+       like a herd of wild animals, knocking down the door and jumping
+       out of the windows (thank G-d we were on the first floor).
+
+       I can't imagine this kind of stuff being used against children.
+
+For them, the worst effect might not be the physical effects so much
+as the psychological effect of being incapacitated without fully
+understanding the cause.  Many years ago, I was accidentally exposed
+to a tiny dose of tear gas.  (It was in Athens, on the street leading
+to the American Embassy; there'd been a march that had been broken up
+with tear-gas; I must have stumbled into a remaining patch of gas the
+next day.)  Aside from the tears, feeling sick to my stomach, etc.,
+the really horrible psychological effect was that of suddenly falling
+to pieces and not knowing why it had happened---I was horrified and
+wondered what disease or other health problem I had.  (I didn't find
+out about the march and the tear-gas till hours later.)  I can imagine
+how horribly disorienting this might be to very young children:
+suddenly crying uncontrollably and feeling sick, weak, and out of
+control of your body---and not knowing the cause.
+
+``This gives us a chance to try the Gas of Peace.''  Yeah, right.
+
+--
+-30-
+Bob Ingria
+
+Xref: cantaloupe.srv.cs.cmu.edu talk.politics.misc:178758 alt.sex:111606 soc.men:68657 misc.legal:60834
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!cs.utexas.edu!uunet!optilink!cramer
+From: cramer@optilink.COM (Clayton Cramer)
+Newsgroups: talk.politics.misc,ca.politics,ba.politics,alt.sex,soc.men,misc.legal
+Subject: Re: New Study Out On Gay Percentage
+Message-ID: <15427@optilink.COM>
+Date: 19 Apr 93 16:21:30 GMT
+References: <15378@optilink.com> <C5K5LC.CyF@murdoch.acc.Virginia.EDU>
+Organization: Optilink Corporation, Petaluma, CA
+Lines: 61
+
+In article <C5K5LC.CyF@murdoch.acc.Virginia.EDU>, lfoard@hopper.Virginia.EDU (Lawrence C. Foard) writes:
+> In article <15378@optilink.com> cramer@optilink.COM (Clayton Cramer) writes:
+# #From the Santa Rosa (Cal.) Press-Democrat, April 15, 1993, p. B2:
+# #
+# #    Male sex survey: Gay activity low
+# #
+# #    A new natonal study on male sexual behavior, the most thorough
+# #    examination of American men's sexual practices published since
+# #    the Kinsey report more than four decades ago, shows about 2
+# #    percent of the men surveyed had engaged in homosexual sex and
+# #    1 percent considered themselves exclusively homosexual.
+# #
+# #    The figures on homosexuality in the study released Wednesday
+# #    by the Alan Guttmacher Institute are significantly lower than
+# #    the 10 percent figure that has been part of the conventional
+# #    wisdom since it was published in the Kinsey report.
+# 
+# 1) So what?
+
+Homosexuals lie about the 10% number to hide the disproportionate
+involvement of homosexuals in child molestation.  They also lie
+about "10%" to keep politicians scared.
+
+# 2) It will be interesting to see the reaction when 2.5million queers
+#    gather in Washington DC. After all if there are only 6million of
+#    us then this is an event unprecidented in history...
+
+But many of the people who will be marching aren't homosexuals, but
+other members of the leftist agenda.
+
+# #The article also contains numbers on the number of sexual partners.
+# #The median number of sexual partners for all men 20-39 was 7.3.
+# 
+# Don't forget that 25% had 20 or more partners....
+
+Not surprising.  Remember, that study includes homosexuals as well.
+
+# #Compared to the table I have already posted from Masters, Johnson,
+# #and Kolodny showing male homosexual partners, it is apparent that
+# #homosexual men are dramatically more promiscuous than the general
+# #male population.  
+# 
+# And what did this study show for number of sexual contacts for those
+# who said they where homosexual? Or is that number to inconvient for
+# you....
+
+It wasn't published.
+
+# #It's a shame that we don't have a breakdown for
+# #straight men vs. gay/bi men -- that would show even more dramatically
+# #how much more promiscuous gay/bi men are.
+# 
+# Fuck off
+
+Typical homoseuxal response.
+
+
+
+-- 
+Clayton E. Cramer {uunet,pyramid}!optilink!cramer  My opinions, all mine!
+Relations between people to be by mutual consent, or not at all.
+Xref: cantaloupe.srv.cs.cmu.edu talk.politics.misc:178759 alt.sex:111607 soc.men:68658 misc.legal:60835
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!usc!cs.utexas.edu!uunet!optilink!cramer
+From: cramer@optilink.COM (Clayton Cramer)
+Newsgroups: talk.politics.misc,ca.politics,ba.politics,alt.sex,soc.men,misc.legal
+Subject: Re: New Study Out On Gay Percentage
+Message-ID: <15428@optilink.COM>
+Date: 19 Apr 93 16:25:00 GMT
+References: <15378@optilink.COM> <brian.21.734967725@gab.unt.edu> <C5L0v1.JCv@news.cso.uiuc.edu>
+Organization: Optilink Corporation, Petaluma, CA
+Lines: 19
+
+In article <C5L0v1.JCv@news.cso.uiuc.edu>, dans@uxa.cso.uiuc.edu (Dan S.) writes:
+> Don't forget about the culture.  Sadly, we don't (as a society) look upon
+> homosexuality as normal (and as we are all too well aware, there are alot
+> of people who condemn it).  As a result, the gay population is not encouraged
+> to develop "non-promiscuous" relationships.  In fact there are many roadblocks
+> put in the way of such committed relationships.  It is as if the heterosexual
+
+Such as?  Not being able to get married isn't a roadblock to a permanent
+relationship.  Lack of a marriage certificate doesn't force a couple
+to break up.  This is an excuse used by homosexuals because the 
+alternative is to ask why they are so much more promiscuous than 
+straights.
+
+> Dan
+
+
+-- 
+Clayton E. Cramer {uunet,pyramid}!optilink!cramer  My opinions, all mine!
+Relations between people to be by mutual consent, or not at all.
+Xref: cantaloupe.srv.cs.cmu.edu talk.politics.misc:178760 alt.sex:111608 soc.men:68659 misc.legal:60836
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!cs.utexas.edu!uunet!optilink!cramer
+From: cramer@optilink.COM (Clayton Cramer)
+Newsgroups: talk.politics.misc,ca.politics,ba.politics,alt.sex,soc.men,misc.legal
+Subject: Re: New Study Out On Gay Percentage
+Message-ID: <15430@optilink.COM>
+Date: 19 Apr 93 16:27:32 GMT
+References: <15378@optilink.COM> <1993Apr16.164638.27218@galileo.cc.rochester.edu>
+Organization: Optilink Corporation, Petaluma, CA
+Lines: 31
+
+In article <1993Apr16.164638.27218@galileo.cc.rochester.edu>, as010b@uhura.cc.rochester.edu (Tree of Schnopia) writes:
+> In <15378@optilink.COM> cramer@optilink.COM (Clayton Cramer) writes:
+# #The article also contains numbers on the number of sexual partners.
+# #The median number of sexual partners for all men 20-39 was 7.3.
+# #Compared to the table I have already posted from Masters, Johnson,
+# #and Kolodny showing male homosexual partners, it is apparent that
+# #homosexual men are dramatically more promiscuous than the general
+# #male population.  It's a shame that we don't have a breakdown for
+# #straight men vs. gay/bi men -- that would show even more dramatically
+# #how much more promiscuous gay/bi men are.
+# 
+# Possibly because gay/bi men are less likely to get married?
+
+Marriage isn't a requirement for a couple staying together.
+
+# What was the purpose of this post?  If it was to show a mindless obsession
+# with statistics, an incredibly flawed system of reasoning, and a repellent
+# hatemonger agenda, then the purpose was accomplished with panache.
+# 
+# (a) Get a clue.  (b) Get a life.  (c) Get out of my face.  I'm not in yours.
+# 
+# ----bi    Andrew D. Simchik					SCHNOPIA!
+
+Yes you are.  When you and the rest of the homosexual community
+pass laws to impose your moral codes on me, by requiring me to
+hire, rent to, or otherwise associate with a homosexual against
+my will, yes, you are in my face.  Until homosexuals stop trying
+to impose their morals on me, I will be in your face about this.
+-- 
+Clayton E. Cramer {uunet,pyramid}!optilink!cramer  My opinions, all mine!
+Relations between people to be by mutual consent, or not at all.
+Xref: cantaloupe.srv.cs.cmu.edu talk.politics.misc:178761 misc.legal:60837
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!cs.utexas.edu!uunet!optilink!cramer
+From: cramer@optilink.COM (Clayton Cramer)
+Newsgroups: talk.politics.misc,misc.legal
+Subject: Re: The Role of the National News Media in Inflaming Passions
+Message-ID: <15431@optilink.COM>
+Date: 19 Apr 93 16:29:20 GMT
+References: <15377@optilink.COM> <C5IAK2.5zH@murdoch.acc.Virginia.EDU> <C5L780.Apu@murdoch.acc.Virginia.EDU>
+Organization: Optilink Corporation, Petaluma, CA
+Lines: 17
+
+In article <C5L780.Apu@murdoch.acc.Virginia.EDU>, gsh7w@fermi.clas.Virginia.EDU (Greg Hennessy) writes:
+> Kaldis writes:
+> #The fact that she was wearing a miniskirt with no underwear was
+> #presented as evidence that she was a prostitute, and the court
+> #apparently found this compelling.
+> 
+> Ah, I know women who wear miniskirts without wearing underwear, and
+> they are not prostitutes.
+
+Do they have a history of working in massage parlors, and telling
+co-workers there that they are prostitutes?  Do they frequent truck
+stop parking lots at 4:00 AM, without ID on any sort?
+
+> -Greg Hennessy, University of Virginia
+-- 
+Clayton E. Cramer {uunet,pyramid}!optilink!cramer  My opinions, all mine!
+Relations between people to be by mutual consent, or not at all.
+Xref: cantaloupe.srv.cs.cmu.edu alt.politics.libertarian:6603 talk.politics.misc:178769 alt.politics.usa.misc:2833
+Path: cantaloupe.srv.cs.cmu.edu!rochester!rochester!udel!bogus.sura.net!howland.reston.ans.net!noc.near.net!transfer.stratus.com!sw.stratus.com!cdt
+From: cdt@sw.stratus.com (C. D. Tavares)
+Newsgroups: alt.politics.libertarian,talk.politics.misc,alt.politics.usa.misc
+Subject: Re: We're from the government and we're here to help you
+Date: 21 Apr 1993 00:14:42 GMT
+Organization: Stratus Computer, Inc.
+Lines: 57
+Distribution: world
+Message-ID: <1r23li$bp2@transfer.stratus.com>
+References: <93096.28448.J056600@LMSC5.IS.LMSC.LOCKHEED.COM> <1993Apr8.200326.27560@infonode.ingr.com> <1993Apr18.192508.12442@isc-br.isc-br.com>
+NNTP-Posting-Host: rocket.sw.stratus.com
+
+In article <1993Apr18.192508.12442@isc-br.isc-br.com>, steveh@thor.isc-br.com (Steve Hendricks) writes:
+> In article <1993Apr8.200326.27560@infonode.ingr.com> albeaj@jima.b17d.ingr.com (Jim Albea) writes:
+
+> >|> Gee, Jim, if you'll check the Constitution you'll find "in order to...
+> >|> promote the general welfare...do ordain and establish this Constitution..."
+> >|> I'm surprised you missed it.  It's right there in the first paragraph.  I
+> >|> would have thought you would have made it at least through the preamble.
+
+> >You almost got it right, and it was a good try, but you should follow your
+> >own advice.  The PREAMBLE to the CONSTITUTION does read as you have quoted
+> >but let us not forget that after all it is only the preamble.  It is not
+> >a binding part of the Constitution and carries no weight in the law.  That 
+> >poor tortured paragraph has got to be one of the most unfortunate passages 
+> >in the English language - witness the legions of blowhards like yourself who
+> >think those vague flowery phrases are part of the law of the land.  Do you
+> >really believe that a politician only has to give lip service to "promoting
+> >the general welfare" to be within the limits of the constitution?
+
+> Sorry, buddy, but some other "blowhards" managed to include the "general
+> welfare" in another portion of the constitution.
+
+> Article I Section 8: "The Congress shall have the power to lay and collect
+> taxes...to pay the debts and provide for the common defence and GENERAL
+> WELFARE of the United States..."
+
+> I guess they wanted to make sure everyone understood they meant what they
+> said in the preamble.
+
+> ...But since it explicitly includes both the general welfare and defense
+> in Article I, Section 8, I guess you'll grant that botha are constitutional
+> functions.  Right?
+
+    James Madison, Federalist Paper 41:
+
+    "It has been urged and echoed, that the power ``to lay and
+     collect taxes, duties, imposts, and excises, to pay the debts,
+     and provide for the common defense and general welfare of the
+     United States,'' amounts to an unlimited commission to exercise
+     every power which may be alleged to be necessary for the common
+     defense or general welfare...
+
+    "No stronger proof could be given of the distress under which
+     these writers labor for objections, than their stooping to such a
+     misconstruction.  Had no other enumeration or definition of the
+     powers of the Congress been found in the Constitution, than the
+     general expressions just cited, the authors of the objection
+     might have had some color for it; ...  But what color can the
+     objection have, when a specification of the objects alluded to by
+     these general terms immediately follows, and is not even
+     separated by a longer pause than a semicolon?  ...  Nothing is
+     more natural nor common than first to use a general phrase, and
+     then to explain and qualify it by a recital of particulars.
+-- 
+
+cdt@rocket.sw.stratus.com   --If you believe that I speak for my company,
+OR cdt@vos.stratus.com        write today for my special Investors' Packet...
+
+Xref: cantaloupe.srv.cs.cmu.edu alt.activism:42868 talk.politics.misc:178770
+Newsgroups: alt.activism,talk.politics.misc
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!ira.uka.de!scsing.switch.ch!dxcern!dscomsa!dscomsa.desy.de!hallam
+From: hallam@dscomsa.desy.de (Phill Hallam-Baker)
+Subject: Re: Welcome to Police State USA
+Message-ID: <C5t942.6Cz@dscomsa.desy.de>
+Lines: 89
+Sender: hallam@vxdesy.desy.de (Phill Hallam-Baker)
+Reply-To: hallam@zeus02.desy.de
+Organization: DESYDeutsches Elektronen Synchrotron, Experiment ZEUS bei HERA
+References: <1993Apr20.004224.66488@cc.usu.edu> <C5rusq.M6M@news.cso.uiuc.edu> <1993Apr20.030234.66491@cc.usu.edu> <C5sI9G.Hx@dscomsa.desy.de> <1r15l1INNh91@ctron-news.ctron.com>
+Date: Wed, 21 Apr 1993 01:50:25 GMT
+
+
+In article <1r15l1INNh91@ctron-news.ctron.com>, smith@ctron.com (Lawrence C Smith) writes:
+
+|>>The paranoid assertion that the BATF fired first in an unprovoked
+|>>assault assumes that the BATF were on a death wish. Had they
+|>>expected the B-D to be anything other than peacefull citizens who
+|>>would accept a search authorized by a court they would have turned up
+|>>in a tank and broken the door down on day one.
+|>
+|>This is stupid.  That is no paranoid assertion, it is testamony from surviving
+|>witnesses, and the BATF _has_ no tanks, nor am I aware of either the BATF _or_
+|>the FBI using any until yesterday.  When they use maximum force they do just
+|>what they did that first day that got four officers killed.
+
+These surviving witnesses being members of which cult pray tell ??
+
+
+|>>The stupidity was the attempt to serve a warant on the place by
+|>>ludicrously underarmed and unprotected police. 
+|>
+|>"Underarmed"?  You flabberghast me, they were loaded for bear and every
+|>picture shows them wearing bullet-proof vests!  They were using concussion
+|>grenades and full-auto weapons, what was missing low-yield tac-nukes?  This
+|>is a transparent attempt to retcon a justification for the ridiculous amount
+|>of force used, both initially and yesterday.  You should be ashamed.
+
+We were having a discussion about whether Bush would have done anything
+differently. On the basis of Panama, Grenada, Tripoli, Kewait etc we 
+decided that Bush would have asked for a surgical airstrike  or used a 
+cruise missile, some people suggested that he would have used the nuke
+warhead cruise, others pointed out that he would be too cheap to use 'em.
+
+What was missing? Armoured vehicles! 
+
+
+|>>If anyone on the net cares to suggest a sure fire method of bringing
+|>>the murderes of four police officers to justice perhaps we could
+|>>hear it.
+|>
+|>They _had_ a sure-fire method: keep them bottled up and talk them to death or
+|>surrender without giving him justification for some looney-tune religious
+|>stunt.
+|>
+|>Phil, I've been reading your postings for months and I'm convinced that you
+|>will back anything, no matter how damaging it may be to yours or anyone
+|>else's rights if you think it will hurt people you don't like.  It's people
+|>with that attitude that set up the preconditions for the Holocaust, a process
+|>that is in place _now_ in this country, even if the tattered, pitiful remains
+|>of the Constitution is slowing its progress.  This isn't a Libertarian issue,
+|>others may argue that line, but from a strictly Constitutional view of a
+|>democratic gov't, what the FBI and BATF did was wrong, wrong, wrong, even if
+|>their _reasons_ for trying to arrest Koresh were 100% right.  _Anything_ that
+|>leads to the deaths of 17 children, if nothing else touches your stoney
+|>heart, is _wrong_ no matter who pushed the button.  For God's sake, man, get
+|>your morality back.
+
+The person who murdered 17 children was Koresh. He kept them there and 
+brought about their deaths deliberately.
+
+You may consider that I am a complete bastard and a not very nice chap.
+Thats quite true. I don't pretend to be. Being nice is what amateurs
+try to do. If you want to talk politics you are talking hard decisions
+such as whether the lives of the troops should be risked attempting
+to rescue the children. Anyone who has held the office of President
+of the United States since FDR has held the threat that if the USA
+or its allies were to be threatened then the USA would risk nuclear 
+Holocaust in order to protect freedom. Beleive it or not, that is not
+the sort of threat that nice chaps make. Do they have a gun nutters
+section of the US version of CND by any chance?
+
+
+There are cases where society has to be protected from
+madmen such as Koresh or Hitler. If it were not for the consideration
+of the 17 children in there the question of the tactics to be used would
+not be a matter of anything but academic significance. It is not for
+the govt to prevent people from commiting mass suicide.
+
+The latest reports are that cult members were shot attempting to
+leave the compound by Koresh loyalists during the fire. If proven
+that would entail the final nail in the coffin of those who want to
+promote Koresh as some sort of role model or hero.
+
+
+I need hardly add that it is Koresh that has created the Holocaust in
+this case by the deliberate arson of the ranch appocalypse.
+
+
+
+Phill Hallam-Baker
+Newsgroups: talk.politics.misc
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!uunet.ca!canrem!dosgate!dosgate![nigel.allen@canrem.com]
+From: "nigel allen" <nigel.allen@canrem.com>
+Subject: HHS Secretary Shalala to Address AFT's Paraprofessional and School-Related Personnel Conference
+Message-ID: <1993Apr20.4334.87545@dosgate>
+Reply-To: "nigel allen" <nigel.allen@canrem.com>
+Organization: Canada Remote Systems
+Distribution: talk
+Date: 20 Apr 93 19:46:25 EST
+Lines: 42
+
+
+Here is a press release from the American Federation of Teachers.
+
+ HHS Secretary Shalala to Address AFT's Paraprofessional and
+School-Related Personnel Conference
+ To: National and Assignment desks, Education Writer
+ Contact: Jamie Horwitz of American Federation of Teachers,
+          202-879-4447
+
+   News Advisory:
+
+   Secretary of Health and Human Services Donna Shalala will speak
+to the 16th annual AFT Paraprofessional and School-Related
+Personnel Conference at 8 p.m., Friday, April 23, at the
+Washington Hilton.  Shalala will discuss HHS's agenda for helping
+children over the next four years.
+   AFT's Paraprofessional and School-Related Personnel Division
+includes school workers such as paraprofessionals and teacher
+aides, school bus drivers, school secretaries, school custodians
+and maintenance workers and school food service workers.  More
+than a thousand school employees will attend the conference which
+is being held at the Washington Hilton, April 23-25.  Most of the
+school workers attending the conference come from urban school
+districts where child health and nutrition, welfare reform and the
+availability of Head Start and other preschool programs are major
+issues.
+   Workshops scheduled for the conference include sessions
+addressing issues around reauthorization of Chapter 1; how
+paraprofessionals and school-related personnel, especially
+minority men, can serve as student role models; the increasing
+problem of school violence; dealing with abused children; and
+assisting children with serious health problems.
+   For a complete conference schedule, contact Jamie Horwitz
+at 202-879-4447.
+   The American Federation of Teachers represents 805,000
+elementary and secondary teachers, paraprofessionals and
+school-related personnel, higher education faculty, nurses, state
+and municipal workers.
+ -30-
+--
+Canada Remote Systems - Toronto, Ontario
+416-629-7000/629-7044
+Xref: cantaloupe.srv.cs.cmu.edu sci.skeptic:43397 talk.politics.misc:178808 talk.religion.misc:83759
+Newsgroups: sci.skeptic,talk.politics.misc,talk.religion.misc
+Path: cantaloupe.srv.cs.cmu.edu!rochester!udel!gatech!howland.reston.ans.net!agate!dog.ee.lbl.gov!network.ucsd.edu!news.cerf.net!fission.dt.wdc.com!ccicpg!leo!brian
+From: brian@leo.irv.icl.com (Brian Davis)
+Subject: Re: Who's next?  Mormons and Jews?
+Message-ID: <C5utLJ.7A6@leo.irv.icl.com>
+Date: Wed, 21 Apr 1993 22:10:29 GMT
+References: <1993Apr20.051902.9472@gw.wmich.edu> <2003@tecsun1.tec.army.mil> <GERRY.93Apr21132149@onion.cmu.edu>
+Organization: ICL Advanced Development Group, Irvine CA
+Lines: 16
+
+In article <GERRY.93Apr21132149@onion.cmu.edu> gerry@cmu.edu (Gerry Roston) writes:
+> 4th Amendment
+> The right of the people to be secure in their persons, houses, 
+> papers, and effects, against unreasonable searches and seizures, 
+> shall not be violated; and no warrants shall issue, but upon 
+> probable cause, supported by oath or affirmation, and 
+> particularly describing the place to be searched and the persons 
+> or things to be seized. 
+>
+>No, a no-knock warrant is in clear violation of the 4th amendment.
+
+I guess my news reader deleted the lines of the 4th amendment which deal
+with no-knock warrants.  How do you deduce that they are in clear violation?
+Now maybe no-knock warrants SHOULD be illegal.  But until the Supreme Court
+says so, your own pronouncements on the warrant's constitutionality are just
+wishful thinking.
+Xref: cantaloupe.srv.cs.cmu.edu alt.conspiracy:21852 alt.activism:42881 pa.general:756 talk.politics.misc:178809
+Newsgroups: alt.conspiracy,alt.activism,pa.general,phl.misc,talk.politics.misc
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!cert.org!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!usc!elroy.jpl.nasa.gov!news.claremont.edu!jarthur.claremont.edu!weverett
+From: weverett@jarthur.claremont.edu (William M. Everett)
+Subject: Re: The earth also pollutes......
+Message-ID: <C5v04F.8rE@news.claremont.edu>
+Sender: news@news.claremont.edu (The News System)
+Organization: Harvey Mudd College, Claremont, CA 91711
+References: <DZVB3B6w164w@cellar.org> <1993Apr21.090638.6253@titan.ksc.nasa.gov>
+Date: Thu, 22 Apr 1993 00:31:26 GMT
+Lines: 34
+
+In article <1993Apr21.090638.6253@titan.ksc.nasa.gov> rodger-scoggin@ksc.nasa.gov (Rodger C. Scoggin) writes:
+>In article <DZVB3B6w164w@cellar.org>, techie@cellar.org (William A Bacon) says:
+>>
+
+>The Earth may spew alot of substances into the atmosphere, but the quality 
+>of your toxic output can easily make up for the lack of quantity. 
+	Excuse me? Quality? As in grade A CO2 and grade B CO2? I may not have
+this quite right but I was under the impression that CO2 was CO2.
+
+ Furthermore, 
+>the planet is a system of carbon, sulfur and other chemicals which have been
+>acting for billions of years, we are but newcomers to the system - we must adapt
+>and control in order to bring about stability.  Also, two wrongs do not make a right, 
+>so continuing our practices despite overwhelming data is just ignorance in (non)action.
+
+	A) There is no reason to believe this system is inherently stable- 
+The Ice ages occured without any help from humans.
+
+	B) The point was that the human contribution of CO2 and other 
+greenhouse gasses is insignificant and it won't really make a difference if
+we make more or less.
+
+	C) What overwhelming data? I see lots of 'projections' of the future,
+which is fascinating, considering they can't predict the weather two weeks
+in advance.
+
+	*********************************************************
+	*  William Everett		Tan, Rested, and ready  *
+	*  Harvey Mudd College		     NIXON in '96       *
+	*                                                       *   
+	*  These opinions are mine- you can't have them         *   
+	*********************************************************
+
+
+Xref: cantaloupe.srv.cs.cmu.edu alt.conspiracy:21853 alt.activism:42882 pa.general:757 talk.politics.misc:178810
+Newsgroups: alt.conspiracy,alt.activism,pa.general,phl.misc,talk.politics.misc
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!uwm.edu!caen!uvaarpa!murdoch!poe.acc.Virginia.EDU!rwd4f
+From: rwd4f@poe.acc.Virginia.EDU (Rob Dobson)
+Subject: Re: The earth also pollutes......
+Message-ID: <C5uxHI.H2B@murdoch.acc.Virginia.EDU>
+Sender: usenet@murdoch.acc.Virginia.EDU
+Organization: University of Virginia
+References: <DZVB3B6w164w@cellar.org>
+Date: Wed, 21 Apr 1993 23:34:29 GMT
+Lines: 16
+
+In article <DZVB3B6w164w@cellar.org> techie@cellar.org (William A Bacon) writes:
+>FURY OF MOTHER NATURE
+>Clearly, man has a long way to go to match nature as a "despoiler" of the 
+>environment.
+
+BULLSHIT. How many lakes have ceased to be able to support life from
+purely natural pollution? Man has already done this to scores of lakes.
+Also, much of the "degredation" you cite was done by cows and pigs.
+
+And why do think there are so many cows around?
+
+Could it be.......cause people raise them?
+
+
+--
+Legalize Freedom
+Xref: cantaloupe.srv.cs.cmu.edu talk.religion.misc:83760 talk.politics.misc:178811 sci.skeptic:43398
+Newsgroups: talk.religion.misc,talk.politics.misc,sci.skeptic
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!magnus.acs.ohio-state.edu!zaphod.mps.ohio-state.edu!malgudi.oar.net!caen!destroyer!cs.ubc.ca!news.UVic.CA!ra.royalroads.ca!mlee
+From: mlee@post.RoyalRoads.ca (Malcolm Lee)
+Subject: Re: Who's next?  Mormons and Jews?
+Message-ID: <1993Apr21.221341.8134@ra.royalroads.ca>
+Sender: mlee@ra.royalroads.ca (Malcolm Lee)
+Organization: Royal Roads Military College, Victoria, B.C.
+References: <1993Apr20.142356.456@ra.royalroads.ca> <1993Apr21.183307.18345@rosevax.rosemount.com>
+Date: Wed, 21 Apr 1993 22:13:41 GMT
+Lines: 83
+
+
+In article <1993Apr21.183307.18345@rosevax.rosemount.com>, grante@aquarius.rosemount.com (Grant Edwards) writes:
+|> mlee@post.RoyalRoads.ca (Malcolm Lee) writes:
+|> 
+|> : God allows people to choose who and what they want to worship.
+|> : Worship of money is one of the greatest religions in this country.
+|> 
+|> At least I can prove that money exists.  Can you say the same for your
+|> god?
+|> 
+
+I have evidence that you will not accept that proves to me that God
+exists.  I have my personal experiences that have proven to me time
+and again that God does exist.  My life has not been a bed of roses
+and He has been there for me when no one else was around and pulled
+me through those times.  Of course, I know this means nothing to you
+because it didn't happen to you.  I can't prove to you that God
+exists anymore than you can prove that He doesn't.
+
+It ultimately boils down to faith.  Whether or not you believe in
+God is a matter strictly between you and Him.  I am just the messenger.
+I don't judge and I don't condemn you for not accepting God.  That is
+not my place.  You are not my enemy.  Satan is our common enemy.  And
+the only way we can defeat Satan is through Jesus Christ.
+
+|> : |> Maybe David Koresh really was Jesus Christ (sure sounds like a neat
+|> : |> opening epic for a new major religion to me).  --
+|> : 
+|> : NOT!  He was an egomaniac who had the attention of the entire world
+|> : for a brief moment in time.
+|> 
+|> I see.  And what was that guy two thousand years ago who thought he
+|> was god?  Sounds like an egomanic to me.  How do you know that Koresh
+|> wasn't who he claimed?
+|>
+
+He fulfilled the prophesies told about Him.  He performed miracles.
+You know, healing the sick and ressurrecting the dead.  Jesus died
+and rose from the dead just as He said He would.  He preached that
+we should love God and love one another as we do ourselves.  Jesus
+put into practice that which He preached.  And He rose from the
+dead!  His spirit now lives in me.  He changed the world not through
+the use of a sword that cleaves the flesh but the Word of God that
+cleaves us from sin.
+
+Compare this to DK who made promises of surrendering and then balked
+when his deluded predictions didn't come to pass.  In the end, he 
+chose to kill himself and everyone with him to hide the shame of 
+being a false Messiah.
+ 
+|> : Rather than live with the shame of being taken captive by the FBI,
+|> : Koresh chose to kill himself and his followers.  Sick and . . . sad.
+|> 
+|> Jesus allowed himself to be killed.  Many of his followers have killed
+|> and died for _thier_ beliefs.  Sorry, I don't see the difference.
+|>
+
+Jesus allowed himself to be killed in order to fulfill prophecy.  As
+you may recall on the Mount of Olives, Jesus prayed to God that if this
+fate could have been avoided He would have taken it.  But instead,
+out of love for mankind, Jesus chose to accept the agonizing sentence
+placed upon Him and thus redeem all mankind.  Jesus died to save 
+everyone, even those who crucifed Him.  He's already gone to Hell and
+back for you and for me.  All He asks is your love.
+
+Which followers do you refer to?  There have been many who have used
+His name to further their own gains.  They would have done the same
+even if there was no Jesus in the first place.  For example, Bush 
+claimed that God was on their side when they attacked Iraq and Saddam
+claimed to have God on his side when he invaded Kuwait.  IMO, God
+would have nothing to do with either side.  They were fighting over
+oil, plain and simple.
+ 
+God be with you,
+
+Malcolm Lee  :)
+
+|> 
+|> --
+|> Grant Edwards                                 |Yow!  Where do your SOCKS go
+|> Rosemount Inc.                                |when you lose them in th'
+|>                                               |WASHER?
+|> grante@aquarius.rosemount.com                 |
+Xref: cantaloupe.srv.cs.cmu.edu alt.conspiracy:21854 alt.activism:42884 pa.general:758 talk.politics.misc:178812
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!cert.org!netnews.upenn.edu!gradient.cis.upenn.edu!jrv
+From: jrv@gradient.cis.upenn.edu (JR VanMechelen)
+Newsgroups: alt.conspiracy,alt.activism,pa.general,phl.misc,talk.politics.misc
+Subject: Re: The earth also pollutes......
+Message-ID: <122070@netnews.upenn.edu>
+Date: 22 Apr 93 02:46:00 GMT
+References: <DZVB3B6w164w@cellar.org> <C5uxHI.H2B@murdoch.acc.Virginia.EDU>
+Sender: news@netnews.upenn.edu
+Followup-To: alt.conspiracy
+Organization: University of Pennsylvania
+Lines: 31
+Nntp-Posting-Host: gradient.cis.upenn.edu
+
+In article <C5uxHI.H2B@murdoch.acc.Virginia.EDU> rwd4f@poe.acc.Virginia.EDU (Rob Dobson) writes:
+>In article <DZVB3B6w164w@cellar.org> techie@cellar.org (William A Bacon) writes:
+>>FURY OF MOTHER NATURE
+>>Clearly, man has a long way to go to match nature as a "despoiler" of the 
+>>environment.
+>
+>BULLSHIT. How many lakes have ceased to be able to support life from
+>purely natural pollution? Man has already done this to scores of lakes.
+>Also, much of the "degredation" you cite was done by cows and pigs.
+
+You have perhaps heard of the Dead Sea.  I may be wrong, but I believe
+it is not misnamed.  And I don't believe that humans had a hand in it,
+although it is possible since the great cedar forests of Lebanon were
+but a memory by the time of Christ if not earlier.
+
+But, more on the point, while Nature is the may be the more prolific
+"despoiler", Man is certainly the more creative.  We have to our
+credit pesticides and heavy metals, not to mention radioactivity,
+which is so wonderfully persistent and fatal (not that we invented
+radioactivity or heavy metals, we only concentrated them so that they
+would be a more lethal threat).
+
+In general I find Mr. Bacon's arguments rhetorical, devoid of sense,
+and therefore trivial.
+
+BTW, is there any reason this discussion is on phl.misc?
+
+So long,
+JR
+
+
+Xref: cantaloupe.srv.cs.cmu.edu talk.religion.misc:83761 talk.politics.misc:178813 sci.skeptic:43402
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!gatech!purdue!haven.umd.edu!cs.umd.edu!mojo.eng.umd.edu!russotto
+From: russotto@eng.umd.edu (Matthew T. Russotto)
+Newsgroups: talk.religion.misc,talk.politics.misc,sci.skeptic
+Subject: Re: Who's next?  Mormons and Jews?
+Date: 22 Apr 1993 03:14:51 GMT
+Organization: Project GLUE, University of Maryland, College Park
+Lines: 20
+Message-ID: <1r52jbINN91b@mojo.eng.umd.edu>
+References: <C5uD1u.3oy@apollo.hp.com> <C5uoC0.9I5@noose.ecn.purdue.edu>
+NNTP-Posting-Host: tea.eng.umd.edu
+
+In article <C5uoC0.9I5@noose.ecn.purdue.edu> tbrent@bank.ecn.purdue.edu (Timothy J Brent) writes:
+>In article <C5uD1u.3oy@apollo.hp.com> goykhman@apollo.hp.com (Red Herring) writes:
+>>    Where did you get this information?  The FBI stated they were not
+>>   aware of any mass suicide plans, ditto Koresh's attorneys who appeared
+>>   on Larry King's Live yesterday, and the survivors claim the fire was started
+>>   from the outside...
+>
+>Actually, ONE of the survivors say it was started by the FBI (tank knocked over lamp).  Another said the Davidians set the fire themselves.
+
+The FBI says that one survivor says they set the fire themselves.
+
+Given that the claim is that the fire was started in 3 places at once,
+and that the building was being rammed by a tank and filled with tear
+gas, just how did the Davidians manage to co-ordinate such a thing?
+
+-- 
+Matthew T. Russotto	russotto@eng.umd.edu	russotto@wam.umd.edu
+Some news readers expect "Disclaimer:" here.
+Just say NO to police searches and seizures.  Make them use force.
+(not responsible for bodily harm resulting from following above advice)

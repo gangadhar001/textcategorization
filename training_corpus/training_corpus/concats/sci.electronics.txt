@@ -1,0 +1,639 @@
+Newsgroups: sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!wupost!eclnews!cec1!dp
+From: dp@cec1.wustl.edu (David Prutchi)
+Subject: Re: EEG Kit?
+Message-ID: <1993Apr20.200452.180@wuecl.wustl.edu>
+Sender: usenet@wuecl.wustl.edu (News Administrator)
+Nntp-Posting-Host: cec1
+Organization: Washington University, St. Louis MO
+References: <cantrell.735330560@sauron.msfc.nasa.gov>
+Date: Tue, 20 Apr 1993 20:04:52 GMT
+Lines: 30
+
+In article <cantrell.735330560@sauron.msfc.nasa.gov> cantrell@sauron.msfc.nasa.gov (Eric Cantrell) writes:
+>Awhile back someone posted some information on where you can get
+>kits to build an EEG.  Does anyone remember where you could get
+>this.  I'm very interested in getting some info on this.  Thanks 
+>in advance.
+>
+>eric
+>
+>cantrell@sauron.msfc.nasa      
+>
+
+Contact Circuit Cellar Inc., 4 Park St. - Suite 12, Vernon, CT 06066
+(203)875-2751, FAX (203)872-2204 and inquire about HAL-4 EEG Biofeedback
+Brainwave Analyzer.  
+
+In addition, if you want to build your own system from board-level compo-
+nents (biosignal amplifiers, analog isolators and isolated multiplexers)
+you can contact The Davron Group,P.O. Box 237, Deerfield, IL  60015
+FAX (708)948-9290.
+
+- David
+
+
++------------------------------------------------------------+
+|  David Prutchi                 HC1DT                       |
+|  Washington University         <prutchi@mesun4.wustl.edu>  |
+|  Campus Box 1185               <dp@cec1.wustl.edu>         |
+|  One Brookings Drive                                       |
+|  St. Louis, MO  63130-4899                                 |
++------------------------------------------------------------+
+Xref: cantaloupe.srv.cs.cmu.edu comp.robotics:5354 sci.electronics:53846
+Newsgroups: comp.robotics,sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!wupost!eclnews!cec1!dp
+From: dp@cec1.wustl.edu (David Prutchi)
+Subject: Re: Long distance IR detection
+Message-ID: <1993Apr20.204739.1662@wuecl.wustl.edu>
+Sender: usenet@wuecl.wustl.edu (News Administrator)
+Nntp-Posting-Host: cec1
+Organization: Washington University, St. Louis MO
+References: <1993Apr20.183416.18744@dres.dnd.ca>
+Date: Tue, 20 Apr 1993 20:47:39 GMT
+Lines: 88
+
+In article <1993Apr20.183416.18744@dres.dnd.ca> sburton@dres.dnd.ca (Stan Burton) writes:
+>
+>--
+>
+>I would like to be able to detect the angular position (low accuracy) of an
+>IR emitting source at a distance of about 100 meters (more is better) in
+>daylight.  The IR source could be emitting a signature; I'm leaning toward
+>30 KHz square wave with 50% duty cycle.
+>
+>I am considering the use of a quadrant detector from Centronic Inc. to give
+>information to a pan/tilt head to point the sensor and thus determine the
+>angles.  For the source I am considering wazing the heck out of an IR LED(s),
+>possibly an Optek OP290 or Motorola MLED81.  Wazing would mean at least 1 Amp
+>current pulses.  At this current the duty cycle of the LED drops to 10% and I
+>would need to cycle five of them in turn to get the 50% required.
+>
+>Has anyone done something like this?
+>
+>Stan Burton (DND/CRAD/DRES/DTD/MSS/AGCG)                 sburton@dres.dnd.ca
+>(403) 544-4737     DRE Suffield, Box 4000, Medicine Hat, AB, Canada, T1A 8K6
+
+A method which will directly (almost) provide you with the information that
+you require is that which is commonly used for coordinate measurements of 
+human body landmarks (eg. the SELSPOT system by SELSPOT AB, Sweden, and the
+WATSMART System ??).  These use lateral photoeffect detectors [Lindholm and
+Oberg, 1974; Woltring and Marsolais, 1980] to determine the position of a
+spot of light projected (using a camera lens) over its surface.  In escence,
+the detector is a large photodiode with four cathodes (one on each of the
+four sides of the square detector crystal) and a single anode (the back of
+the crystal).  A spot of light will produce currents which are proportional
+to the position of the spot on the detector's face.  Let's try some ASCII
+graphics in 2-D (so the detector has two cathodes to detect linear position)
+
+
+
+              -------------------------> 1
+             |                       |
+             |                       |       |\
+           -----   cathode 1         |       |  \
+           XXXXX                     ________| +  \
+           XXXXX|                            |      \        -------
+    light >XXXXX|                            |        \_____ divider __ output
+           XXXXX|     |                      |        /      -------
+           XXXXX|-----| |--                  |      /           |
+           XXXXX|   + |    |         ________| -  /           1 + 2
+           XXXXX|         --- gnd    |       |  /
+           XXXXX|         \ /        |       |/
+           XXXXX| anode              |
+           XXXXX                     |
+           ----- cathode 2           |
+             |                       |
+             |                       |
+             --------------------------> 2
+
+If the dot of light from the LED is the ONLY source of light, then the position
+of the projection is given by this circuit regardless of the level of illumina-
+tion (the divider is used to normalize relative to total received power).  When
+this circuit is used in the presence of other sources of light, then the way of
+"tuning" to it is to sample for a few msec the background signal, light the LED
+for an equal time and sample that signal separately.  The difference between
+the two is the position of the LED.
+
+Hamamatsu photonics sells linear and 2-D lateral photoeffect detectors, and
+they also sell the required signal processing electronics.  The ready-made
+systems by SELSPOT and others are NOT cheap ... 
+
+Lindholm, L.E., and K.E. Oberg, "An Optoelectronic Instrument for Remote
+On-Line Movement Monitoring", Biotelemetry, 1, 94-95, 1974.
+
+Woltring, H.J., and E.B. Marsolais, "Opto-Electronic (SELSPOT) Gait Measure-
+ments in Two and Three Dimensional Space - A Preliminary Report", Bull. Pros-
+thetics Research, 46-52, 1980.
+
+Most probably this technique can provide you with a much more accurate
+measurement than you need, but I think that its simplicity beats scanning
+a quadrant detector with a pan/tilt system until you reach zero difference.
+
+            - David
+
+
+
++------------------------------------------------------------+
+|  David Prutchi                 HC1DT                       |
+|  Washington University         <prutchi@mesun4.wustl.edu>  |
+|  Campus Box 1185               <dp@cec1.wustl.edu>         |
+|  One Brookings Drive                                       |
+|  St. Louis, MO  63130-4899                                 |
++------------------------------------------------------------+
+Newsgroups: sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!pacific.mps.ohio-state.edu!zaphod.mps.ohio-state.edu!darwin.sura.net!sgiblab!wetware!spunky.RedBrick.COM!psinntp!psinntp!bnlux1.bnl.gov!kushmer
+From: kushmer@bnlux1.bnl.gov (christopher kushmerick)
+Subject: infra red position encoders
+Message-ID: <1993Apr20.195858.27819@bnlux1.bnl.gov>
+Organization: Brookhaven National Laboratory
+Distribution: na
+Date: Tue, 20 Apr 1993 19:58:58 GMT
+Lines: 16
+
+I am looking for information on infra red based position encoders.
+
+The idea would be to bounce the infrared source off a wall and the device would
+read out the distance.
+
+preferable it would be rs-232 addressable.
+
+
+
+Any leads?
+
+
+-- 
+Chris Kushmerick
+kushmer@bnlux1.bnl.gov
+--I found my niche in life, I just didn't fit in.
+Newsgroups: sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!pacific.mps.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!ira.uka.de!math.fu-berlin.de!news.netmbx.de!Germany.EU.net!mcsun!sunic!news.chalmers.se!etek.chalmers.se!fy.chalmers.se!f92anha
+From: f92anha@fy.chalmers.se (Anders Hammarquist)
+Subject: Re: Need to find out number to a phone line
+Message-ID: <1993Apr20.221550.16422@fy.chalmers.se>
+Organization: Chalmers University of Technology
+References: <23321@mindlink.bc.ca>
+Date: Tue, 20 Apr 93 22:15:50 GMT
+Lines: 11
+
+In article <23321@mindlink.bc.ca> Sean_Oliver@mindlink.bc.ca (Sean Oliver) writes:
+>> Joseph Mich Krzeszewsk writes:
+>>         890 the phone company will read the number of the phone you are on
+>
+>Where I live, I use BCTEL. The number to dial is 211 for the same result.
+>
+
+In NY City, the number to dial is 958... It seems to be different in different
+areas.
+
+Anders
+Xref: cantaloupe.srv.cs.cmu.edu comp.os.msdos.programmer:23199 alt.msdos.programmer:6773 sci.electronics:53856
+Newsgroups: comp.os.msdos.programmer,alt.msdos.programmer,sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!pacific.mps.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!ira.uka.de!math.fu-berlin.de!news.netmbx.de!Germany.EU.net!mcsun!sunic!ugle.unit.no!nuug!dhhalden.no!pc109.dhhalden.no!gunnarh
+From: gunnarh@dhhalden.no (GUNNAR HORRIGMO)
+Subject: Re: How to the disks copy protected.
+Message-ID: <gunnarh.600.735346037@dhhalden.no>
+Lines: 25
+Sender: news@dhhalden.no (Network News User)
+Nntp-Posting-Host: pc109
+Organization: Ostfold College
+References: <sehari.735331566@marge.ecss.iastate.edu>
+Date: Tue, 20 Apr 1993 22:47:17 GMT
+
+In article <sehari.735331566@marge.ecss.iastate.edu> sehari@iastate.edu (Babak Sehari) writes:
+
+>I was wondering, what copy protection techniques are avaliable, and how
+>effective are they?  Has anyone have any experience in this area?
+>
+>                      With highest regards,
+>                           Babak   Sehari.
+
+One of the easiest, and really very used ways of copyprotection, is to mark 
+a specific sector on the installation disk bad. This is very easy to get 
+around, though, if you have any knowledge of hw-hacking, but most 'normal' 
+users (yes those lowly key-punchers) don't. Whatever you do, please do 
+_not_ use a hardware key. These were very popular a few years ago, and they 
+STINK!!
+
+MAIL-mail: gunnarh@sofus.dhhalden.no    SNAIL-mail: Gunnar Horrigmo
+           gunnarh@fenris.dhhalden.no               Oskleiva 17
+                                                    N-1772 Norway
+----------------------------------------------------------------------
+Disclaimer: The above posting may seem like insignificant rubbish at 
+first glance, but if you read between the lines, you will be 
+surprised to discover the annals of Burt Bacharach, world peace, 
+Oxford Advanced Readers Dictionary, quantum physics made easy, and an 
+easy-to-use step-by-step walkthrough on how to make a time travelling 
+device that actually works.
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!noc.near.net!howland.reston.ans.net!usc!rand.org!edhall
+From: edhall@rand.org (Ed Hall)
+Newsgroups: sci.electronics
+Subject: Re: Building a UV flashlight
+Message-ID: <16710@rand.org>
+Date: 20 Apr 93 23:35:57 GMT
+References: <C5r6Lz.n25@panix.com>
+Sender: news@rand.org
+Organization: RAND
+Lines: 26
+Nntp-Posting-Host: ives.rand.org
+
+In article <C5r6Lz.n25@panix.com> jhawk@panix.com (John Hawkinson) writes:
+>One other thing: a friend of mine mentioned something about near-UV
+>light being cheaper to get at than actual UV light. Does anyone
+>know what he was referring to?
+
+I don't want to get into a semantic argument, but contrary to some other
+postings "near UV light" /is/ "actual UV light."  The "near" means that
+it is close to the visible spectrum (i.e. of relatively long wavelength),
+not that it is "nearly UV."  (I'm sure you can figure out now just what
+"far UV" is.)
+
+Regular incandenscent flashlight bulbs emit tiny amounts of UV in the
+near end of the spectrum, such that a filter can be used to remove the
+visible light and thus create a weak UV source.  Stronger sources are
+going to require gas (probably mercury vapor) discharge tubes (such as
+fluorescent tubes with UV phosphor).  Be careful, though; strong UV
+sources can cause physiological damage, especially to the eyes.  The
+shorter wavelengths are the most dangerous.
+
+It wouldn't project a beam like a flashlight, but replacing the tubes
+in a portable fluorescent lantern with UV tubes would be a relatively
+cheap way to create a portable source.  It would be bright enough to
+be useful, but not dangerously so.
+
+		-Ed Hall
+		edhall@rand.org
+Xref: cantaloupe.srv.cs.cmu.edu misc.consumers.house:45823 sci.electronics:53858
+Newsgroups: misc.consumers.house,sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!emory!sol.ctr.columbia.edu!destroyer!cs.ubc.ca!mprgate!mprgate.mpr.ca!vanderby
+From: vanderby@mprgate.mpr.ca (David Vanderbyl)
+Subject: Re: Power, signal surges in home...
+Message-ID: <1993Apr20.232804.24632@mprgate.mpr.ca>
+Sender: news@mprgate.mpr.ca
+Nntp-Posting-Host: chip
+Reply-To: vanderby@mprgate.mpr.ca (David Vanderbyl)
+Organization: MPR Teltech Ltd.
+References: <C5Do17.F46@news.rich.bnr.ca> <randall.735251839@woof> <DRAND.93Apr20150701@spinner.osf.org> <1r1jmoINN8mb@rave.larc.nasa.gov>
+Date: Tue, 20 Apr 1993 23:28:04 GMT
+Lines: 15
+
+kludge@grissom.larc.nasa.gov (Scott Dorsey) writes:
+
+>My car, unfortunately, has so much computer junk under the hood that it's
+>astonishingly sensitive to RFI.  If I key a 2W HT over the engine with
+>the hood open, the car loses timing due to the RF leaking into the 
+>distributor pickup.  Very poor design.
+
+There was a news article a little while ago reporting a type of car (was
+it a Volvo?) was found to stall if you used a certain brand/model of cellular
+phone in it.  I seem to remember the car was recalled to fix the problem.
+
+Hmmmmm... this has possibilities:
+If the police are in pursuit of a vehicle, maybe they can bombard it with
+high energy RFI.  :-)
+
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!caen!batcomputer!munnari.oz.au!metro!sunb.ocs.mq.edu.au!macadam!johnh
+From: johnh@macadam.mpce.mq.edu.au (John Haddy)
+Newsgroups: sci.electronics
+Subject: Re: Help wanted
+Date: 21 Apr 1993 00:36:28 GMT
+Organization: Macquarie University
+Lines: 54
+Sender: johnh@macadam (John Haddy)
+Distribution: world
+Message-ID: <1r24uc$i19@sunb.ocs.mq.edu.au>
+References: <1993Apr20.071549.24839@csc.canberra.edu.au>
+NNTP-Posting-Host: macadam.mpce.mq.edu.au
+
+In article <1993Apr20.071549.24839@csc.canberra.edu.au>, u934132@student.canberra.edu.au (Ogawa / Taro Stephen (ISE)) writes:
+|> Could someone please tell me if a 1/4 decoder is the same as a 1 to 4
+|> demultiplexer. I know how to link 2 of these to get an 8 output circuit,
+|> but how do I link 5 of these to make a 1/16 multiplexer. Sorry if this
+|> seems like a lame question, but I'm only a newbie to electronics, and I
+|> have to do this circuit. Please make any mail as droolproof as possible.
+|> 
+|> 				 Thanx,
+|> 					Taro Ogawa
+|> 					(u934132@student.canberra.edu.au)
+
+A 1 of 4 decoder need not be the same as a 1 to 4 demultiplexer, although
+many commercial SSI implementations allow you to use one as such. Strictly,
+a 1 of 4 decoder need only take two lines in and make one output change
+state, according to the inputs.
+
+A demux, on the other hand, uses two control inputs to determine which
+of four outputs will reflect the state of the input signal. So there are
+three inputs required.
+
+A decoder can be used as a demux if it is equipped with an output enable
+input, since this can be used as the data input (e.g. when high, all
+outputs are high; when low, only the selected (by control inputs) output
+will be low).
+
+An eight way decoder is created by using the high order bit (bit 2) to
+select which of two four way demuxes is enabled. Thus you achieve your
+aim of having only one output of eight reflecting the input bits. Note
+that this method cannot be used to create a true eight way demux, since
+you have no data input (the enable line on a four way decoder) left
+once you commit the enable lines to their intended purpose.
+
+A sixteen way decoder obviously requires four, four-way decoders, plus
+a mechanism to enable only one of the four at a time. Therefore, use
+the fifth decoder, attached to the two high order bits, to provide the
+four enable lines.
+
+Of course, the two low order bits must be connected in parallel to the
+four final stage decoders.
+
+Please give me the credit when you submit your homework.
+
+JohnH
+
+----------------------------------------------------------------------------
+
+      |  _  |_   _   |_|  _   _|  _|              Electronics Department
+    |_| (_) | | | |  | | (_| (_| (_| \/           School of MPCE
+    ---------------------------------/-           Macquarie University
+                                                  Sydney, AUSTRALIA 2109
+
+    Email: johnh@mpce.mq.edu.au, Ph: +61 2 805 8959, Fax: +61 2 805 8983
+
+----------------------------------------------------------------------------
+Path: cantaloupe.srv.cs.cmu.edu!magnesium.club.cc.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!cs.utexas.edu!utnut!utcsri!newsflash.concordia.ca!mizar.cc.umanitoba.ca!bison!sys6626!inqmind!baden
+From: baden@inqmind.bison.mb.ca (Baden de Bari)
+Newsgroups: sci.electronics
+Subject: *]] MOSFET help...
+Message-ID: <aXqa3B2w165w@inqmind.bison.mb.ca>
+Date: Tue, 20 Apr 93 03:32:45 CDT
+Organization: The Inquiring Mind BBS  1 204 488-1607
+Lines: 28
+
+ 
+        Since I'm not all too keen on this area of hooking them up, I'm 
+asking for help.  I know better than to hook a 12v, 1a stepper line to 
+one, unless it can take it; however what about if I've got a 24-60v 
+stepper.  What sort of curent limmiting circuitry would be involved (a 
+small schematic would probably be helpfull).  
+        Also, I've looked into the TIPC2701N by TI, and I was wondering 
+if I should use the same suggested (by you replying to this message) 
+current limiting circuitry on each of the 7 mosfets in the package as 
+that illustrated in the schematic (which you the replyer would hopefully 
+help me with).
+ 
+                                ... hmm... different request... 
+ 
+                Thanks.
+
+ 
+  _________________________________________________
+  Inspiration  |   ___                             |
+  comes to     |  \   o  baden@sys6626.bison.mb.ca |
+  those who    | (  ^  ) baden@inqmind.bison.mb.ca |
+  seek the     |   /-\      =] Baden de Bari [=    |
+  unknown.     |                                   |
+  ------------------------------------------------- 
+ 
+
+baden@inqmind.bison.mb.ca
+The Inquiring Mind BBS, Winnipeg, Manitoba  204 488-1607
+Xref: cantaloupe.srv.cs.cmu.edu misc.consumers.house:45842 sci.electronics:53868
+Newsgroups: misc.consumers.house,sci.electronics
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!cs.utexas.edu!uunet!walter!porthos!dasher!patter
+From: patter@dasher.cc.bellcore.com (patterson,george r)
+Subject: Re: Power, signal surges in home...
+Organization: Bellcore, Livingston, NJ
+Date: Wed, 21 Apr 93 02:55:00 GMT
+Message-ID: <1993Apr21.025500.8804@porthos.cc.bellcore.com>
+References: <DRAND.93Apr20150701@spinner.osf.org> <1r1jmoINN8mb@rave.larc.nasa.gov> <1993Apr20.232804.24632@mprgate.mpr.ca>
+Sender: netnews@porthos.cc.bellcore.com (USENET System Software)
+Lines: 20
+
+In article <1993Apr20.232804.24632@mprgate.mpr.ca> vanderby@mprgate.mpr.ca (David Vanderbyl) writes:
+>kludge@grissom.larc.nasa.gov (Scott Dorsey) writes:
+>
+>>My car, unfortunately, has so much computer junk under the hood that it's
+>>astonishingly sensitive to RFI.  
+>
+>Hmmmmm... this has possibilities:
+>If the police are in pursuit of a vehicle, maybe they can bombard it with
+>high energy RFI.  :-)
+
+Right. So all the cops will be buying antique muscle cars for chase cars;
+otherwise the *police* cars will die too!
+
+-----------------------------------------------------------------------
+                    | To get the attention of a large animal, be it an
+                    | elephant or a bureaucracy, it helps to know what
+George Patterson -  | part of it feels pain. Be very sure, though, that
+                    | you want its full attention.
+                    |                            Kelvin Throop
+-----------------------------------------------------------------------
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!bogus.sura.net!udel!news.intercon.com!digex.com!digex.com!not-for-mail
+From: dale@access.digex.com (Dale Farmer)
+Newsgroups: sci.electronics
+Subject: Re: Building a UV flashlight
+Date: 20 Apr 1993 23:26:05 -0400
+Organization: Express Access Online Communications, Greenbelt, MD USA
+Lines: 31
+Message-ID: <1r2esd$pcb@access.digex.net>
+References: <C5r6Lz.n25@panix.com>
+NNTP-Posting-Host: access.digex.net
+X-Newsreader: TIN [version 1.1 PL8]
+
+John Hawkinson (jhawk@panix.com) wrote:
+: Yes, I know it sounds crazy. Call it an urge. Call it what you want.
+: Just don't ask why :-)
+
+: Anyway, I'd like to build a UV flashlight, cheaply. "flashlight" means
+: it should be reasonably portable, but could have a power pack if
+: necessary.
+
+: My main question is the bulb: where can I get UV bulbs? Do they
+: need a lot of power? etc., etc.
+
+: I'm not too concerned with whether it's long-wave or short-wave
+: (but hey, if anyone has a cheap source of bulbs, I'll take both).
+
+	Check out a medical supply catalog, the thing you are looking for
+is called a woods lamp (so you can check for woods sign, certain skin
+conditions flourecse (sp) under UV light)  They come in disposable
+penlight like types and larger ac powered types.  It is also used in eye
+examinations, a flourescent dye is introduced to the surface of the eye,
+then UV is shined on it, shows up scratches and abrasions very clearly
+that would otherwise be very difficult to detect.  (for the completest the
+dye is called flouescien, and in normal light appears orangish, and leaves
+a mild burning sensation to the eye for 10-15 minutes, until the tears
+flush it all out.  
+
+Have fun.
+
+--Dale Farmer
+
+
+
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!swrinde!emory!cs.utk.edu!nntp.memst.edu!umlangston
+From: umlangston@msuvx1.memst.edu (Mark C. Langston)
+Newsgroups: sci.electronics
+Subject: _negative_ logic high?
+Message-ID: <1993Apr20.225648.6910@msuvx1.memst.edu>
+Date: 20 Apr 93 22:56:48 -0600
+Summary: help!!!
+Distribution: world
+Organization: Memphis State University
+Lines: 28
+
+  This may sound like a simple-minded question, but this is the first time
+I've ever had a need for this:
+
+I've been designing some relatively simple chip circuits based on things
+like photoresistors (you know, no light to photoresistor, emit a logic
+high, etc.).
+
+Anyway, I've got some servos lying around, and I wanted to do some things
+with them using digital logic.  I know all about having to pulse the signal
+and everything, I just have one problem:  I'm assuming I need a negative
+(yes, negative) logic high to get the thing to turn in the direction 
+opposite the direction it would turn under normal logic high.
+
+Is a negative logic high (I've seen this in schematics) the same thing as
+an active low, or what?  I'm not using a bi-polar power source, so how
+would I get a negative logic high out of this thing?  I need to have all
+three signals available:  Logic high, logic low, and negative logic high.
+
+Any help would be greatly appreciated.  Also, please reply via email, as I
+never seem to have time to read this (or any other) group lately.
+
+Thanks much,
+-mark
+
+umlangston@memstvx1.memst.edu
+
+
+
+Xref: cantaloupe.srv.cs.cmu.edu rec.audio:63910 sci.electronics:53871
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!fs7.ece.cmu.edu!europa.eng.gtefsd.com!howland.reston.ans.net!zaphod.mps.ohio-state.edu!uwm.edu!csd4.csd.uwm.edu!randyd
+From: randyd@csd4.csd.uwm.edu (Randall Elton Ding)
+Newsgroups: rec.audio,sci.electronics
+Subject: Re: ADCOM GTP500II IR sensor & repeater spec's?
+Date: 21 Apr 1993 04:25:36 GMT
+Organization: Computing Services Division, University of Wisconsin - Milwaukee
+Lines: 48
+Message-ID: <1r2ic0INN72i@uwm.edu>
+References: <1r1996INNijp@hp-col.col.hp.com>
+NNTP-Posting-Host: 129.89.7.4
+
+In article <1r1996INNijp@hp-col.col.hp.com> johnr@col.hp.com (John T. Rasper) writes:
+>Does anyone know the details of the interface (5 wire din) for the
+>IR remote sensor & (2 wire IR repeater) for the ADCOM GTP-500II
+>preamp?  The ADCOM part numbers are the XR-500II, SPM-500II, and 
+>IRA-500II.
+>
+>A cursory physical examination of the pre-amp connector indicates
+>that the connector (5 pin din) may provide: (Viewed from connector front)
+>
+>      |
+>   5     1     (pin ?) +?v @ ???mA
+>    4   2      (pin ?) +/-?v @ ???mA
+>      3        (pin 3) Signal Ground
+>               (pin ?) Demodulated signal ?V-pp, ? polarity, ? mA drive
+>               (pin ?) Signal to drive repeater LED (drives through 150ohm
+>                       resistor) ?V-pp
+>
+>I assume that the repeater connectors (mini-plugs) drive the IR repeater
+>LED's directly.  True?
+>
+>Can anyone fill in the ?'s.  Thanks.
+>
+
+Here's the scoop.  When you get your home brew receiver working, would
+you be willing to share it with the rest of us?  I always wanted to
+build my own but never have the time to fool around and design it.
+
+pin 1:  signal ground
+pin 2:  signal
+pin 3:  always hot +6 volts
+pin 4:  +6 volts, hot only when preamp is turned on
+pin 5:  infrared repeater connectors
+
+The infrared repeater jacks on the back of the preamp are not connected
+to anything inside the preamp except the 5 pin connector pin #5.  There
+is a 150 ohm resistor between the two jacks, with a 1.5K from pin 5 to
+ground.
+
+The signal pin #2 in the preamp is summed with the built in IR receiver.
+They use a chip called CX20106A and a BJT to amplify the signal.  I would
+imagine the logical way would be to duplicate this circuit and use
+it as the external receiver.
+
+If you need more info, let me know.
+
+Randy      randyd@csd4.csd.uwm.edu
+
+
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!wupost!fegmania.wustl.edu!pat
+From: pat@fegmania.wustl.edu (Pat Niemeyer)
+Newsgroups: sci.electronics
+Subject: Re: Radar detector DETECTORS?
+Date: 21 Apr 93 04:42:57 GMT
+Organization: Washington University in Saint Louis, MO USA
+Lines: 11
+Message-ID: <pat.735367377@fegmania.wustl.edu>
+References: <1993Apr06.173031.9793@vdoe386.vak12ed.edu> <oxenreid.734127163@chaos.cs.umn.edu> <C5K2rB.Cry@news.iastate.edu>
+Reply-To: pat@fegmania.wustl.edu
+NNTP-Posting-Host: fegmania.wustl.edu
+Originator: pat@fegmania
+
+>>>  Are any brands "quieter" than others?
+
+>Yes some radar detectors are less detectable by radar detector
+>detectors. ;-)
+
+I have a Bel-966.
+I just looked at the manual yesterday... and it does indeed claim to be
+undetectable by RDD's.
+
+
+Pat
+Path: cantaloupe.srv.cs.cmu.edu!crabapple.srv.cs.cmu.edu!bb3.andrew.cmu.edu!news.sei.cmu.edu!cis.ohio-state.edu!zaphod.mps.ohio-state.edu!howland.reston.ans.net!ira.uka.de!smurf.sub.org!nadia!amylnd!laosinh!gerrit
+From: gerrit@laosinh.stgt.sub.org (Gerrit Heitsch)
+Newsgroups: sci.electronics
+Subject: Re: 6551A and 6551 compatibility
+Message-ID: <6V0Os*Dx2@laosinh.stgt.sub.org>
+Date: Tue, 20 Apr 1993 19:21:42 MET
+References: <C5owvs.pr@world.std.com>
+Distribution: world
+Organization: Lao-Sinh project (private UUCP site)
+Lines: 31
+
+In article <C5owvs.pr@world.std.com>, Internet Surfer writes:
+
+> Does any one know if the 6551 is timing/pin compatible with the 6551.. 
+
+No, the 6551A is able to operate in a 2 MHz system, the 6551 can only
+take 1 MHz without problems.
+
+If you see a 8551 made by MOS or CSG, take it, its a 6551A.
+
+> It seems the 6551 has in iheirent bug with cts/rts handshaking and i need
+> a suitable pin replacement to put in my serial card... possibly a buffered
+> version perhaps?
+
+I know no fixed version of the 6551. There are different possibilities
+to work around this bug. The easiest is to tie _CTS to GND and
+use _DSR or _DCD as _CTS. It should be easy to fix the software,
+_DSR is bit 6 and DCD ist bit 5 of the Status Register (Read 6551
+with RS1 = low and RS0 = high).
+
+Using the _CTS-line can lead into big trouble. The 6551 _instantly_
+stops transmission if _CTS goes high. This means, that you may
+get only a half byte...
+
+Gerrit
+
+-- 
+         Gerrit Heitsch  Moenchweg 16  7038 Holzgerlingen  Germany
+  Logical adresses: UUCP: gerrit@laosinh.stgt.sub.org FIDO: (2:2407/106.9)
+If we will ever be visited by Aliens, it will be very hard to explain, why a
+ lifeform, that is intelligent enough to build atomic weapons can be stupid
+   enough to do it. (taken from GEO special about space, page 88-91)
