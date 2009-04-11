@@ -12,7 +12,26 @@ import java.util.*;
 
 public class kNN {
 
+	String train = "./train ";
+    String test = "./test ";
+    TermSelection ts = new TermSelection();
+    File trainfolder = new File("../training_corpus");
+    File testfolder = new File("../testing_corpus");
+    Hashtable HTrain = new Hashtable();
+    Hashtable HTest = new Hashtable();
+    int [][]EvaluationMatrix = new int[2][2];
+    
+    ArrayList<String> trainingDocumentVector = new ArrayList<String>();
+    ArrayList<String> testingDocumentVector = new ArrayList<String>();
+    ArrayList<String> trainingDocumentVector_address = new ArrayList<String>();
+    ArrayList<String> testingDocumentVector_address = new ArrayList<String>();
+    ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
+    ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
+        	
     public kNN() {
+    	for(int i=0;i<2;i++)
+        		for(int j=0;j<2;j++)
+        			EvaluationMatrix[i][j]=0;
     }
     
     public static void bubbleSort(double[] x,String[] y) {
@@ -53,183 +72,171 @@ public class kNN {
             		HT.put(filename,filecategory);
             	}
             }
-            	
         }
     }//recursive traversing of files; does copying of files and hashing of filename to file category
      
-    public static void main(String[] args)
+    public void train()
     {
+    	// Step 1: Computing the training and testing set
+        
         try
         {
-        	String train = "./train ";
-        	String test = "./test ";
-        	FeatureExtraction fe = new FeatureExtraction();
-        	File trainfolder = new File("../training_corpus");
-        	File testfolder = new File("../testing_corpus");
-        	Hashtable HTrain = new Hashtable();
-        	Hashtable HTest = new Hashtable();
-        	int [][]EvaluationMatrix = new int[2][2];
-        	
-        	for(int i=0;i<2;i++)
-        		for(int j=0;j<2;j++)
-        			EvaluationMatrix[i][j]=0;
-        	
-        	ArrayList<String> trainingDocumentVector = new ArrayList<String>();
-        	ArrayList<String> testingDocumentVector = new ArrayList<String>();
-        	ArrayList<String> trainingDocumentVector_address = new ArrayList<String>();
-        	ArrayList<String> testingDocumentVector_address = new ArrayList<String>();
-        	ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
-        	ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
-        
-// Step 1: Computing the training and testing set
-        
         	File traindir = new File(train);
-        		
-        	boolean success = traindir.mkdir();
-   			if (success) {
-      			System.out.println("Training directory created");
-    		}
-    		
-    		File testdir = new File(test);
-        		
-        	success = testdir.mkdir();
-   			if (success) {
-      			System.out.println("Testing directory created");
-    		}
-    		
-    		getFiles(trainfolder,trainingDocumentVector,trainingDocumentVector_address,HTrain);
-        
+        	
+        	getFiles(trainfolder,trainingDocumentVector,trainingDocumentVector_address,HTrain);
+        	
         	for(int i=0;i<trainingDocumentVector.size();i++)
-        	{
-        		//exec=exec+trainingDocumentVector_address+" "; 	
-        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
-        		Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
-        	    p1.waitFor();
-        	}
+	        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
+	        		
+        	//ts.filterTerms(trainingDocumentVector, HTrain);
         	
-        	getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);
-        
-        	for(int i=0;i<testingDocumentVector.size();i++)
-        	{
-        		testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
-        		Process p2 = Runtime.getRuntime().exec("java StopListStemmer "+test+testingDocumentVector_address.get(i));
-        		p2.waitFor();
-        	}
-       
-        /*	
-        	for(int i=0;i<trainoutputDocumentVector.size();i++)
-        		fe.extract("./train/"+trainoutputDocumentVector.get(i));
-      
-      		for(int i=0;i<testoutputDocumentVector.size();i++)
-        		fe.extract("./test/"+testoutputDocumentVector.get(i));
-        */
-// Step 2: Performing KNN classification        	
+	        if(!traindir.exists())
+	        {
+	        	boolean success = traindir.mkdir();
+	   			if (success)
+	      			System.out.println("Training directory created");
+	    				
+	        	for(int i=0;i<trainingDocumentVector.size();i++)
+	        	{ 	
+	        		Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
+	        	    p1.waitFor();
+	        	}
+	        }	
+	        		
+	        File testdir = new File(test);
+	        
+	        getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);
+	        	
+	        for(int i=0;i<testingDocumentVector.size();i++)
+		        	testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
+		        	
+	    	if(!testdir.exists())
+	    	{
+	    		boolean success = testdir.mkdir();
+	   			if (success)
+	      			System.out.println("Testing directory created");
+	    			
+		        for(int i=0;i<testingDocumentVector.size();i++)
+		        {
+		        	Process p2 = Runtime.getRuntime().exec("java StopListStemmer "+test+testingDocumentVector_address.get(i));
+		        	p2.waitFor();
+		        }
+	    	}
+	    	
+	    	System.out.println("Training is completed");
+        }
+        catch(Exception e){}
+    }
+    
+    public void classify()
+    {
+    	// Step 2: Performing KNN classification        	
         	
-        	Similarity s = new Similarity();
+        Similarity s = new Similarity();
         	
-        	Scanner scan = new Scanner(System.in);
-     		int k;
+        Scanner scan = new Scanner(System.in);
+     	int k;
 
-     		System.out.print("Enter the value of k:");
-     		k = scan.nextInt();
+     	System.out.print("Enter the value of k:");
+     	k = scan.nextInt();
      			
-        	for(int i=0;i<testoutputDocumentVector.size();i++)
-        	{
-        		String testdoc = "./test/"+testoutputDocumentVector.get(i);
+        for(int i=0;i<testoutputDocumentVector.size();i++)
+        {
+        	String testdoc = "./test/"+testoutputDocumentVector.get(i);
         	
-        		String []knn = new String[trainoutputDocumentVector.size()];
-     			double []freq = new double[trainoutputDocumentVector.size()];
+        	String []knn = new String[trainoutputDocumentVector.size()];
+     		double []freq = new double[trainoutputDocumentVector.size()];
      				
-        		for(int j=0;j<trainoutputDocumentVector.size();j++)
-        		{
-        			String traindoc = "./train/"+trainoutputDocumentVector.get(j);
+        	for(int j=0;j<trainoutputDocumentVector.size();j++)
+        	{
+        		String traindoc = "./train/"+trainoutputDocumentVector.get(j);
         			
-        			freq[j] = 0;
-        			knn[j] = new String("");
+        		freq[j] = 0;
+        		knn[j] = new String("");
         			
-        			double v = s.computeSimilarity(testdoc,traindoc);
+        		double v = s.computeSimilarity(testdoc,traindoc);
        
-       				freq[j] = v;
-      			    knn[j] = traindoc.substring(15);
-        		}
+       			freq[j] = v;
+      			knn[j] = traindoc.substring(15);
+        	}	
         		
-        		bubbleSort(freq,knn);
-        		
-        		int []count = new int[10];
-        		int []freqOfCategory = new int[10];
-        		String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
+        	bubbleSort(freq,knn);
+        	
+        	int []count = new int[10];
+        	int []freqOfCategory = new int[10];
+        	String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
         			                   "rec.autos","rec.motorcycles","rec.sport.baseball",
         			                   "sci.electronics","sci.med","talk.politics.misc",
         			                   "talk.religion.misc"};
         			                    
-        		for(int h=0;h<k;h++)
-        		{
-        			String category = (String)HTrain.get((String)knn[h]);
-        			
-        			for(int a=0;a<10;a++)
-        			{
-        				String c = categories[a];
-        				if(category.equals(c))
-        				{
-        					count[a]++;
-        					freqOfCategory[a] += freq[h]; 
-        				}//computing the total frequency of each category
-        			}
-        		}
-        		
-        		System.out.println();
-        		for(int a=0;a<k;a++)
-        		{
-        			System.out.println(knn[a]+" "+freq[a]);
-        		}
-        		System.out.println();
-        		/*
-        		for(int a=0;a<10;a++)
-        		{
-        			System.out.println(categories[a]+" "+count[a]);
-        		}*/
-        		
-        		int max = -1;
-        		int pos = -1;
-        			
-        		for(int a=0;a<10;a++)
-        			if(count[a]> max)
-        			{
-        					max = freqOfCategory[a];
-        					pos = a;
-        			}
-        			
-        		String retrievedcategory=""; 
-        		if(pos!=-1)
-        			retrievedcategory = categories[pos];
-        		String relevantcategory = (String)HTest.get((String)testdoc.substring(14));
-        	
-        		System.out.println("Classified as "+retrievedcategory);
-  				System.out.println("Test category is "+relevantcategory);
-  			     if(relevantcategory.equals("concats"))
-  			     	Thread.sleep(5000);		
-        		if(pos==-1)
-        			EvaluationMatrix[1][0]++;
-        		else
-        		{
-        			if(retrievedcategory.equals(relevantcategory))
-        				EvaluationMatrix[0][0]++;
-        			else if(!retrievedcategory.equals(relevantcategory))
-        				EvaluationMatrix[0][1]++;
-        		}
-        	}
-        	
-        	for(int i=0;i<2;i++)
+        	for(int h=0;h<k;h++)
         	{
-        		for(int j=0;j<2;j++)
+        		String category = (String)HTrain.get((String)knn[h]);
+        			
+        		for(int a=0;a<10;a++)
         		{
-        			System.out.print(EvaluationMatrix[i][j]+" ");
+        			String c = categories[a];
+        			if(category.equals(c))
+        			{
+        				count[a]++;
+        				freqOfCategory[a] += freq[h]; 
+        			}//computing the total frequency of each category
         		}
-        		System.out.println();
+        	}
+        		
+        	System.out.println();
+        	
+        	for(int a=0;a<k;a++)
+        	{
+        		System.out.println(knn[a]+" "+freq[a]);
         	}
         	
-       		System.out.println("Finished execution");
+        	System.out.println();
+        		
+        	int max = -1;
+        	int pos = -1;
+        			
+        	for(int a=0;a<10;a++)
+        		if(count[a]> max)
+        		{
+        			max = freqOfCategory[a];
+        			pos = a;
+        		}
+        			
+        	String retrievedcategory=""; 
+        	if(pos!=-1)
+        		retrievedcategory = categories[pos];
+        	String relevantcategory = (String)HTest.get((String)testdoc.substring(14));
+        	
+        	System.out.println(testdoc.substring(14)+" classified as "+retrievedcategory);
+  			System.out.println("Test category is "+relevantcategory);
+  			     	
+        	if(pos==-1)
+        			EvaluationMatrix[1][0]++;
+        	else
+        	{
+        		if(retrievedcategory.equals(relevantcategory))
+        			EvaluationMatrix[0][0]++;
+        		else if(!retrievedcategory.equals(relevantcategory))
+        			EvaluationMatrix[0][1]++;
+        	}
         }
-    	catch (Exception e) {System.out.println(e);}
+        	
+        for(int i=0;i<2;i++)
+        {
+        	for(int j=0;j<2;j++)
+        		System.out.print(EvaluationMatrix[i][j]+" ");
+        	
+        	System.out.println();
+        }
+        	
+       	System.out.println("Finished classifying");
+
+    }
+    public static void main(String[] args)
+    {
+        kNN knn = new kNN();
+        knn.train();
+        knn.classify();
     }
 }
