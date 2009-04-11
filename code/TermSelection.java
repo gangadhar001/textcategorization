@@ -4,8 +4,8 @@ import java.util.*;
 
 public class TermSelection
 {
-	public float DFThresh = 0;
-	public float IDFThresh = 9999;
+	public float DFThresh = 2;
+	public float IDFThresh = 100;
 
 	public TermSelection()
 	{
@@ -47,7 +47,6 @@ public class TermSelection
 
 			//append document into certain category
 			//categorizedDoc = appendDocCat(file, category, categorizedDoc);
-			
 		}
 		
 
@@ -56,6 +55,7 @@ public class TermSelection
 			String exec = "";
 			//TODO: run stemmer on the 10 files
 			// run stemmer on categorizedDoc[j]
+			
 			Process p1 = Runtime.getRuntime().exec("java StopListStemmer \"\" " + dir + categorizedDoc[j].getName());
 			p1.waitFor();
         	
@@ -68,6 +68,7 @@ public class TermSelection
 			//append document(consolidated category) into single consolidated file
 			//consolidatedDoc = appendDoc(categorizedDoc[j], consolidatedDoc);
 		}
+		
 		
 		Process p2 = Runtime.getRuntime().exec("java StopListStemmer \"\" " + dir + "all.txt");
 		p2.waitFor();
@@ -151,13 +152,11 @@ public class TermSelection
 		br.close();
 		Writer output = new BufferedWriter(new FileWriter(file));
 		for (int i = 0; i < file2string.size(); i++)
-		{
 			output.write((String)file2string.get(i) + "\n");
-		}
+		
 		for (int i = 0; i < filtered.size(); i++)
-		{
 			output.write((String)filtered.get(i) + "\n");
-		}
+		
 		output.close();
 	}
 	/*
