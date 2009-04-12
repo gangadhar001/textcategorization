@@ -161,10 +161,10 @@ public class TermSelection
 		br.close();
 		Writer output = new BufferedWriter(new FileWriter(new File("stoplist.txt")));
 		for (int i = 0; i < file2string.size(); i++)
-			output.write((String)file2string.get(i) + "\n");
+			output.write((String)file2string.get(i) + "\r\n");
 		
 		for (int i = 0; i < filtered.size(); i++)
-			output.write((String)filtered.get(i) + "\n");
+			output.write((String)filtered.get(i) + "\r\n");
 		
 		output.close();
 	}
