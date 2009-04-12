@@ -1,0 +1,169 @@
+<operators>
+
+ <operator 
+     name        = "TextInput"     
+     class       = "com.rapidminer.operator.TextInputOperator"
+     description = "Generates word vectors from text collections."
+     group       = "IO.Text" />
+
+  <operator 
+     name        = "StringTextInput"    
+     class       = "com.rapidminer.operator.StringTextInput"
+     description = "Generates word vectors from string attributes."
+     group       = "IO.Text" />
+
+  <operator 
+     name        = "TextObjectTextInput"    
+     class       = "com.rapidminer.operator.TextObjectTextInput"
+     description = "Generates a word vector from TextObject."
+     group       = "IO.Text" />
+     
+  <operator 
+     name        = "SingleTextInput"     
+     class       = "com.rapidminer.operator.SingleTextInput"
+     description = "Generates word vectors from a single text."
+     group       = "IO.Text" />
+     
+  <operator 
+     name        = "FeatureExtraction"     
+     class       = "com.rapidminer.operator.FeatureExtractionOperator"
+     description = "Extracts values from structured and unstructured sources using XPath expressions or regular expressions."
+     group       = "IO.Text" />
+
+
+<!-- Web -->
+
+  <operator 
+     name        = "Crawler"     
+     class       = "com.rapidminer.operator.CrawlerOperator"
+     description = "Crawls a set of web resources and writes them to a local directory."
+     group       = "IO.Web" />
+
+  <operator 
+     name        = "MashUp"     
+     class       = "com.rapidminer.operator.MashupOperator"
+     description = "Extracts information from a HTTP GET based web resource."
+     group       = "IO.Web" />
+     
+  <operator 
+     name        = "LogFileSource"     
+     class       = "com.rapidminer.operator.loganalysis.LogFileSource"
+     description = "Reads a web server log file."
+     group       = "IO.Web" />
+     
+   <operator 
+     name        = "TagLogSource"     
+     class       = "com.rapidminer.operator.loganalysis.TagLogReader"
+     description = "Reads a tag log file."
+     group       = "IO.Web" />  
+ 
+  <operator 
+     name        = "ServerLog2Transactions"     
+     class       = "com.rapidminer.operator.loganalysis.ServerLog2Transactions"
+     description = "Converts an example set containing a server log to transactions"
+     group       = "IO.Web" />
+     
+
+<!-- Tools -->
+
+ <operator 
+     name        = "Segmenter"     
+     class       = "com.rapidminer.operator.DocumentSegmenterOperator"
+     description = "Segments documents based on regular expressions or xpath."
+     group       = "IO.Text.Misc" />
+     
+      <operator 
+     name        = "SplitSegmenter"     
+     class       = "com.rapidminer.operator.SimpleSegmenter"
+     description = "Segments documents by defining the splitting point."
+     group       = "IO.Text.Misc" />
+
+
+<!-- Token Processing -->
+
+<operator 
+     name        = "TokenReplace"     
+     class       = "com.rapidminer.operator.transformer.TokenReplace"
+     description = "Replaces all occurences of all specified regular expression within each token by its specified replacement."
+     group       = "IO.Text.Transformer" />
+
+<operator 
+     name        = "StringTokenizer"     
+     class       = "com.rapidminer.operator.tokenizer.SimpleTokenizer"
+     description = "Tokenizes a set of input tokens."
+     group       = "IO.Text.Tokenizer" />
+
+<operator 
+     name        = "NGramTokenizer"     
+     class       = "com.rapidminer.operator.tokenizer.NGramTokenizer"
+     description = "Creates ngrams of the input token stream."
+     group       = "IO.Text.Tokenizer" />
+
+<operator 
+     name        = "TermNGramGenerator"     
+     class       = "com.rapidminer.operator.tokenizer.TermNGramGenerator"
+     description = "Creates term ngrams of the input token stream."
+     group       = "IO.Text.Tokenizer" />
+
+
+<operator 
+     name        = "DictionaryStemmer"     
+     class       = "com.rapidminer.operator.reducer.DictionaryStemmer"
+     description = "Replaces terms by pattern matching rules."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "GermanStemmer"     
+     class       = "com.rapidminer.operator.reducer.GermanStemmer"
+     description = "A stemmer for German texts."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "LovinsStemmer"     
+     class       = "com.rapidminer.operator.reducer.LovinsStemmer"
+     description = "The Lovins stemmer for English texts."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "PorterStemmer"     
+     class       = "com.rapidminer.operator.reducer.PorterStemmer"
+     description = "The Porter stemmer for English texts."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "SnowballStemmer"     
+     class       = "com.rapidminer.operator.reducer.SnowballStemmer"
+     description = "The Snowball stemmer for different languages."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "ToLowerCaseConverter"     
+     class       = "com.rapidminer.operator.reducer.ToLowerCaseConverter"
+     description = "Converts the characters in all terms to lower case."
+     group       = "IO.Text.Stemmer" />
+
+<operator 
+     name        = "EnglishStopwordFilter"     
+     class       = "com.rapidminer.operator.wordfilter.EnglishStopwordFilter"
+     description = "Standard stopwords list for English texts."
+     group       = "IO.Text.Filter" />
+
+<operator 
+     name        = "GermanStopwordFilter"     
+     class       = "com.rapidminer.operator.wordfilter.GermanStopwordFilter"
+     description = "Standard stopwords list for German texts."
+     group       = "IO.Text.Filter" />
+
+<operator 
+     name        = "StopwordFilterFile"     
+     class       = "com.rapidminer.operator.wordfilter.StopwordFilterFile"
+     description = "Filters terms based on a list of expressions provided in an external file."
+     group       = "IO.Text.Filter" />
+
+<operator 
+     name        = "TokenLengthFilter"     
+     class       = "com.rapidminer.operator.wordfilter.TokenLengthFilter"
+     description = "Filters terms based on a minimal number of characters they must contain."
+     group       = "IO.Text.Filter" />
+
+</operators>
