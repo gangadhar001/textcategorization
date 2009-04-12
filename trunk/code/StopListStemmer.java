@@ -122,9 +122,22 @@ public class StopListStemmer
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String word;
-            while((word = br.readLine()) != null) 
-                if(inputMap.containsKey(word))
-                    inputMap.remove(word);
+            if(br.ready())
+            {
+            	while((word = br.readLine()) != null)
+	            {
+	            	String newword="";
+	            	for(int i=0;i<word.length();i++)
+	            	{
+	            		if(word.charAt(i)!=' ' && word.charAt(i)!='\r' && word.charAt(i)!='\n')
+	            			newword+= word.charAt(i);
+	            	}
+	            		
+	            	if(inputMap.containsKey(newword))
+	                    inputMap.remove(newword);
+	            } 
+            }
+                
             br.close();
             in.close();
             fstream.close();
@@ -149,7 +162,7 @@ public class StopListStemmer
             
             String filename ="";
             StringTokenizer st = new StringTokenizer((args[i]).toString(),"/\\");
-		     while (st.hasMoreTokens()) {
+		    while (st.hasMoreTokens()) {
          		filename = st.nextToken();
      		}
 

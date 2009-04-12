@@ -4,6 +4,8 @@ import java.util.*;
 
 public class TermSelection
 {
+	public static String newline = System.getProperty("line.separator");
+	
 	public float DFThresh = 100;
 	public float IDFThresh = 100;
 
@@ -99,7 +101,6 @@ public class TermSelection
 		}
 
 		all_File.delete();
-		
 	}
 
 	public ArrayList filterDF(ArrayList filtered, File file)
@@ -107,7 +108,7 @@ public class TermSelection
 	{
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		ArrayList file2string = new ArrayList();
-		//FileInputStream in = new FileInputStream(file);
+		
 		String input = null;
 		while ((input = br.readLine()) != null)
 			file2string.add(input);
@@ -117,7 +118,7 @@ public class TermSelection
 			String text = tk.nextToken();
 			int freq = Integer.parseInt(tk.nextToken());
 			if (freq < DFThresh)
-				filtered.add(text + " ");
+				filtered.add(text+" ");
 		}
 		br.close();
 		return filtered;
@@ -138,7 +139,7 @@ public class TermSelection
 			String text = tk.nextToken();
 			int freq = Integer.parseInt(tk.nextToken());
 			if (freq > IDFThresh)
-				filtered.add(text + " ");
+				filtered.add(text+" ");
 		}
 		br.close();
 		return filtered;
@@ -147,26 +148,38 @@ public class TermSelection
 	/*public void filterOriginal(ArrayList filtered, ArrayList trainoutputDocumentVector)
 	{
 	}*/
-
+	
 	public void addStopList(ArrayList filtered)
 	throws Exception
 	{
-		File file = new File("stoplist.bak");
-		BufferedReader br = new BufferedReader(new FileReader(file));
+		FileInputStream fstream = new FileInputStream("stoplist.bak");
+        DataInputStream in = new DataInputStream(fstream);
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		ArrayList file2string = new ArrayList();
-		//FileInputStream in = new FileInputStream(file);
+		
 		String input = null;
-		while ((input = br.readLine()) != null)
-			file2string.add(input);
+		if(br.ready())
+		{
+			while ((input = br.readLine()) != null)
+				file2string.add(input);
+		}
 		br.close();
-		Writer output = new BufferedWriter(new FileWriter(new File("stoplist.txt")));
+        in.close();
+        fstream.close();
+		
+		FileOutputStream fstream2 = new FileOutputStream("stoplist.txt");
+        DataOutputStream out = new DataOutputStream(fstream2);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
+		
 		for (int i = 0; i < file2string.size(); i++)
-			output.write((String)file2string.get(i) + "\r\n");
-		
+			bw.write((String)file2string.get(i)+newline);
+			
 		for (int i = 0; i < filtered.size(); i++)
-			output.write((String)filtered.get(i) + "\r\n");
+			bw.write((String)filtered.get(i)+newline);
 		
-		output.close();
+		bw.close();
+		out.close();
+		fstream2.close();
 	}
 	/*
 	public File appendDoc(File file, File consolidatedFile)
