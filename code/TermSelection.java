@@ -142,7 +142,7 @@ public class TermSelection
 	public void addStopList(ArrayList filtered)
 	throws Exception
 	{
-		File file = new File("stoplist.txt");
+		File file = new File("stoplist.bak");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		ArrayList file2string = new ArrayList();
 		//FileInputStream in = new FileInputStream(file);
@@ -150,7 +150,7 @@ public class TermSelection
 		while ((input = br.readLine()) != null)
 			file2string.add(input);
 		br.close();
-		Writer output = new BufferedWriter(new FileWriter(file));
+		Writer output = new BufferedWriter(new FileWriter(new File("stoplist.txt")));
 		for (int i = 0; i < file2string.size(); i++)
 			output.write((String)file2string.get(i) + "\n");
 		
