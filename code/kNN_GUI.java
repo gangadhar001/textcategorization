@@ -15,22 +15,22 @@ public class kNN_GUI extends JFrame implements ActionListener{
 	
 	JTextField jtfClassify, jtfFile;
     JLabel jlbClassify, jlbFile;
+    JLabel jlbk, jlbdf,jlbidf;
+    JTextField jtfk, jtfdf,jtfidf;
     JPanel panel1, panel2, mainPanel;
     Container container;
-    String disp = "";
     String filename = "";
-    File file = null;
-    int success = -1;
-    private java.util.List<String> results;
+    File file;
+    
     kNN kc;
-    JButton jbnOpen, jbnSearch;
-    JButton[] button;
+    
+    JButton jbnOpen, jbnSearch,jbnTrain;
+    //JButton[] button;
     
 	public kNN_GUI() {
 		super("KNN text classification");
 
         kc = new kNN();
-        kc.train();
 
         container = getContentPane();
         container.setLayout(new FlowLayout());
@@ -39,46 +39,58 @@ public class kNN_GUI extends JFrame implements ActionListener{
         container.add(jlbFile);
         
          
-        jtfFile = new JTextField("", 60);
+        jtfFile = new JTextField("", 65);
         jtfFile.setEditable(false);
         container.add(jtfFile);
 
         jbnOpen = new JButton("Open");
         container.add(jbnOpen);
 
-        jlbClassify = new JLabel("Classifed as:");
+		jlbk = new JLabel("K:");
+        container.add(jlbk);
+
+        jtfk = new JTextField("", 20);
+        jtfk.setEditable(true);
+        jtfk.setText("3");
+        container.add(jtfk);
+        
+        jlbdf = new JLabel("DF:");
+        container.add(jlbdf);
+
+        jtfdf = new JTextField("", 20);
+        jtfdf.setEditable(true);
+        jtfdf.setText("0");
+        container.add(jtfdf);
+        
+        jlbidf = new JLabel("IDF:");
+        container.add(jlbidf);
+
+        jtfidf = new JTextField("", 20);
+        jtfidf.setEditable(true);
+        jtfidf.setText("9999");
+        container.add(jtfidf);
+        
+        jbnTrain = new JButton("Train");
+        container.add(jbnTrain);
+        
+		jlbClassify = new JLabel("Classifed as:");
         container.add(jlbClassify);
 
         jtfClassify = new JTextField("", 57);
         jtfClassify.setEditable(false);
         container.add(jtfClassify);
-
+        
         jbnSearch = new JButton("Search");
         container.add(jbnSearch);
 
         mainPanel = new JPanel(); 
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-
-        panel1 = new JPanel();
-        panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
-        panel1.setAlignmentX(Component.CENTER_ALIGNMENT);
-        panel1.setAlignmentY(Component.CENTER_ALIGNMENT);
-
-        panel2 = new JPanel();
-        panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
-        panel2.setAlignmentX(Component.CENTER_ALIGNMENT);
-        panel2.setAlignmentY(Component.CENTER_ALIGNMENT);
-
-        mainPanel.add(panel1);
-        mainPanel.add(panel2);
-        container.add(mainPanel);
-
         jbnOpen.addActionListener(this);
         jbnSearch.addActionListener(this);
+        jbnTrain.addActionListener(this);
 
-        this.setSize(850, 100); 
-        // pack();
+        this.setSize(850, 130); 
         setVisible(true);
     }
     
@@ -99,14 +111,26 @@ public class kNN_GUI extends JFrame implements ActionListener{
         } else if (e.getSource() == jbnSearch) {
 
             try {
-                filename = jtfFile.getText();
-               
-                jtfClassify.setText(kc.classify(filename));
+            	if(!jtfFile.getText().equals(""))
+            	{
+            		filename = jtfFile.getText();
+                	jtfClassify.setText(kc.classify(filename,new Integer(jtfk.getText())));
+            	}
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }  
+        } else if (e.getSource() == jbnTrain) {
+
+            try {
+                kc.setThreshHolds(new Float(jtfdf.getText()),new Float(jtfidf.getText()));
+                kc.train1();
+                
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }
             
         } 
+        
     }
 
     public static void main(String[] args) {
