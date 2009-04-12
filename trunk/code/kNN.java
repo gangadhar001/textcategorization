@@ -14,24 +14,28 @@ public class kNN {
 
 	String train = "./train ";
     String test = "./test ";
-    TermSelection ts = new TermSelection();
+    TermSelection ts;
     File trainfolder = new File("../training_corpus");
     File testfolder = new File("../testing_corpus");
-    Hashtable HTrain = new Hashtable();
-    Hashtable HTest = new Hashtable();
+    
     int [][]EvaluationMatrix = new int[2][2];
     
-    ArrayList<String> trainingDocumentVector = new ArrayList<String>();
-    ArrayList<String> testingDocumentVector = new ArrayList<String>();
-    ArrayList<String> trainingDocumentVector_address = new ArrayList<String>();
-    ArrayList<String> testingDocumentVector_address = new ArrayList<String>();
-    ArrayList<String> trainoutputDocumentVector = new ArrayList<String>();
-    ArrayList<String> testoutputDocumentVector = new ArrayList<String>();
+    Hashtable HTrain;
+    ArrayList<String> trainingDocumentVector;
+    ArrayList<String> trainingDocumentVector_address;
+    ArrayList<String> trainoutputDocumentVector;
+    
+    Hashtable HTest;
+    ArrayList<String> testingDocumentVector;
+    ArrayList<String> testingDocumentVector_address;
+    ArrayList<String> testoutputDocumentVector;
         	
     public kNN() {
     	for(int i=0;i<2;i++)
         		for(int j=0;j<2;j++)
         			EvaluationMatrix[i][j]=0;
+
+    	ts = new TermSelection();
     }
     
     public static void bubbleSort(double[] x,String[] y) {
@@ -74,37 +78,62 @@ public class kNN {
             }
         }
     }//recursive traversing of files; does copying of files and hashing of filename to file category
-     
-    public void train()
+    
+    public void setThreshHolds(float df,float idf)
     {
-    	// Step 1: Computing the training and testing set
+    	ts.setDFThresh(df);
+    	ts.setIDFThresh(idf);
+    }
+    	 
+    public void train1()
+    {
+    	// Step 1 Part I: Computing the training set
         
         try
         {
         	File traindir = new File(train);
-        	
+        	HTrain = new Hashtable();
+    		trainingDocumentVector = new ArrayList<String>();
+    		trainingDocumentVector_address = new ArrayList<String>();
+   			trainoutputDocumentVector = new ArrayList<String>();
+   		
         	getFiles(trainfolder,trainingDocumentVector,trainingDocumentVector_address,HTrain);
         	
         	for(int i=0;i<trainingDocumentVector.size();i++)
 	        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
 	        		
         	ts.filterTerms(trainingDocumentVector, HTrain);
-        	
+	        
 	        if(!traindir.exists())
 	        {
 	        	boolean success = traindir.mkdir();
 	   			if (success)
 	      			System.out.println("Training directory created");
-	    				
-	        	for(int i=0;i<trainingDocumentVector.size();i++)
-	        	{ 	
-	        		Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
-	        	    p1.waitFor();
-	        	}
-	        }	
-	        		
+	    	}			
+	        	
+	        for(int i=0;i<trainingDocumentVector.size();i++)
+	        { 	
+	        	Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
+	        	p1.waitFor();
+	        }
+	        	
+	    	System.out.println("Training is completed for training set");
+        }
+        catch(Exception e){}
+    }
+    
+    public void train2()
+    {
+    	// Step 1 part II: Computing the testing set
+    	
+    	try
+        {		
 	        File testdir = new File(test);
-	        
+	        HTest = new Hashtable();
+    		testingDocumentVector = new ArrayList<String>();
+    		testingDocumentVector_address = new ArrayList<String>();
+    		testoutputDocumentVector = new ArrayList<String>();
+    	
 	        getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);
 	        	
 	        for(int i=0;i<testingDocumentVector.size();i++)
@@ -115,15 +144,15 @@ public class kNN {
 	    		boolean success = testdir.mkdir();
 	   			if (success)
 	      			System.out.println("Testing directory created");
-	    			
-		        for(int i=0;i<testingDocumentVector.size();i++)
-		        {
-		        	Process p2 = Runtime.getRuntime().exec("java StopListStemmer "+test+testingDocumentVector_address.get(i));
-		        	p2.waitFor();
-		        }
 	    	}
+	    			
+		    for(int i=0;i<testingDocumentVector.size();i++)
+		    {
+		        Process p2 = Runtime.getRuntime().exec("java StopListStemmer "+test+testingDocumentVector_address.get(i));
+		        p2.waitFor();
+		    }
 	    	
-	    	System.out.println("Training is completed");
+	    	System.out.println("Training is completed for testing set");
         }
         catch(Exception e){}
     }
@@ -232,13 +261,11 @@ public class kNN {
 
     }
     
-    public String classify(String filetobeClassified)
+    public String classify(String filetobeClassified,int k)
     {
     	// Step 2: Performing KNN classification        	
         	
         Similarity s = new Similarity();
-        
-     	int k=3;
 		
 		String [] array = null;	
         array = filetobeClassified.split("\\\\");
@@ -312,18 +339,17 @@ public class kNN {
         if(pos!=-1)
         	retrievedcategory = categories[pos];
   
-        String relevantcategory = (String)HTest.get((String)filename);
-        System.out.println(filename);
         System.out.println(filename+" classified as "+retrievedcategory);
-  		System.out.println("Test category is "+relevantcategory);
-  			     	
+  		
         return retrievedcategory;
     }
     
     public static void main(String[] args)
     {
         kNN knn = new kNN();
-        knn.train();
+        knn.setThreshHolds(80,60);
+        knn.train1();
+        knn.train2();
         knn.classify();
     }
 }
