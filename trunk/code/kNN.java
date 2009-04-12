@@ -1,7 +1,5 @@
 /**
  * @(#)kNN.java
- *
- *
  * @author Choon Meng, Chris and Wei Jie
  * @version 1.00 2009/4/4
  */
@@ -79,20 +77,23 @@ public class kNN {
         }
     }//recursive traversing of files; does copying of files and hashing of filename to file category
     
-    public void setThreshHolds(float df,float idf)
+    public void filter(float df,float idf)
     {
-    	ts.setDFThresh(df);
-    	ts.setIDFThresh(idf);
+    	try
+    	{
+    		ts.setDFThresh(df);
+    		ts.setIDFThresh(idf);
+    		ts.filterTerms(trainingDocumentVector, HTrain);
+    	}
+    	catch(Exception e){}
+    	
     }
-    	 
-    public void train1()
+    
+    public void populate()
     {
-    	// Step 1 Part I: Computing the training set
-        
-        try
-        {
-        	File traindir = new File(train);
-        	HTrain = new Hashtable();
+    	try
+    	{
+    		HTrain = new Hashtable();
     		trainingDocumentVector = new ArrayList<String>();
     		trainingDocumentVector_address = new ArrayList<String>();
    			trainoutputDocumentVector = new ArrayList<String>();
@@ -100,10 +101,29 @@ public class kNN {
         	getFiles(trainfolder,trainingDocumentVector,trainingDocumentVector_address,HTrain);
         	
         	for(int i=0;i<trainingDocumentVector.size();i++)
-	        		trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
-	        		
-        	ts.filterTerms(trainingDocumentVector, HTrain);
-	        
+	        	trainoutputDocumentVector.add("output_"+trainingDocumentVector.get(i));
+	    
+	    	HTest = new Hashtable();
+    		testingDocumentVector = new ArrayList<String>();
+    		testingDocumentVector_address = new ArrayList<String>();
+    		testoutputDocumentVector = new ArrayList<String>();
+    	
+	    	getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);	
+	    
+	    	for(int i=0;i<testingDocumentVector.size();i++)
+		        testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));	
+    	}
+    	catch(Exception e){}
+    }	
+    	
+    public void stemTrainingSet()
+    {
+    	// Step 1 Part I: Computing the training set
+        
+        try
+        {
+        	File traindir = new File(train);
+        	
 	        if(!traindir.exists())
 	        {
 	        	boolean success = traindir.mkdir();
@@ -122,23 +142,14 @@ public class kNN {
         catch(Exception e){}
     }
     
-    public void train2()
+    public void stemTestingSet()
     {
     	// Step 1 part II: Computing the testing set
     	
     	try
         {		
 	        File testdir = new File(test);
-	        HTest = new Hashtable();
-    		testingDocumentVector = new ArrayList<String>();
-    		testingDocumentVector_address = new ArrayList<String>();
-    		testoutputDocumentVector = new ArrayList<String>();
-    	
-	        getFiles(testfolder,testingDocumentVector,testingDocumentVector_address,HTest);
-	        	
-	        for(int i=0;i<testingDocumentVector.size();i++)
-		        	testoutputDocumentVector.add("output_"+testingDocumentVector.get(i));
-		        	
+	        
 	    	if(!testdir.exists())
 	    	{
 	    		boolean success = testdir.mkdir();
@@ -157,17 +168,11 @@ public class kNN {
         catch(Exception e){}
     }
     
-    public void classify()
+    public void classify(int k)
     {
     	// Step 2: Performing KNN classification        	
         	
         Similarity s = new Similarity();
-        	
-        Scanner scan = new Scanner(System.in);
-     	int k;
-
-     	System.out.print("Enter the value of k:");
-     	k = scan.nextInt();
      			
         for(int i=0;i<testoutputDocumentVector.size();i++)
         {
@@ -347,9 +352,21 @@ public class kNN {
     public static void main(String[] args)
     {
         kNN knn = new kNN();
-        knn.setThreshHolds(80,60);
-        knn.train1();
-        knn.train2();
-        knn.classify();
+        Scanner scan = new Scanner(System.in);
+     	
+     	System.out.print("Enter the value of k:");
+     	int k = scan.nextInt();
+     	
+     	System.out.print("Enter the value of df:");
+     	float df = scan.nextFloat();
+     	
+     	System.out.print("Enter the value of idf:");
+     	float idf = scan.nextFloat();
+     	
+     	knn.populate();
+        knn.filter(df,idf);
+        knn.stemTrainingSet();
+        knn.stemTestingSet();
+        knn.classify(k);
     }
 }
