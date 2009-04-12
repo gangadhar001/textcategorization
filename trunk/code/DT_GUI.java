@@ -16,11 +16,11 @@ public class DT_GUI extends JFrame implements ActionListener{
 	
 	JTextField jtfClassify, jtfFile;
     JLabel jlbClassify, jlbFile, jlbText;
-    JPanel mainPanel;
+    JPanel mainPanel, topPanel, centerPanel, bottomPanel;
     JTextArea jtaText;
-    Container container;
-    String filename = "";
+    String toprocess = "", theresult = "";
     File file;
+    static MyRMTextClassifier theclassifier;
     
     JButton jbnOpen, jbnSearch;
     
@@ -28,43 +28,52 @@ public class DT_GUI extends JFrame implements ActionListener{
     
 	public DT_GUI() {
 		super("DT Text Classification");
-
-        container = getContentPane();
-        container.setLayout(new FlowLayout());
-
-        jlbFile = new JLabel("File:");
-        container.add(jlbFile);
+		
+		    mainPanel = new JPanel(new BorderLayout());
+        topPanel = new JPanel(new BorderLayout());
         
-        jtfFile = new JTextField("", 65);
-        jtfFile.setEditable(false);
-        container.add(jtfFile);
+        jlbFile = new JLabel("File:");
+        topPanel.add(jlbFile, BorderLayout.WEST);
+        
+        jtfFile = new JTextField("");
+        //jtfFile.setEditable(false);
+        topPanel.add(jtfFile, BorderLayout.CENTER);
 
         jbnOpen = new JButton("Open");
-        container.add(jbnOpen);
+        topPanel.add(jbnOpen, BorderLayout.EAST);
         
+        mainPanel.add(topPanel, BorderLayout.NORTH);
+        
+        centerPanel = new JPanel(new BorderLayout(5,5));
         jlbText = new JLabel("Text:");
-        container.add(jlbText);
+        centerPanel.add(jlbText, BorderLayout.NORTH);
         
-        jtaText = new JTextArea(35,70);
-        container.add(jtaText);
+        jtaText = new JTextArea();
+        centerPanel.add(jtaText, BorderLayout.CENTER);
+        
+        mainPanel.add(centerPanel, BorderLayout.CENTER);
+        
+        bottomPanel = new JPanel(new BorderLayout());
         
 		jlbClassify = new JLabel("Classifed as:");
-        container.add(jlbClassify);
+        bottomPanel.add(jlbClassify, BorderLayout.WEST);
 
         jtfClassify = new JTextField("", 57);
         jtfClassify.setEditable(false);
-        container.add(jtfClassify);
+        bottomPanel.add(jtfClassify, BorderLayout.CENTER);
         
         jbnSearch = new JButton("Classify");
-        container.add(jbnSearch);
+        bottomPanel.add(jbnSearch, BorderLayout.SOUTH);
+        
+        mainPanel.add(bottomPanel, BorderLayout.SOUTH);
+        
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
 
-        mainPanel = new JPanel(); 
-        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-
+        setContentPane(mainPanel);
         jbnOpen.addActionListener(this);
         jbnSearch.addActionListener(this);
 
-        this.setSize(850, 700); 
+        this.setSize(600, 400); 
         setVisible(true);
     }
     
@@ -88,9 +97,14 @@ public class DT_GUI extends JFrame implements ActionListener{
             {
             	if(!jtfFile.getText().equals(""))
             	{
-            		filename = jtfFile.getText();
+            		toprocess = jtfFile.getText();
                 	//stub : classify method
+            	} else {
+            	  // else process the text in the textbox
+            	  toprocess = jtaText.getText();
             	}
+            	theresult = theclassifier.apply(toprocess);
+            	jtfClassify.setText(theresult);
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }  
@@ -100,6 +114,15 @@ public class DT_GUI extends JFrame implements ActionListener{
 
     public static void main(String[] args) {
         DT_GUI app = new DT_GUI();
+        try {
+        theclassifier = new MyRMTextClassifier(
+    				new File(
+    						"../rapidminer/w-j48bin.mod"),
+    				new File(
+    						"../rapidminer/w-j48words.list"));
+    		} catch (Exception ex) {
+    		  JOptionPane.showMessageDialog(app, ex.getMessage());
+    		}
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
