@@ -120,8 +120,9 @@ public class kNN_GUI extends JFrame implements ActionListener{
         } else if (e.getSource() == jbnTrain) {
 
             try {
-                kc.setThreshHolds(new Float(jtfdf.getText()),new Float(jtfidf.getText()));
-                kc.train1();
+            	kc.populate();
+                kc.filter(new Float(jtfdf.getText()),new Float(jtfidf.getText()));
+                kc.stemTrainingSet();
                 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
