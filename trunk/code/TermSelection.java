@@ -7,6 +7,15 @@ public class TermSelection
 	public float DFThresh = 100;
 	public float IDFThresh = 100;
 
+	public void setDFThresh(float in)
+	{
+		DFThresh = in;
+	}
+	public void setIDFThresh(float in)
+	{
+		IDFThresh = in;
+	}
+
 	public TermSelection()
 	{
 	}
