@@ -78,13 +78,13 @@ public class MyRMTextClassifier {
 		// Create a text classifier  
 		MyRMTextClassifier tr = new MyRMTextClassifier(
 				new File(
-						"w-j48zip.mod"),
+						"w-j48bin.mod"),
 				new File(
-						"training_set_words.list"));
+						"w-j48words.list"));
 
 		// Call the classifier with texts
-		System.out.println("Test1:" + tr.apply("dod povrai xflick resolution gif"));
-		System.out.println("Test2:" + tr.apply("workstation intel switch"));
+		System.out.println("Test1:" + tr.apply("../testing_corpus/testing_corpus/comp.windows.x/67059"));
+		System.out.println("Test2:" + tr.apply("I like to play baseball! :)"));
 
 	}
 
