@@ -1,34 +1,33 @@
 /**
- * @(#)kNN_GUI.java
+ * @(#)DT_GUI.java
  *
  *
  * @author 
- * @version 1.00 2009/4/11
+ * @version 1.00 2009/4/12
  */
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;       
 
-public class kNN_GUI extends JFrame implements ActionListener{
+public class DT_GUI extends JFrame implements ActionListener{
 	
 	JTextField jtfClassify, jtfFile;
-    JLabel jlbClassify, jlbFile;
-    JLabel jlbk, jlbdf,jlbidf;
-    JTextField jtfk, jtfdf,jtfidf;
+    JLabel jlbClassify, jlbFile, jlbText;
     JPanel mainPanel;
+    JTextArea jtaText;
     Container container;
     String filename = "";
     File file;
     
-    static kNN kc;
+    JButton jbnOpen, jbnSearch;
     
-    JButton jbnOpen, jbnSearch,jbnTrain;
-    //JButton[] button;
+    //stub: DT instance
     
-	public kNN_GUI() {
-		super("KNN Text Classification");
+	public DT_GUI() {
+		super("DT Text Classification");
 
         container = getContentPane();
         container.setLayout(new FlowLayout());
@@ -36,40 +35,18 @@ public class kNN_GUI extends JFrame implements ActionListener{
         jlbFile = new JLabel("File:");
         container.add(jlbFile);
         
-         
         jtfFile = new JTextField("", 65);
         jtfFile.setEditable(false);
         container.add(jtfFile);
 
         jbnOpen = new JButton("Open");
         container.add(jbnOpen);
-
-		jlbk = new JLabel("K:");
-        container.add(jlbk);
-
-        jtfk = new JTextField("", 20);
-        jtfk.setEditable(true);
-        jtfk.setText("3");
-        container.add(jtfk);
         
-        jlbdf = new JLabel("DF:");
-        container.add(jlbdf);
-
-        jtfdf = new JTextField("", 20);
-        jtfdf.setEditable(true);
-        jtfdf.setText("0");
-        container.add(jtfdf);
+        jlbText = new JLabel("Text:");
+        container.add(jlbText);
         
-        jlbidf = new JLabel("IDF:");
-        container.add(jlbidf);
-
-        jtfidf = new JTextField("", 20);
-        jtfidf.setEditable(true);
-        jtfidf.setText("9999");
-        container.add(jtfidf);
-        
-        jbnTrain = new JButton("Train");
-        container.add(jbnTrain);
+        jtaText = new JTextArea(35,70);
+        container.add(jtaText);
         
 		jlbClassify = new JLabel("Classifed as:");
         container.add(jlbClassify);
@@ -86,9 +63,8 @@ public class kNN_GUI extends JFrame implements ActionListener{
 
         jbnOpen.addActionListener(this);
         jbnSearch.addActionListener(this);
-        jbnTrain.addActionListener(this);
 
-        this.setSize(850, 130); 
+        this.setSize(850, 700); 
         setVisible(true);
     }
     
@@ -108,32 +84,22 @@ public class kNN_GUI extends JFrame implements ActionListener{
             }
         } else if (e.getSource() == jbnSearch) {
 
-            try {
+            try 
+            {
             	if(!jtfFile.getText().equals(""))
             	{
             		filename = jtfFile.getText();
-                	jtfClassify.setText(kc.classify(filename,new Integer(jtfk.getText())));
+                	//stub : classify method
             	}
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }  
-        } else if (e.getSource() == jbnTrain) {
-
-            try {
-                kc.setThreshHolds(new Float(jtfdf.getText()),new Float(jtfidf.getText()));
-                kc.train1();
-                
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, ex.getMessage());
-            }
-            
         } 
         
     }
 
     public static void main(String[] args) {
-    	kc = new kNN();
-        kNN_GUI app = new kNN_GUI();
+        DT_GUI app = new DT_GUI();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
