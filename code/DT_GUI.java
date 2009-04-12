@@ -124,9 +124,9 @@ public class DT_GUI extends JFrame implements ActionListener{
         try {
         theclassifier = new MyRMTextClassifier(
     				new File(
-    						"../rapidminer/w-j48-2bin.mod"),
+    						"../rapidminer/w-j48bin.mod"),
     				new File(
-    						"../rapidminer/w-j48-2words.list"));
+    						"../rapidminer/w-j48words.list"));
     		} catch (Exception ex) {
     		  JOptionPane.showMessageDialog(app, ex.getMessage());
     		}
