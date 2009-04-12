@@ -1,4 +1,11 @@
 /**
+ * To compile:
+ * javac -cp ../rapidminer/rapidminer.jar:. DT_GUI.java
+ * To run:
+ * java -cp ../rapidminer/rapidminer.jar:. -Drapidminer.home=../rapidminer/ DT_GUI
+ */
+
+/**
  * @(#)DT_GUI.java
  *
  *
@@ -117,9 +124,9 @@ public class DT_GUI extends JFrame implements ActionListener{
         try {
         theclassifier = new MyRMTextClassifier(
     				new File(
-    						"../rapidminer/w-j48bin.mod"),
+    						"../rapidminer/w-j48-2bin.mod"),
     				new File(
-    						"../rapidminer/w-j48words.list"));
+    						"../rapidminer/w-j48-2words.list"));
     		} catch (Exception ex) {
     		  JOptionPane.showMessageDialog(app, ex.getMessage());
     		}
