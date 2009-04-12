@@ -29,7 +29,7 @@ public class DT_GUI extends JFrame implements ActionListener{
     File file;
     static MyRMTextClassifier theclassifier;
     
-    JButton jbnOpen, jbnSearch;
+    JButton jbnOpen, jbnSearch, jbClear;
     
     //stub: DT instance
     
@@ -72,6 +72,9 @@ public class DT_GUI extends JFrame implements ActionListener{
         jbnSearch = new JButton("Classify");
         bottomPanel.add(jbnSearch, BorderLayout.SOUTH);
         
+        jbClear = new JButton("Clear");
+        bottomPanel.add(jbClear, BorderLayout.EAST);
+        
         mainPanel.add(bottomPanel, BorderLayout.SOUTH);
         
         mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
@@ -79,6 +82,7 @@ public class DT_GUI extends JFrame implements ActionListener{
         setContentPane(mainPanel);
         jbnOpen.addActionListener(this);
         jbnSearch.addActionListener(this);
+        jbClear.addActionListener(this);
 
         this.setSize(600, 400); 
         setVisible(true);
@@ -115,16 +119,22 @@ public class DT_GUI extends JFrame implements ActionListener{
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }  
-        } 
+        } else if (e.getSource() == jbClear) {
+          jtfClassify.setText("");
+        }
         
     }
 
     public static void main(String[] args) {
+        String modelToUse = "w-j48finbin.mod";
+        if (args.length > 0 && !args[0].equals(""))
+          modelToUse = args[0];
+
         DT_GUI app = new DT_GUI();
         try {
         theclassifier = new MyRMTextClassifier(
     				new File(
-    						"../rapidminer/w-j48bin.mod"),
+    						"../rapidminer/" + modelToUse),
     				new File(
     						"../rapidminer/w-j48words.list"));
     		} catch (Exception ex) {
