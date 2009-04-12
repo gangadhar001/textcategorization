@@ -16,7 +16,7 @@ public class kNN {
     File trainfolder = new File("../training_corpus");
     File testfolder = new File("../testing_corpus");
     
-    int [][]EvaluationMatrix = new int[2][2];
+    int []EvaluationMatrix = new int[2];
     
     Hashtable HTrain;
     ArrayList<String> trainingDocumentVector;
@@ -30,8 +30,7 @@ public class kNN {
         	
     public kNN() {
     	for(int i=0;i<2;i++)
-        		for(int j=0;j<2;j++)
-        			EvaluationMatrix[i][j]=0;
+        		EvaluationMatrix[i]=0;
 
     	ts = new TermSelection();
     }
@@ -168,7 +167,7 @@ public class kNN {
         catch(Exception e){}
     }
     
-    public void classify(int k)
+    public double classify(int k)
     {
     	// Step 2: Performing KNN classification        	
         	
@@ -218,13 +217,13 @@ public class kNN {
         		}
         	}
         		
-        	System.out.println();
+        	/*System.out.println();
         	
         	for(int a=0;a<k;a++)
         		System.out.println(knn[a]+" "+freq[a]);
         	
         	System.out.println();
-        		
+        	*/	
         	int max = -1;
         	int pos = -1;
         			
@@ -240,30 +239,24 @@ public class kNN {
         		retrievedcategory = categories[pos];
         	String relevantcategory = (String)HTest.get((String)testdoc.substring(14));
         	
-        	System.out.println(testdoc.substring(14)+" classified as "+retrievedcategory);
-  			System.out.println("Test category is "+relevantcategory);
+        	//System.out.println(testdoc.substring(14)+" classified as "+retrievedcategory);
+  			//System.out.println("Test category is "+relevantcategory);
   			     	
-        	if(pos==-1)
-        			EvaluationMatrix[1][0]++;
-        	else
-        	{
-        		if(retrievedcategory.equals(relevantcategory))
-        			EvaluationMatrix[0][0]++;
-        		else if(!retrievedcategory.equals(relevantcategory))
-        			EvaluationMatrix[0][1]++;
-        	}
+        	if(retrievedcategory.equals(relevantcategory))
+        		EvaluationMatrix[0]++;
+        	else if(!retrievedcategory.equals(relevantcategory))
+        		EvaluationMatrix[1]++;
+        
         }
         	
         for(int i=0;i<2;i++)
-        {
-        	for(int j=0;j<2;j++)
-        		System.out.print(EvaluationMatrix[i][j]+" ");
+        	System.out.print(EvaluationMatrix[i]+" ");
         	
-        	System.out.println();
-        }
-        	
+        System.out.println();
+      
        	System.out.println("Finished classifying");
 
+		return (float)EvaluationMatrix[0]/120.0;
     }
     
     public String classify(String filetobeClassified,int k)
@@ -351,22 +344,39 @@ public class kNN {
     
     public static void main(String[] args)
     {
-        kNN knn = new kNN();
-        Scanner scan = new Scanner(System.in);
+        //kNN knn = new kNN();
+        //Scanner scan = new Scanner(System.in);
      	
+     	int k;
+     	float df,idf;
+     	/*
      	System.out.print("Enter the value of k:");
-     	int k = scan.nextInt();
+     	k = scan.nextInt();
      	
      	System.out.print("Enter the value of df:");
-     	float df = scan.nextFloat();
+     	df = scan.nextFloat();
      	
      	System.out.print("Enter the value of idf:");
-     	float idf = scan.nextFloat();
-     	
-     	knn.populate();
-        knn.filter(df,idf);
-        knn.stemTrainingSet();
-        knn.stemTestingSet();
-        knn.classify(k);
+     	idf = scan.nextFloat();
+     	*/
+     	for(int i=1;i<=5;i++)
+     	{
+     		for(float j=1;j<=5;j++)
+     		{
+     			for(float h=1;h<=15;h++)
+     			{
+     				k=i;
+     				df=j;
+     				idf=h;
+     				kNN knn = new kNN();
+     				knn.populate();
+     				knn.filter(df,idf);
+        			knn.stemTrainingSet();
+        			knn.stemTestingSet();
+        			double accuracy = knn.classify(k);
+        			System.out.println("Accuracy for k value: " +k +" df value: "+df+" idf value:" +idf +" is "+accuracy+"%" );
+     			}
+     		}
+     	}
     }
 }
