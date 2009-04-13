@@ -126,7 +126,7 @@ public class DT_GUI extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        String modelToUse = "w-j48finbin.mod";
+        String modelToUse = "finalw-j48.mod";
         if (args.length > 0 && !args[0].equals(""))
           modelToUse = args[0];
 
@@ -136,7 +136,7 @@ public class DT_GUI extends JFrame implements ActionListener{
     				new File(
     						"../rapidminer/" + modelToUse),
     				new File(
-    						"../rapidminer/w-j48words.list"));
+    						"../rapidminer/words.list"));
     		} catch (Exception ex) {
     		  JOptionPane.showMessageDialog(app, ex.getMessage());
     		}
