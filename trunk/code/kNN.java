@@ -359,11 +359,11 @@ public class kNN {
      	System.out.print("Enter the value of idf:");
      	idf = scan.nextFloat();
      	*/
-     	for(int i=3;i<=5;i++)
+     	for(int i=4;i<=6;i++)
      	{
-     		for(float j=1;j<=5;j++)
+     		for(float j=1;j<=3;j++)
      		{
-     			for(float h=1;h<=15;h++)
+     			for(float h=1;h<=8;h++)
      			{
      				k=i;
      				df=j;
