@@ -114,10 +114,10 @@ public class TermSelection
 			file2string.add(input);
 		for (int i = 0; i < file2string.size(); i++)
 		{
-			StringTokenizer tk = new StringTokenizer((String)file2string.get(i));
+			StringTokenizer tk = new StringTokenizer((String)file2string.get(i), "\t");
 			String text = tk.nextToken();
 			int freq = Integer.parseInt(tk.nextToken());
-			if (freq < DFThresh)
+			if (freq < (int)DFThresh)
 				filtered.add(text+" ");
 		}
 		br.close();
@@ -135,10 +135,10 @@ public class TermSelection
 			file2string.add(input);
 		for (int i = 0; i < file2string.size(); i++)
 		{
-			StringTokenizer tk = new StringTokenizer((String)file2string.get(i));
+			StringTokenizer tk = new StringTokenizer((String)file2string.get(i), "\t");
 			String text = tk.nextToken();
 			int freq = Integer.parseInt(tk.nextToken());
-			if (freq > IDFThresh)
+			if (freq > (int)IDFThresh)
 				filtered.add(text+" ");
 		}
 		br.close();
@@ -181,51 +181,7 @@ public class TermSelection
 		out.close();
 		fstream2.close();
 	}
-	/*
-	public File appendDoc(File file, File consolidatedFile)
-	{
-		return (new File("stub"));
-	}*/
-	/*
-	public File[] appendDocCat(File file, String category, File[] categorizedFile)
-	{
-		return (new File[10]);
-		int catIndex;
-		
-		switch (category)
-		{
-			case "alt.atheism":
-				catIndex = 0;
-				break;
-			case "comp.windows.x":
-				catIndex = 1;
-				break;
-			case "misc.forsale":
-				catIndex = 2;
-				break;
-			case "rec.autos":
-				catIndex = 3;
-				break;
-			case "rec.motorcycles":
-				catIndex = 4;
-				break;
-			case "rec.sport.baseball":
-				catIndex = 5;
-				break;
-			case "sci.electronics":
-				catIndex = 6;
-				break;
-			case "sci.med":
-				catIndex = 7;
-				break;
-			case "talk.politics.misc":
-				catIndex = 8;
-				break;
-			case "talk.religion.misc":
-				catIndex = 9;
-				break;
-			default:
-				break;
-		}
-	}*/
+
+
+
 }
