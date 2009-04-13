@@ -29,8 +29,6 @@ public class kNN {
     ArrayList<String> testoutputDocumentVector;
         	
     public kNN() {
-    	for(int i=0;i<2;i++)
-        		EvaluationMatrix[i]=0;
 
     	ts = new TermSelection();
     }
@@ -131,7 +129,8 @@ public class kNN {
 	    	}			
 	        	
 	        for(int i=0;i<trainingDocumentVector.size();i++)
-	        { 	
+	        {
+			//System.out.println("java StopListStemmer "+train+trainingDocumentVector_address.get(i)); 	
 	        	Process p1 = Runtime.getRuntime().exec("java StopListStemmer "+train+trainingDocumentVector_address.get(i));
 	        	p1.waitFor();
 	        }
@@ -170,7 +169,10 @@ public class kNN {
     public double classify(int k)
     {
     	// Step 2: Performing KNN classification        	
-        	
+
+		for (int i = 0; i < 2; i++)
+			EvaluationMatrix[i] = 0;
+
         Similarity s = new Similarity();
      			
         for(int i=0;i<testoutputDocumentVector.size();i++)
@@ -196,7 +198,7 @@ public class kNN {
         	bubbleSort(freq,knn);
         	
         	int []count = new int[10];
-        	int []freqOfCategory = new int[10];
+        	double []freqOfCategory = new double[10];
         	String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
         			                   "rec.autos","rec.motorcycles","rec.sport.baseball",
         			                   "sci.electronics","sci.med","talk.politics.misc",
@@ -216,19 +218,12 @@ public class kNN {
         			}//computing the total frequency of each category
         		}
         	}
-        		
-        	/*System.out.println();
-        	
-        	for(int a=0;a<k;a++)
-        		System.out.println(knn[a]+" "+freq[a]);
-        	
-        	System.out.println();
-        	*/	
-        	int max = -1;
+
+        	double max = -1;
         	int pos = -1;
         			
         	for(int a=0;a<10;a++)
-        		if(count[a]> max)
+				if (freqOfCategory[a] > max)
         		{
         			max = freqOfCategory[a];
         			pos = a;
@@ -239,8 +234,6 @@ public class kNN {
         		retrievedcategory = categories[pos];
         	String relevantcategory = (String)HTest.get((String)testdoc.substring(14));
         	
-        	//System.out.println(testdoc.substring(14)+" classified as "+retrievedcategory);
-  			//System.out.println("Test category is "+relevantcategory);
   			     	
         	if(retrievedcategory.equals(relevantcategory))
         		EvaluationMatrix[0]++;
@@ -256,7 +249,7 @@ public class kNN {
       
        	System.out.println("Finished classifying");
 
-		return (float)EvaluationMatrix[0]/120.0;
+		return (float)EvaluationMatrix[0] / ((float)EvaluationMatrix[0] + (float)EvaluationMatrix[1]);
     }
     
     public String classify(String filetobeClassified,int k)
@@ -264,7 +257,10 @@ public class kNN {
     	// Step 2: Performing KNN classification        	
         	
         Similarity s = new Similarity();
-		
+
+		for (int i = 0; i < 2; i++)
+			EvaluationMatrix[i] = 0;
+
 		String [] array = null;	
         array = filetobeClassified.split("\\\\");
     	String filename = array[array.length - 1];
@@ -295,7 +291,7 @@ public class kNN {
         bubbleSort(freq,knn);
         	
         int []count = new int[10];
-        int []freqOfCategory = new int[10];
+        double []freqOfCategory = new double[10];
         String []categories = {"alt.atheism","comp.windows.x","misc.forsale",
         			           "rec.autos","rec.motorcycles","rec.sport.baseball",
         			           "sci.electronics","sci.med","talk.politics.misc",
@@ -323,11 +319,11 @@ public class kNN {
         
         System.out.println();
         		
-        int max = -1;
+        double max = -1;
         int pos = -1;
         			
         for(int a=0;a<10;a++)
-        	if(count[a]> max)
+			if (freqOfCategory[a] > max)
         	{
         		max = freqOfCategory[a];
         		pos = a;
@@ -359,24 +355,27 @@ public class kNN {
      	System.out.print("Enter the value of idf:");
      	idf = scan.nextFloat();
      	*/
-     	for(int i=4;i<=6;i++)
+
+		df = 1;
+		idf = 1000;
+		kNN knn = new kNN();
+		knn.populate();
+		knn.filter(df, idf);
+		knn.stemTrainingSet();
+		knn.stemTestingSet();
+
+     	for(int i=1;i<=20;i++)
      	{
-     		for(float j=1;j<=3;j++)
-     		{
-     			for(float h=1;h<=8;h++)
-     			{
+     		//for(float j=1;j<=3;j++)
+     		//{
+     		//	for(float h=1;h<=8;h++)
+     		//	{
      				k=i;
-     				df=j;
-     				idf=h;
-     				kNN knn = new kNN();
-     				knn.populate();
-     				knn.filter(df,idf);
-        			knn.stemTrainingSet();
-        			knn.stemTestingSet();
+     				
         			double accuracy = knn.classify(k);
         			System.out.println("Accuracy for k value: " +k +" df value: "+df+" idf value:" +idf +" is "+accuracy+"%" );
-     			}
-     		}
+     		//	}
+     		//}
      	}
     }
 }
