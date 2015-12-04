@@ -1,0 +1,1 @@
+To implement a system to perform text categorization. You are to implement at least 2 categorization methods: kNN and Decision Tree. For Decision Tree, you may down-load package from the Web (e.g C5.0) and adapt it for your purpose.
